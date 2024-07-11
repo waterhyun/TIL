@@ -1,4 +1,4 @@
-##  CLI
+# 1. CLI
 Command Line Interface 명령줄 인터페이스  
 글자를 입력하여 컴퓨터에 명령을 내리는 방식(나무위키)
 
@@ -21,7 +21,7 @@ Bash는 Shell의 한 종류!
 window에서도 리눅스 운영체제의 명령어를 쓸 수 있도록 함.
 
 
-# GIT
+# 2. GIT
 ## 의미
 **분산 버전 관리 시스템**  
 버전을 여러 개의 복제된 저장소에 저장 및 관리  
@@ -48,7 +48,7 @@ window에서도 리눅스 운영체제의 명령어를 쓸 수 있도록 함.
   - 버번(Commit) 이력과 파일들이 영구적으로 저장되는 영역 모든 버전(Commit)과 변경 이력이 기록
   - 반드시 staging area를 건너야 함.
 
-## Commit하는 과정
+## ⭐ Commit하는 과정
 1. `git init`를 현재 쓰는 로컬에 선언.
   - git의 버전 관리를 시작할 디렉토리에서 진행! = 로컬 저장소 설정
   - init? 초기화 (initialize의 줄임말)
@@ -58,18 +58,20 @@ window에서도 리눅스 운영체제의 명령어를 쓸 수 있도록 함.
     - 하위 폴더에서 git init하지 않기
   - 실수시 해결법
     - 숨겨진 파일 삭제(.git)
-    - ls -a로 확인 가능/또는 폴더에서 직접 제거
+    - ls -a로 확인 가능/또는 폴더에서 직접 제거  
+    
 2. `git add`
   - working directory영역에서 staging area으로 보내는 작업
   - `git add 파일명`: 해당 파일을 staging area에 전달
-  - `git add .` : 수정된 전체 파일을 staging area에 전달
+  - `git add .` : 수정된 전체 파일을 staging area에 전달  
+
 3. `git commit`
   - `git commit -m "message"`
 
-### `git status`
+### ⭐`git status`
 변경 이력 확인하는 방법
 
-### `git log`
+### ⭐`git log`
 commit history를 보는 방법  
 너무 길면 짤리므로 `git log --oneline` 사용 권장.  
 `enter`를 계속 쳐야하는 상황이 온다면 `q`를 눌러 탈출.
@@ -86,7 +88,7 @@ $ git config --global user.name "Your Name"
 코드와 버전 관리 이력을 온라인 상의 특정 위치에 저장하여 여러 개발자가 협업하고 코드를 공유할 수 있는 저장공간.  
 예시) gitlab, github, bitbucket (이중 가장 큰 것은 github)
 
-## Push
+## ⭐ Push
 `git remote add origin remote_repo_url`
 - origin : 추가하는 원격 저장소 별칭
   - 보통 origin
@@ -98,7 +100,7 @@ push를 통해 commit 내용을 upload
 변경 사항만큼만 push
 
 ## Pull & Clone
-### Pull
+### ⭐ Pull
 `git pull remote_repo_url`
 - 변경 사항 만큼만 내려받기
 
@@ -118,7 +120,7 @@ push를 통해 commit 내용을 upload
 - 주의사항  
 이미 git의 관리를 받은 이력이 있는 파일이나 디렉토리는 나중에 gitignore에 작성해도 적용이 되지 않음.
   - `git rm -cached` 명령어를 통해 git 캐시에서 삭제 필요.
-  
+
   
 
 
