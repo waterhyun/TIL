@@ -3,6 +3,8 @@
 일반 텍스트로 문서를 작성하는 간단한 방법.  
 주로 개발자들이 텍스트와 코드를 작성해 문서화하기 위해 사용하는 것.
 
+> 참고 자료
+> [markdown guide](https://markdownguide.offshoot.io/basic-syntax/)
 
 ## 1. Heading
 문단 제목, 개요에 해당.
