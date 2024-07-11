@@ -1,22 +1,30 @@
 # 1. CLI
 Command Line Interface 명령줄 인터페이스  
-글자를 입력하여 컴퓨터에 명령을 내리는 방식(나무위키)
+글자를 입력하여 컴퓨터와 상호작용하는 방식.
 
-장점  
+✅장점  
 - 효율성
 - 정밀한 제어
 - 표준성
   - window의 경우 cmd
   - unix 계열의 운영체제의 경우 bash
-  - CLI 명령어는 대부분의 Unix 운영체제 기반 시스템에서 동일하게 작동하여 여러 환경에서 적용할 수 있어서 Bash로 설정 (🤔)
 
+✅CLI 도구
+- Bash : 리눅스 및 유닉스 시스템에서 주로 사용하는 셸(Shell)
+- PowerShell: 윈도우 시스템에서 사용되는 강력한 스크립팅 언어 겸 셸
+-CMD: 윈도우 운영 체제에 기본적으로 포함된 CLI
 
-## shell
-shell(쉘) program은 명령어 처리기로 키보드로 입력한 명령어를 운영체제에 전달하여 키보드로 입력한 명령어를 실행하게끔 하는 프로그램.
+<br><br><br>
+
+## Shell
+Shell(쉘)은 사용자가 컴퓨터와 대화할 수 있도록 도와주는 프로그램.  
 
 Bash는 Shell의 한 종류!
 
-운영체제마다 명령어가 다르다는 문제점을 극복하기 위해 git bash를 사용함.  
+운영체제마다 명령어가 다르다는 문제점을 극복하기 위해 git bash를 사용함.
+- 윈도우 운영 체제에서 Git을 사용하기 위한 도구
+- 리눅스 환경에서 사용하는 Bash Shell을 윈도우에서 사용할 수 있도록 해줌.
+- 이를 통해 윈도우 사용자도 리눅스 명령어와 Git 명령어를 함께 사용할 수 있음.(git commit 등등)
 
 window에서도 리눅스 운영체제의 명령어를 쓸 수 있도록 함.
 
@@ -47,6 +55,56 @@ window에서도 리눅스 운영체제의 명령어를 쓸 수 있도록 함.
   - 안 보이는 영역
   - 버번(Commit) 이력과 파일들이 영구적으로 저장되는 영역 모든 버전(Commit)과 변경 이력이 기록
   - 반드시 staging area를 건너야 함.
+
+## 주요 명령어
+### 파일 및 디렉토리 이동과 확인
+- `cd` - Change Directory
+```bash
+cd /path/to/directory  # 지정한 디렉토리로 이동
+cd ..                  # 상위 디렉토리로 이동
+cd ~                   # 홈 디렉토리로 이동
+
+```
+- `ls` - List
+```bash
+ls         # 기본 목록
+ls -la     # 숨김 파일을 포함한 상세 목록
+```
+- `pwd` - Print Working Directory
+```bash
+pwd  # 현재 작업 중인 디렉토리의 경로 출력
+```
+### 파일 및 디렉토리 관리
+- `touch`
+```bash
+touch filename.txt  # 빈 파일 생성
+```
+- `mkdir`- Make Directory
+```bash
+mkdir new_directory  # 새로운 디렉토리 생성
+mkdir -p path/to/directory  # 경로 상에 없는 디렉토리도 함께 생성
+```
+- `rm`- Remove
+```bash
+rm filename.txt          # 파일 삭제
+rm -r directory_name     # 디렉토리와 그 안의 내용 삭제
+rm -f filename.txt       # 강제로 파일 삭제
+```
+### 파일 내용 보기
+- `cat` - Concatenate
+```bash
+cat filename.txt            # 파일 내용 출력
+cat file1.txt file2.txt     # 두 파일의 내용을 연속적으로 출력
+
+```
+### 프로그램 및 파일 실행
+- `start`
+```bash
+start notepad.exe           # 메모장 실행
+start filename.txt          # 파일을 기본 프로그램으로 열기
+```
+
+
 
 ## ⭐ Commit하는 과정
 1. `git init`를 현재 쓰는 로컬에 선언.
