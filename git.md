@@ -14,7 +14,7 @@ Command Line Interface 명령줄 인터페이스
 - PowerShell: 윈도우 시스템에서 사용되는 강력한 스크립팅 언어 겸 셸
 -CMD: 윈도우 운영 체제에 기본적으로 포함된 CLI
 
-<br><br><br>
+
 
 ## Shell
 Shell(쉘)은 사용자가 컴퓨터와 대화할 수 있도록 도와주는 프로그램.  
@@ -28,6 +28,7 @@ Bash는 Shell의 한 종류!
 
 window에서도 리눅스 운영체제의 명령어를 쓸 수 있도록 함.
 
+<br>
 
 # 2. GIT
 ## 의미
@@ -136,8 +137,8 @@ commit history를 보는 방법
 
 ### 최초 설정
 ```bash
-$ git config --global user.email you@example.com
-$ git config --global user.name "Your Name"
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
 ```  
 - `--global` 옵션을 이용하면 딱 한번의 설정으로 가능.
 - 이 작업을 하지 않으면 `commit` 불가능
