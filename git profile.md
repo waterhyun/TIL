@@ -58,15 +58,6 @@ TARGET URL에 깃허브 URL 넣기.
 결과  
 <img src="https://img.shields.io/badge/Python-3766AB?style=flat&logo=Python&logoColor=white"/>
 
-보통 `<img src = ""/>` 이렇게 끝나면   
-<img src="https://img.shields.io/badge/Python-3766AB?style=flat&logo=Python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Python-3766AB?style=flat&logo=Python&logoColor=white"/>
-
-이렇게 나오기 때문에
-끝에 `</a>`를 붙여준다.  
-<img src="https://img.shields.io/badge/Python-3766AB?style=flat&logo=Python&logoColor=white"/></a> 
-<img src="https://img.shields.io/badge/Python-3766AB?style=flat&logo=Python&logoColor=white"/></a>
-
 ## README stats
 [참고 사이트: GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)
 - Top Languages Card
