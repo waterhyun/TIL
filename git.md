@@ -111,13 +111,16 @@ start filename.txt          # 파일을 기본 프로그램으로 열기
 1. `git init`를 현재 쓰는 로컬에 선언.
   - git의 버전 관리를 시작할 디렉토리에서 진행! = 로컬 저장소 설정
   - init? 초기화 (initialize의 줄임말)
-  - 📌선언하면 `master`가 생김
-  - ⚠ 주의 사항
-    - desktop에서 git init은 하지 않기
-    - 하위 폴더에서 git init하지 않기
+  
+  📌선언하면 `master`가 생김  
+
+  ⚠ 주의 사항
+  - desktop에서 git init은 하지 않기  
+  - 하위 폴더에서 git init하지 않기  
   - 실수시 해결법
-    - 숨겨진 파일 삭제(.git)
-    - ls -a로 확인 가능/또는 폴더에서 직접 제거  
+    - 숨겨진 파일 삭제(.git)  
+    - `ls -a`로 확인 가능/또는 폴더에서 직접 제거  
+    <br>
     
 2. `git add`
   - working directory영역에서 staging area으로 보내는 작업
@@ -257,7 +260,7 @@ push를 통해 commit 내용을 upload
 
 
 
-## restore
+## Restore
 - modified 상태의 파일 되돌리기
 - working directory에서 파일을 수정한 뒤, 파일의 수정 사항을  취소하고, 원래 모습대로 되돌리는 작업
 - unstage 명령어 간 차이 “commit 존재 여부에 의한 차이”
