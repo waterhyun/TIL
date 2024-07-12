@@ -120,7 +120,6 @@ start filename.txt          # 파일을 기본 프로그램으로 열기
   - 실수시 해결법
     - 숨겨진 파일 삭제(.git)  
     - `ls -a`로 확인 가능/또는 폴더에서 직접 제거  
-    <br>
     
 2. `git add`
   - working directory영역에서 staging area으로 보내는 작업
