@@ -1,4 +1,4 @@
-## Github Profile 꾸미기
+# Github Profile 꾸미기
 
 🔎 사전 준비
 - 본인의 **github username**으로 github repository를 생성
@@ -6,7 +6,7 @@
 - Initialize this repository with: Add a README file ✅
 
 
-### Header
+## Header
 [참고 사이트: capsule-render](https://github.com/kyechan99/capsule-render/tree/master)
 
 위 사이트에 들어가서 *How to Use* 부분에서 *Markdown*부분 복사해서 붙여넣기.
