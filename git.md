@@ -143,32 +143,37 @@ commit history를 보는 방법
 - `--global` 옵션을 이용하면 딱 한번의 설정으로 가능.
 - 이 작업을 하지 않으면 `commit` 불가능
 
-# Remote Repository
+##  Remote Repository
 코드와 버전 관리 이력을 온라인 상의 특정 위치에 저장하여 여러 개발자가 협업하고 코드를 공유할 수 있는 저장공간.  
 예시) gitlab, github, bitbucket (이중 가장 큰 것은 github)
 
-## ⭐ Push
+### 1. Push ⭐
 `git remote add origin remote_repo_url`
 - origin : 추가하는 원격 저장소 별칭
   - 보통 origin
   - 별칭을 사용해 **로컬 저장소 한 개**에 **여러 원격 저장소**를 추가할 수 있음.
 - remote_repo_url : 원격 저장소 주소
 
+`git remote -v`
+- 현재 프로젝트에 등록된 리모트 저장소 확인
+- `-v` 옵션을 통해 단축이름과 URL함께 확인
+
 `git push origin master`  
 push를 통해 commit 내용을 upload  
 변경 사항만큼만 push
 
-## Pull & Clone
-### ⭐ Pull
+
+### 2. Pull & Clone ⭐
+#### Pull
 `git pull remote_repo_url`
 - 변경 사항 만큼만 내려받기
 
-### Clone
+#### Clone
 `git clone remote_repo_url`
 - 초기에 통재로 처음에 다 내려받는 것(복제)
 
 
-## `.gitignore`
+### 3. `.gitignore`
 - git에서 특정 파일을 추적하지 못하도록 함.
 - 폴더에 `.gitignore`를 만들어서 해당 파일에서 무시할 내용을 적음.
 
@@ -181,5 +186,82 @@ push를 통해 commit 내용을 upload
   - `git rm -cached` 명령어를 통해 git 캐시에서 삭제 필요.
 
   
+## Git revert & reset
+
+### 1. revert
+특정 commit을 없었던 일로 만드는 작업.  
+변경 사항을 안전하게 실행 취소할 수 있도록 순방향 실행 취소 작업.
+
+`git revert <commit id>`
+- id는 일부만 적어도 됨(앞에 4자리 정도)
+
+🔗 **작동원리**
+- 단일 commit을 실행 취소하는 것 (재설정)
+- 프로젝트 기록에서 commit을 없었던 일로 처리 후 그 결과를 새로운 commit으로 추가함.
+  - 없어진 commit의 기록은 남아 있게 됨
+  - commit의 개수 유지  
+
+즉, commit 기록에서 commit을 삭제하거나 분리하는 대신, 지정된 변경 사항을 바전시키는 새 commit을 생성  
+<br>
+❓ **왜** revert는 지우고자 하는 commit을 남겨둘까?
+- 분산 버전 관리 시스템이므로 다른 사람들과의 싱크를 맞추기 위해 남겨진다.  
+(git에서 기록이 손실되는 것을 방지하며 기록의 무결성과 협업의 신뢰성을 높임)
 
 
+⚠ **주의사항**
+- 새로운 commit이 추가 됨으로 메세지를 작성해야하는 vim이 나타남.
+  - vim이란?
+    > - 입력 모드와 명령 모드가 있음.
+    >- 입력 모드로 전환 `i` (아래에 insert라고 표시)
+    > - 명령 모드로 전환 `esc`
+    > - 아주 가벼운 에디터라 기본 에디터로 내장되어 있는 경우가 많음.
+  - vim이 나타나는 경우 메시지를 입력
+    - git이 추천해준 `revert"second"`를 그대로 시용하는 것을 권장
+    - 저장하고 끄는 방법 `:wq`
+      > - w: write
+      > - q: quit
+
+**옵션**
+- `git revert id1, id2, id3` : 여러 개 나열하여 revert
+- `git revert id1..id3`: 여러 개 나열하여 revert
+- `git revert --no-edit id`: 메시지를 알아서 등록하고자 할 때.
+
+
+### 2. reset
+특정 커밋으로 되돌아 가는 작업
+
+`git reset <option><id>`
+
+🔗 **작동원리**
+- 특정 commit으로 되돌아 갔을 때, 되돌아간 commit이후의 commit은 모두 삭제 (위험)
+- 되돌아 간 후 기록에서 삭제
+- 삭제된 커밋들의 기록을 어떤 영역에 남겨둘 것인지 옵션을 활용해 조정 가능.
+
+**옵션**
+1) `--soft`  
+삭제된 commit의 기록을 staging area에 남김
+    - 남겨져 있음
+2) `--mixed`(default)  
+삭제된 commit의 기록을 working directory에 남김
+    - 남겨져 있음 
+3) `--hard`  
+삭제된 commit의 기록을 남기지 않음
+    - 남겨져 있지 않음
+    - 이미 삭제한 commit으로 다시 돌아가고 싶을 때(복구)
+    ```bash
+    git reflog
+    git reset --hard <복구하고자 하는 commitID>
+    ```
+    
+
+
+
+
+## restore
+- modified 상태의 파일 되돌리기
+- working directory에서 파일을 수정한 뒤, 파일의 수정 사항을  취소하고, 원래 모습대로 되돌리는 작업
+- unstage 명령어 간 차이 “commit 존재 여부에 의한 차이”
+  - git 저장소에 commit이 없는 경우
+      - `git rm —cached` : staging area에서 working directory로 되돌리기
+  - git 저장소에 commit이 존재하는 경우
+      - `git restore —staged` : staging area에서 working directory로 되돌리기
