@@ -267,3 +267,15 @@ push를 통해 commit 내용을 upload
       - `git rm —cached` : staging area에서 working directory로 되돌리기
   - git 저장소에 commit이 존재하는 경우
       - `git restore —staged` : staging area에서 working directory로 되돌리기
+
+
+## Commit 수정
+바로 직전에 생성한 commit을 수정  
+`git commit --amend`
+
+1. commit 메세지 수정
+    - 메세지만 수정하는 것이 아니라 새로운 commit으로 갈아끼워짐(ID가 달라짐)
+    - ID가 바뀌면 다른 사람과 충돌이 발생할 수 있기 때문에 조심. 
+2. commit 전체 수정
+    - 다 올리고 커밋을 하고 싶었는데 하나를 놓쳤을 때 사용
+    - `git add 파일명`를 시행 한 뒤 `git commit --amend` 시행
