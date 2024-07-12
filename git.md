@@ -47,15 +47,15 @@ window에서도 리눅스 운영체제의 명령어를 쓸 수 있도록 함.
 - 변경 사항만 저장
 
 ## 영역
-1. Working Directory
-  - GUI 화면
-  - 실제 작업 중인 파일들이 위치하는 영역
-2. Staging Area
-  - 안 보이는 영역
-3. Repository
-  - 안 보이는 영역
-  - 버번(Commit) 이력과 파일들이 영구적으로 저장되는 영역 모든 버전(Commit)과 변경 이력이 기록
-  - 반드시 staging area를 건너야 함.
+1. **Working Directory**
+    - GUI 화면
+    - 실제 작업 중인 파일들이 위치하는 영역
+2. **Staging Area**
+    - 안 보이는 영역
+3. **Repository**
+    - 안 보이는 영역
+    - 버번(Commit) 이력과 파일들이 영구적으로 저장되는 영역 모든 버전(Commit)과 변경 이력이 기록
+    - 반드시 staging area를 건너야 함.
 
 ## 주요 명령어
 ### 파일 및 디렉토리 이동과 확인
