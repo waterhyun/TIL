@@ -396,6 +396,20 @@ my_str[1] = 'z'
 ⭐ 문자열은 불변(변경불가)
 
 
+### print()
+```python
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+```
+
+
 ### Python Style Guide
 - 변수명은 무엇을 위한 변수인지 직관적인 이름을 가져야함
 - 공백(spaces) 4칸을 사용하여 코드 블록을 들여쓰기
