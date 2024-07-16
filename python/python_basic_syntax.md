@@ -20,10 +20,11 @@
     + [str 문자열](#str-문자열)
     + [Escape Sequence](#escape-sequence)
     + [f-string](#f-string)
-    + [% formatting](#--formatting)
-    + [str.format()](#strformat--)
-    + [Indexing, Slicing](#indexing--slicing)
+    + [% formatting](#formatting)
+    + [str.format()](#strformat)
+    + [Indexing, Slicing](#indexing-slicing)
 - [print()](#print)
+- [copy()](#copy)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -219,7 +220,6 @@ complex(1).__str__() # '(1+0j)'
 
 
 ## Text Sequence Type(str)
----
 
 ### Sequence Types
 여러 개의 값들을 순서대로 나열하여 저장하는 자료형   
