@@ -1,11 +1,11 @@
 # Python_basic_syntax
 ## Contents
 
-- [표현식 Expression](#표현식-Expression)
-- [타입 Type](#타입-Type)
+- [표현식 Expression](#표현식-expression)
+- [타입 Type](#타입-type)
 - [산술 연산자](#산술-연산자)
   * [우선순위](#우선순위)
-- [변수 Variable](#변수-Variable)
+- [변수 Variable](#변수-variable)
   * [변수명 규칙](#변수명-규칙)
   * [Python Style Guide](#python-style-guide)
   * [Python Tutor](#python-tutor)
@@ -14,9 +14,9 @@
     + [1. int](#1-int)
     + [2. float](#2-float)
     + [3. complex](#3-complex)
-  * [Text Sequence Type(str)](#text-sequence-type(str))
+  * [Text Sequence Type(str)](#text-sequence-typestr)
     + [Sequence Types](#sequence-types)
-    + [Sequence Types 특징](#Sequence-Types-특징)
+    + [Sequence Types 특징](#sequence-types-특징)
     + [str 문자열](#str-문자열)
     + [Escape Sequence](#escape-sequence)
     + [f-string](#f-string)
