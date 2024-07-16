@@ -2,33 +2,33 @@
 ## Contents
 - [Data Types](#data-types)
   * [Numeric Types](#numeric-types)
-    + [1) int](#1--int)
-    + [2) float](#2--float)
-    + [3) complex](#3--complex)
+    + [1. int](#1-int)
+    + [2. float](#2-float)
+    + [3. complex](#3-complex)
   * [Sequence Types](#sequence-types)
-    + [1) str](#1--str)
-    + [2) list](#2--list)
-    + [3) tuple](#3--tuple)
-    + [4) range](#4--range)
+    + [1. str](#1-str)
+    + [2. list](#2-list)
+    + [3. tuple](#3-tuple)
+    + [4. range](#4-range)
   * [Non-sequence Types](#non-sequence-types)
-    + [1) dict](#1--dict)
-    + [2) set](#2--set)
+    + [1. dict](#1-dict)
+    + [2. set](#2-set)
   * [Other Types](#other-types)
-    + [1) None](#1--none)
-    + [2) Boolean](#2--boolean)
+    + [1. None](#1-none)
+    + [2. Boolean](#2-boolean)
 - [Collection](#collection)
-- [형변환 Type Conversion](#----type-conversion)
-  * [암시적 형변화 implicit type conversion](#--------implicit-type-conversion)
-  * [명시적 형변화 Explicit Type conversion](#--------explicit-type-conversion)
-- [연산자](#---)
-  * [산술 연산자](#------)
-  * [복합 연산자](#------)
-  * [비교 연산자](#------)
-  * [논리 연산자](#------)
-  * [단축평가](#----)
-  * [멤버십 연산자](#-------)
-  * [시퀀스형 연산자](#--------)
-  * [연산자 우선순위 정리](#-----------)
+- [형변환 Type Conversion](#형변환-Type-Conversion)
+  * [암시적 형변화 implicit type conversion](#암시적-형변화-implicit-type-conversion)
+  * [명시적 형변화 Explicit Type conversion](#명시적-형변화-Explicit-Type-conversion)
+- [연산자](#연산자)
+  * [산술 연산자](#산술-연산자)
+  * [복합 연산자](#복합-연산자)
+  * [비교 연산자](#비교-연산자)
+  * [논리 연산자](#논리-연산자)
+  * [단축평가](#단축평가)
+  * [멤버십 연산자](#멤버십-연산자)
+  * [시퀀스형 연산자](#시퀀스형-연산자)
+  * [연산자 우선순위 정리](#연산자-우선순위-정리)  
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -36,16 +36,16 @@
 # Data Types  
 ## Numeric Types
 [python_basic_syntax 참고](https://github.com/waterhyun/TIL/blob/master/python/python_basic_syntax.md)
-### 1) int
-### 2) float
-### 3) complex
+### 1. int
+### 2. float
+### 3. complex
 
 
 ## Sequence Types
-### 1) str
+### 1. str
 [python_basic_syntax 참고](https://github.com/waterhyun/TIL/blob/master/python/python_basic_syntax.md)
 
-### 2) list
+### 2. list
 📍 여러 개의 값을 순서대로 저장하는 변경 가능한 시퀀스 자료형
 
 📌 리스트 표현
@@ -103,7 +103,7 @@ a, b, c = my_list
 print(a, b, c) # 1 2 3
 ```
 
-### 3) tuple
+### 3. tuple
 📍 여러 개의 값을 순서대로 저장하는 변경 불가능한 시퀀스 자료형
 
 
@@ -171,7 +171,7 @@ print(y)
 x, y = 10, 20
 ```
 
-### 4) range
+### 4. range
 📍 연속된 정수 시퀀스를 생성하는 변경 불가능한 자료형
 
 `range(시작 값, 끝 값, 증가 값)`
@@ -225,7 +225,7 @@ for i in range(1, 10, 2):
 ```
 
 ## Non-sequence Types
-### 1) dict
+### 1. dict
 📍 key-value 쌍으로 이루어진 순서와 중복이 없는 변경 가능한 자료형
 
 📌 딕셔너리 표현
@@ -260,7 +260,7 @@ my_dict['apple'] = 100
 print(my_dict) # {'apple': 100, 'list': [1, 2, 3], 'banana': 50}
 ```
 
-### 2) set
+### 2. set
 📍 순서와 중복이 없는 변경 가능한 자료형 
 
 📌 세트 표현
@@ -292,7 +292,7 @@ print(my_set_1 & my_set_2)  # {3}
 ```
 
 ## Other Types
-### 1) None
+### 1. None
 📍 파이썬에서 **값이 없음**을 표현하는 자료형
 
 📌 None 표현
@@ -301,7 +301,7 @@ print(my_set_1 & my_set_2)  # {3}
 variable = None
 print(variable)  # None
 ```
-### 2) Boolean
+### 2. Boolean
 📍 참(True)과 거짓(False)을 표현하는 자료형
 
 📌불리언 표현

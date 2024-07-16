@@ -1,29 +1,29 @@
 # Python_basic_syntax
 ## Contents
 
-- [표현식 Expression](#----expression)
-- [타입 Type](#---type)
-- [산술 연산자](#------)
-  * [우선순위](#----)
-- [변수 Variable](#---variable)
-  * [변수명 규칙](#------)
+- [표현식 Expression](#표현식-Expression)
+- [타입 Type](#타입-Type)
+- [산술 연산자](#산술-연산자)
+  * [우선순위](#우선순위)
+- [변수 Variable](#변수-Variable)
+  * [변수명 규칙](#변수명-규칙)
   * [Python Style Guide](#python-style-guide)
   * [Python Tutor](#python-tutor)
 - [Data Types](#data-types)
   * [Numeric Types](#numeric-types)
-    + [1. int (정수 자료형)](#1-int---------)
-    + [2. float (실수 자료형)](#2-float---------)
+    + [1. int](#1-int)
+    + [2. float](#2-float)
     + [3. complex](#3-complex)
-  * [Text Sequence Type(str)](#text-sequence-type-str-)
+  * [Text Sequence Type(str)](#text-sequence-type(str))
     + [Sequence Types](#sequence-types)
-    + [Sequence Types 특징](#sequence-types---)
-    + [str 문자열](#str----)
-    + [📍 Escape Sequence](#---escape-sequence)
-    + [📌 f-string(f 문자열 포매팅)](#---f-string-f---------)
-    + [📌 % 연산자를 사용 하는 방법](#------------------)
-    + [📌 str.format() 메서드](#---strformat------)
-    + [📍 Indexing/Slicing](#---indexing-slicing)
-- [print()](#print--)
+    + [Sequence Types 특징](#Sequence-Types-특징)
+    + [str 문자열](#str-문자열)
+    + [Escape Sequence](#escape-sequence)
+    + [f-string](#f-string)
+    + [% formatting](#--formatting)
+    + [str.format()](#strformat--)
+    + [Indexing, Slicing](#indexing--slicing)
+- [print()](#print)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -146,7 +146,7 @@ number가 재할당 되어도 double의 경우 여전히 20을 참조.
 - 타입을 명시적으로 지정하면 코드를 읽는 사람이 변수의 의도를 더 쉽게 이해할 수 있고, 잘못된 데이터 탑으로 인한 오류를 미리 예방
 
 ## Numeric Types
-### 1. int (정수 자료형)
+### 1. int
 
 진수 표현
 - 2진수(binary) : 0b
@@ -157,7 +157,7 @@ print(0b10) # 2
 print(0o30) # 24  
 print(0x10) # 16
 ```
-### 2. float (실수 자료형)
+### 2. float
 프로그래밍 언어에서 float은 실수에 대한 근삿값
 
 📃 1.2는 정확히 1.2가 아니라 1.2에 가까운 근삿값으로 처리 됨 -> **유한 정밀도**
@@ -247,7 +247,7 @@ print(type('hello, world!')) # <class 'str'>
 <br>
 
 
-### 📍 Escape Sequence  
+### Escape Sequence  
 - 역슬래시 뒤에 특정문자가 와서 특수한 기능을 하는 문자 조합
 - python의 일반적인 문법 규칙을 잠시 탈출한다는 의미  
 
@@ -271,7 +271,7 @@ print(type('hello, world!')) # <class 'str'>
 📍 String Interpolation  (문자열 포맷팅 String formatting)
 문자열 내에 변수나 표현식을 삽입하는 방법
 
-### 📌 f-string(f 문자열 포매팅)
+### f-string
 - 문자열에 f 또는 F 접두어를 붙이고 표현식을 {expression}로 작성하는 문법
 - 문자열에 파이썬 표현식의 값을 삽입할 수 있음
 ```python
@@ -310,7 +310,7 @@ f'{{ and }}' # '{ and }'
 
 ```
 
-### 📌 % 연산자를 사용 하는 방법
+### % formatting
 ```python
 # 숫자 대입
 "I eat %d apples." % 3
@@ -356,7 +356,7 @@ day = "three"
 
 <br>  
 
-### 📌 str.format() 메서드
+### str.format()
 ```python
 # 숫자 바로 대입하기
 "I eat {0} apples".format(3) # 'I eat 3 apples'
@@ -393,7 +393,7 @@ y = 3.42134234
 
 <br> 
 
-### 📍 Indexing/Slicing
+### Indexing, Slicing
 
 - 인덱스 index : 시퀀스 내의 값들에 대한 고유한 번호로, 각 값의 위치를 식별하는 데 사용되는 숫자  
 - 슬라이싱 scling: 시퀀스의 일부분을 선택하여 추출하는 작업 -> 시작 인덱스와 끝 인덱스를 지정하여 해당 범위의 값을 포함하는 새로운 시퀀스를 생성
