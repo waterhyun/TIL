@@ -3,11 +3,12 @@
 - [Copy](#copy)
   * [Contents](#contents)
   * [Assignment copy](#assignment-copy)
-  * [Copy moduel](#copy-moduel)
-    + [Shallow moduel](#shallow-moduel)
+  * [Copy module](#copy-module)
+    + [Shallow module](#shallow-module)
       - [Using copy module](#using-copy-module)
-      - [Using [:], .copy()](#using------copy--)
+      - [Using another way](#using-another-way)
     + [Deep copy](#deep-copy)
+
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -77,7 +78,7 @@ id(list2) # 2600865425856
 <!-- ![shallow_moduel1](copy_method.png) -->
 <img src="image/copy/copy_method.png" alt="shallow_moduel1" width="300"/>
 
-#### Using [:], .copy()
+#### Using another way
 ```python
 list1 = [1,2,3]
 list2 = list1.copy() # .copy() 사용
