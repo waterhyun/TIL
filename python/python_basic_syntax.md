@@ -8,6 +8,7 @@ Contents
 > - Numeric Types
 > - Text Sequence Type(str)
 > 
+> print()  
 > Python Style Guide  
 > Python Tutor
 
@@ -395,6 +396,8 @@ my_str[1] = 'z'
 ```
 ⭐ 문자열은 불변(변경불가)
 
+
+----
 
 ### print()
 ```python
