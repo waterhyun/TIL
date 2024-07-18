@@ -457,7 +457,7 @@ for i in range(10):
 ```
 
 <details>
-  <summary> break 예제 </summary> 
+  <summary> <span style="font-size: 13px;"> break 예제 </span></summary> 
 
 ```python
 # break 예시 1 - "프로그램 종료 조건 만들기"
@@ -511,7 +511,7 @@ for i in range(10):
 ```
 
 <details>
-  <summary> continue 예제 </summary> 
+  <summary><span style="font-size: 13px;"> continue 예제 </span></summary> 
 
 
 ```python
@@ -537,7 +537,7 @@ for i in range(10):
 ```
 
 <details>
-  <summary> pass 예제 </summary> 
+  <summary> <span style="font-size: 13px;"> pass 예제 </span></summary> 
 
 
 1. 코드 작성 중 미완성 부분  
