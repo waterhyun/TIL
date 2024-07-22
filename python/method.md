@@ -137,6 +137,7 @@ print(string2.islower())  # False
 
 #### `.replace(old, new[, count])`
 바꿀 대상 글자를 새로운 글자로 바꿔서 반환  
+
 ```python
 text = 'Hello, world!'
 new_text = text.replace('world', 'Python')
@@ -149,6 +150,7 @@ print(new_text)  # Hello, Python! world!  world!
 
 #### `.strip([chars])`
 문자열의 시작과 끝에 있는 공백 혹은 지정한 문자를 제거
+
 ```python
 text = '   Hello, world!   '
 new_text = text.strip()
@@ -157,13 +159,16 @@ print(new_text) # 'Hello, world!'
 
 #### `.split(sep=None, maxsplit = -1)`
 지정한 문자를 구분자로 문자열을 분리하여 문자열의 리스트로 반환
+
 ```python
 text = 'Hello, world!'
 words = text.split(',')
-print(words) # ['Hello', 'world!']
+print(words) # ['Hello', ' world!']
 ```
 
 #### `'separator'.join(iterable)`
+iterable의 문자열을 연결한 문자열을 반환
+
 ```python
 words = ['Hello', 'world!']
 text = '-'.join(words)
@@ -171,6 +176,7 @@ print(text) # 'Hello-world!'
 ```
 
 #### `s.capitalize()`, `s.title()`, `s.upper()`, `s.lower()`, `s.swapcase()`
+
 ```python
 text = 'heLLo, woRld!'
 new_text1 = text.capitalize()  # Hello, world!
