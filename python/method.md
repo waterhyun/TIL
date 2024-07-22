@@ -332,6 +332,9 @@ print(my_list)  # [3, 2, 1]
 데이터 타입과 복사
 - 파이썬에서는 데이터에 분류에 따라 복사가 달라짐
 - '변경 가능한 데이터 타입'과 '변경 불가능한 데이터 타입'을 다르게 다룸
+
+[참고 자료](https://github.com/waterhyun/TIL/blob/master/python/copy_method.md)
+
 ### 변경 가능한 데이터 타입
 ```python
 a = [1, 2, 3, 4]
