@@ -599,7 +599,7 @@ print([1, 2] * 2)  # [1, 2, 1, 2]
 summary
 
 
-| Data Types | Orderd | Mutable | Constructor |
+| Data Types | Ordered | Mutable | Constructor |
 | ----- | ----- | ----- | ----- |
 | Str | Yes | No | `''` or `str()` |
 | List | Yes | Yes | `[]` or `list()` |
@@ -610,7 +610,7 @@ summary
 📍 여러 개의 값을 순서대로 저장하는 변경 가능한 시퀀스 자료형 = list  
 📍 여러 개의 값을 순서대로 저장하는 변경 불가능한 시퀀스 자료형 = tuple  
 📍 key-value 쌍으로 이루어진 순서와 중복이 없는 변경 가능한 자료형 = dictionary  
-📍 순서와 중복이 없는 변경 가능한 자료형 = tuple
+📍 순서와 중복이 없는 변경 가능한 자료형 = set
 
 A dictionary itself is mutable, but each of its individual keys must be immutable.
 
