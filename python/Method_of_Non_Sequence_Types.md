@@ -334,8 +334,6 @@ print(set1.union(set2))  # {0, 1, 2, 3, 4, 5, 7, 9}
 
 <p align = 'center'>
  <img src = image\data-structure\hash-table.png  width=350>
- 
- [사진 출처](https://www.learnbyexample.org/python-set/)
 </p>
 
 📍 해시 (Hash)
@@ -441,8 +439,7 @@ print(hash((1, 2, [3, 4])))  # TypeError: unhashable type: 'list'
 ```
 <p align = 'center'>
  <img src = image\data-structure\hash-table2.png  width=500>
- 
- [사진 출처](https://www.learnbyexample.org/python-set/)
+
 </p>
 
 📍 hashable과 불변성 간의 관계
