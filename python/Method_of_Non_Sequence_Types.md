@@ -1,5 +1,31 @@
-# Non-Sequence-Data-Types
+## Contents
+- [Non-Sequence-Data-Types](#non-sequence-data-types)
+  * [Dictionary](#dictionary)
+    + [딕셔너리 관련 메서드](#딕셔너리-관련-메서드)
+      - `.clear()`
+      - `.get(key[,default])`
+      - `.keys()`
+      - `.values()`
+      - `.items()`
+      - `.pop(key[,default])`
+      - `.setdefault(key[,default])`
+      - `.update([other])`
+  * [Set](#set)
+    + [세트 관련 메서드](#세트-관련-메서드)
+      - `.add(x)`
+      - `.clear()`
+      - `.remove(x)`
+      - `.pop()`
+      - `.discard()`
+      - `.update(iterable)`
+    + [세트의 집합 메서드](#세트의-집합-메서드)
+- [참고](#참고)
+  * [Hash Table](#hash-table)
+  * [파이썬 문법 규격](#파이썬-문법-규격)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+# Non-Sequence-Data-Types
 ## Dictionary
 📍 고유한 항목들의 정렬되지 않은 컬렉션
 
