@@ -318,6 +318,7 @@ print(c2.pi)  # 5 (새로운 인스턴스 변수가 생성됨)
 <p align = "center">
   <img src = "https://miro.medium.com/v2/resize:fit:640/format:webp/1*Z-_zt8Ygbeg9nIzSGH8Q4A.png", width = 500>
 </p>
+
 [이미지 출처](https://miro.medium.com/v2/resize:fit:640/format:webp/1*Z-_zt8Ygbeg9nIzSGH8Q4A.png)
 
 ## 인스턴스 메서드
