@@ -25,6 +25,9 @@
     + [Indexing, Slicing](#indexing-slicing)
 - [print()](#print)
 - [copy()](#copy)
+- [아스키코드 변환 함수](#아스키-코드-변환-함수)
+  * `ord()`
+  * `chr()`
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -431,3 +434,39 @@ print(...)
     end:   string appended after the last value, default a newline.
     flush: whether to forcibly flush the stream.
 ```
+
+# 아스키코드 변환 함수
+📍 아스키코드란?  
+ASCII(American Standard Code for Information Interchage, 미국 정보 교환 표준 부호)
+
+- 1963년 미국 ANSI에서 표준화한 정보교환용 7비트 부호체계.
+- 컴퓨터에서 문자를 숫자로 표현하기 위한  표준 코드 체계.
+
+특징
+- 코드 값: 7비트 코드 값을 할당하여 총 128개의 가능한 문자와 기호를 표현할 수 있음.
+- 문자 범위: 알파벳 (대소문자), 숫자, 구두점, 제어 문자(예: 개행 문자, 탭 등) 등을 포함한 다양한 문자를 포함
+- 표현 방법: 각 문자는 0부터 127까지의 정수로 나타낼 수 있음
+- 확장 ASCII: 초기 ASCII는 7비트로 제한되어 있었지만, 후에 8비트가 도입되어 추가적인 문자나 기호를 포함할 수 있게 됨
+- 유니코드와 관계: 유니코드가 보편화되면서 전 세계의 모든 문자를 포함하는 더 넓은 문자 인코딩 체계가 사용되고 있지만 ASCII는 컴퓨터 네트워킹, 파일 시스템 등에서 기본적인 텍스트 처리에 사용됨.
+
+
+## `ord(문자열)`
+ordinal position의 약자  
+문자열을 아스키코드로 반환할 수 있는 함수
+```py
+ord('A')
+# 65
+ord('a')
+# 97
+```
+## `chr(숫자)`
+아스키코드를 문자열로 변환하는 함수.  
+```py
+for i in range(65, 123):
+	print(chr(i), end =' ')
+
+# A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z 
+```
+<p align = 'center'>
+  <img src = 'image\basic\ascii_table.png' width = 400>
+</p>
