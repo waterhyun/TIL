@@ -15,6 +15,20 @@
   - [단순 반복문과 배열](#단순-반복문과-배열)
   - [재귀](#재귀)
   - [비트연산](#비트연산)
+- [Search 검색](#search-검색)
+  - [순차 검색 Sequential Search](#순차-검색-sequential-search)
+    - [검색 과정](#검색-과정)
+    - [슈도코드](#슈도코드)
+    - [정렬되어 있지 않은 경우](#정렬되어-있지-않은-경우)
+    - [정렬되어 있는 경우](#정렬되어-있는-경우)
+  - [이진 검색 Binary Search](#이진-검색-binary-search)
+    - [binary search 검색 과정](#binary-search-검색-과정)
+    - [구현](#구현)
+    - [binary search 슈도코드](#binary-search-슈도코드)
+    - [재귀 함수 이용](#재귀-함수-이용)
+    - [실사용 예시](#실사용-예시)
+    - [인덱스](#인덱스)
+
   
 
 # 2차원 List
@@ -430,3 +444,228 @@ for i in range(1 << n):
 ```
 
 </details>
+
+
+# Search 검색
+
+- 저장되어 있는 자료 중에서 **원하는 항목**을 찾는 작업
+- 목적하는 **탐색 키**를 가진 항목을 찾는 것
+    - 탐색 키(search key): 자료를 구별하여 인식할 수 있는 키
+- 검색의 종류
+    - 순차 검색 sequential search
+    - 이진 검색 binary search : 내가 가진 값의 중간을 이용
+    - 해쉬 hash : 고유한 위치 값을 사용
+
+## 순차 검색 Sequential Search
+
+- 일렬로 되어 있는 자료를 순서대로 검색하는 방법
+    - 가장 간단하고 **직관적인 검색 방법**
+    - 배열이나 연결 리스트 등 순차구조로 구현된 자료구조에서 원하는 항목을 찾을 때 유용함
+    - 알고리즘이 단순하여 구현이 쉽지만, 검색 대상의 수가 많은 경우에는 수행시간이 급격히 증가하여 비효율적임
+- 2가지 경우
+    - 정렬되어 있지 않은 경우
+    - 정렬되어 있는 경우
+- 정렬을 하는데 필요한 시간과 검색 시간을 합쳐서 유리한지 판단하는 것도 필요
+
+### 검색 과정
+
+- 첫 번재 원소부터 순서대로 검색 대상과 키 값이 같은 원소가 있는지 비교하며 찾음
+- 키 값이 동일한 원소를 찾으면 그 원소의 인덱스를 반환한다.
+- 자료구조의 마지막에 이를 때까지 검색 대상을 찾지 못하면 검색 실패
+
+<p align = 'center'>
+  <image src = '..\image\list2-search1.png'>
+</p>
+
+<p align = 'center'>
+  <image src = '..\image\list2-search2.png'>
+</p>
+  
+  - 모든 원소에 접근하는 것이 아닌거 같다? = 원칙적으로 다 검색(일찍 찾는 것일뿐)
+  - -1을 반환하도록 함(인덱스 -1)이 아님!
+
+### 슈도코드
+
+```python
+def f(key, A):
+	for i : 0 -> N-1
+		if key == A[i]
+			return i
+	
+	return -1
+```
+
+함수가 불편하면 아래와 같이 작성해도 되지만 되도록이면 함수 형태면 함수를 사용하는 것이 좋다
+
+```python
+return -1
+for i : 0 -> N-1
+	if key == A[i]
+		return i
+```
+
+### 정렬되어 있지 않은 경우
+
+- 찾고자 하는 원소의 순서에 따라 비교 횟수가 결정됨
+- 첫 번째 원소를 찾을 때는 1번 비교, 두 번째 원소를 찾을 때는 2번 비교
+- 정렬되지 않은 자료에서 순차 검색의 평균 비교 횟수
+    
+    $(1/n)\times(1+2+3+...+n) = (n+1)/2$
+    
+- 시간 복잡도: $O(n)$
+- 구현 예시(슈도코드)
+    
+    ```python
+    # while 반복문을 이용
+    def sequential_search(arr, n, key):
+    	i <- 0
+    	while i < n and arr[i] != key: # 배열끝에 가거나, 키를 찾으면 반복문 종료
+    		i <- i+1
+    	if i < n : return i
+    	else: return -1
+    ```
+    
+
+### 정렬되어 있는 경우
+
+<p align = 'center'>
+  <image src = '..\image\list2-search3.png'>
+</p>
+
+<p align = 'center'>
+  <image src = '..\image\list2-search4.png'>
+</p>
+
+- 자료가 오름차순으로 정렬된 상태에서 검색을 실시한다고 가정.
+- 자료를 순차적으로 검색하면서 키 값을 비교하여, 
+원소의 키 값이 검색 대상의 키 값보다 크면 
+찾는 원소가 없다는 것이므로 더 이상 검색하지 않고 검색을 종료한다.
+    - 내가 찾고 싶은 숫자가 7인데 6 다음이 9이면 없는 거임
+- 찾고자 하는 원소의 순서에 따라 비교 횟수가 결정됨
+    - 정렬이 되어있으므로, 검색 실패를 반환하는 경우 평균 비교 횟수가 반으로 줄어든다.
+    - 시간 복잡도 $O(n)$
+- 슈도코드
+    
+    ```python
+    def sequential_Search2(arr, n , key):
+    	i <- 0
+    	while i < n and arr[i] < key: 
+    		# 배열끝에 가거나, 키보다 크거나 같으면 종료
+    		# 조건문에 항상 인덱스를 먼저 설정하는 것이 좋음
+    		i <- i+1
+    	if i < n and arr[i] == key : return i
+    		# 벗어나지 않았고 key를 찾았으면 index 리턴
+    	else: return -1
+    		# 벗어났고, key도 못찾았으면 -1 리턴
+    ```
+    
+
+## 이진 검색 Binary Search
+
+- 자료의 가운데에 있는 항목의 키 값과 비교하여 다음 검색의 위치를 결정하고 검색을 계속 진행하는 방법
+    - 목적 키를 찾을 때까지 이진 검색을 순환적으로 반복 수행함으로써 검색 범위를 반으로 줄여가면서 보다 빠르게 검색을 수행함
+- 이진 검색을 하기 위해는 **자료가 정렬된 상태**여야 한다.
+
+### binary search 검색 과정
+
+<p align = 'center'>
+  <image src = '..\image\list2-search5.png'>
+</p>
+
+<p align = 'center'>
+  <image src = '..\image\list2-search6.png'>
+</p>
+
+- 홀수 : (start+end)//2
+- 짝수 : (start+end)//2 면 중간에서 왼쪽
+    - 0 1 2 3
+    - (0+3)//2 = 1
+    - 그러면 늘 오른쪽 선택하면 됨
+
+### 구현
+
+- 검색 범위의 시작점(start, left)과 종료점(end, right)을 이용하여 검색을 반복 수행한다.
+- 이진 검색의 경우, 자료에 삽입이나 삭제가 발생했을 때 배열의 상태를 항상 정렬 상태로 유지하는 추가 작업이 필요하다.
+    - 더 이상 삽입 삭제가 필요 없는 자료에서 쓰는 것이 좋다.
+
+### binary search 슈도코드
+
+```python
+mid <- (start+end)//2
+if arr[mid] == key: # 찾는 경우
+	return mid
+if arr[mid] < key:
+	# 검색 범위가 오른쪽으로 바뀔 때
+	start = mid + 1
+else:
+	# 검색 범위가 왼쪽으로 바뀔 때
+	end = mid - 1
+```
+
+→ 위 과정을 반복 해야함
+
+```python
+while 남은 구간이 있으면.. 원소가 하나라도 남아 있으면...
+```
+
+```python
+def binary_Search(arr, n, key):
+	start = 0
+	end = n-1
+	while start <= end: # 남은 구간이 없을 때 까지 반복
+		middle = (start+end)//2
+		if arr[middle] == key # 검색성공
+			return true
+		elif arr[middle] > key:
+			# 왼쪽 부분으로 이동
+			end = middle - 1
+		else:
+			# 오른쪽 부분으로 이동
+			start = middle + 1
+	
+	return false # 검색 실패
+```
+
+- `while start <= end`
+    - □ → start == end == middle
+    - □□□ → start < end
+
+### 재귀 함수 이용
+
+- 아래와 같이 재귀 함수를 이용하여 이진 검색을 구현할 수 있다.
+- 반복 vs 재귀
+    - 똑같은 작업을 계속한다고 했을 때 반복이 더 빠름
+
+```python
+def Binary_Search2(arr, low, high, key):
+	if low > high: # 검색 실패
+		return Flase
+	else:
+		middle = (low + high) // 2
+		if key == arr[middle]:
+			return True
+		elif key < arr[middle]:
+			return Binary_Search2(arr, low, middle-1, key)
+		elif arr[middle] < key:
+			return Binary_Search2(arr, middle+1, high, key)
+```
+
+### 실사용 예시
+
+- 다음 예에서 원본 데이터에서 배열과 별개로, 배열 인덱스를 추가한 예를 보여주고 있다.
+- 원본 데이터에 데이터가 삽입될 경우 상대적으로 크기가 작은 인덱스 배열을 정렬하기 때문에 속도가 빠르다.
+
+<p align = 'center'>
+  <image src = '..\image\list2-func.png'>
+</p>
+
+### 인덱스
+
+- 인덱스라는 용어는 데이터베이스에서 유래했으며, 테이블에 대한 동작 속도를 높여주는 자료 구조를 일컫는다.
+- 데이터베이스 분야가 아닌 곳에서는 Look up table 등의 용어를 사용하기도 한다.
+- 인덱스를 저장하는데 필요한 디스크 공간은 보통 테이블을 저장하는데 필요한 디스크 공간보다 작다.
+    - 왜냐하면 보통 인덱스는 키-필드만 갖고 있고, 테이블의 다른 세부 항목들은 갖고 있지 않기 때문이다.
+- 대량의 데이터를 매번 정렬하면, 프로그램의 반응은 느려질 수 밖에 없다. 따라서 이러한 대량 데이터의 성능 저하 문제를 해결하기 위해 배열 인덱스를 사용할 수 있다.
+    - 데이터베이스 인덱스는 이진 탐색 트리 구조로 되어 있다.
+    - [참고] **이진 탐색 트리** - 삽입, 삭제, 정렬까지 편하게 할 수 있는 자료구조
+        - 대부분 정수형 자료만을 이용함
