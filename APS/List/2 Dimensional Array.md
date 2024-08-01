@@ -28,8 +28,15 @@
     - [재귀 함수 이용](#재귀-함수-이용)
     - [실사용 예시](#실사용-예시)
     - [인덱스](#인덱스)
-
-  
+- [선택 정렬 Selection Sort](#선택-정렬-selection-sort)
+  - [Selection Sort 정렬 과정](#selection-sort-정렬-과정)
+  - [Selection Sort 슈도코드](#selection-sort-슈도코드)
+  - [선택 정렬 코드](#선택-정렬-코드)
+- [셀렉션 알고리즘 Selection Algorithm](#셀렉션-알고리즘-selection-algorithm)
+  - [Selection Algorithm 선택 과정](#selection-algorithm-선택-과정)
+  - [일반적인 셀렉션 알고리즘](#일반적인-셀렉션-알고리즘)
+  - [Selection Algorithm 코드](#selection-algorithm-코드)
+- [포켓볼 순서대로 정렬하기](#포켓볼-순서대로-정렬하기)
 
 # 2차원 List
 ## 구조
@@ -669,3 +676,113 @@ def Binary_Search2(arr, low, high, key):
     - 데이터베이스 인덱스는 이진 탐색 트리 구조로 되어 있다.
     - [참고] **이진 탐색 트리** - 삽입, 삭제, 정렬까지 편하게 할 수 있는 자료구조
         - 대부분 정수형 자료만을 이용함
+  
+
+# 선택 정렬 Selection Sort
+<p align = 'center'>
+  <image src = 'https://www.notion.so/image/https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A640%2Fformat%3Awebp%2F1*H2bCd6eoIONJIUnG5Jm9sQ.gif?table=block&id=875a16e9-9141-4834-973c-046061b37b45&spaceId=ad2b66d4-21f0-472f-9113-bda789629967&userId=dcd52217-99c9-4b24-a664-df8a623a2c57&cache=v2' width = 350>
+</p>
+
+- 주어진 자료들 중 가장 작은 값의 원소부터 차례대로 선택하여 위치를 교환하는 방식
+    - 앞서 살펴본 셀렉션 알고리즘(선택 검색)을 전체 자료에 적용한 것이다.
+- 시간 복잡도 $O(n^2)$ (코드는 단순)
+
+## Selection Sort 정렬 과정
+
+1. 주어진 리스트 중에서 최소값을 찾는다.
+    <p align = 'center'>
+      <image src = '..\image\list2-ss1.png' width = 350>
+    </p>
+1. 그 값을 리스트의 맨 앞에 위치한 값과 교환하다.
+    <p align = 'center'>
+      <image src = '..\image\list2-ss2.png' width = 350>
+    </p>
+
+1. 맨 처음 위치를 제외한 나머지 리스트를 대사응로 위의 과정을 반복한다.
+    
+    3-1. 미정렬 리스트에서 최솟값을 찾음
+      <p align = 'center'>
+        <image src = '..\image\list2-ss3.png' width = 350>
+      </p>
+    
+    3-2. 리스트의 맨 앞에 위치한 값과 교환
+      <p align = 'center'>
+        <image src = '..\image\list2-ss4.png' width = 350>
+      </p>
+    
+    3~.
+    
+      <p align = 'center'>
+        <image src = '..\image\list2-ss5.png' width = 350>
+      </p>
+      <p align = 'center'>
+        <image src = '..\image\list2-ss6.png' width = 350>
+      </p>
+      <p align = 'center'>
+        <image src = '..\image\list2-ss7.png' width = 350>
+      </p>
+      <p align = 'center'>
+        <image src = '..\image\list2-ss8.png' width = 350>
+      </p>
+    
+    
+    - 미정렬 원소가 하나 남은 상황에서는 마지막 원소가 가장 큰 값게 되므로 실행을 종료하고 선택 정렬이 완료된다.
+    - 값이 아니라 인덱스를 가지고 움직여야 함
+
+## Selection Sort 슈도코드
+
+```python
+def Selection_Sort(a[], n)
+	for i from 0 to n-2 # 기준 위치
+		a[i], ... ,a[n-1] 원소 중 최소값 a[k] 찾음
+		a[i]와 a[k] 교환
+```
+
+## 선택 정렬 코드
+
+```python
+def Selection_Sort(arr, n):
+	for i in range(n-1): # 기준 위치 i, 구간 시작
+		min_idx = i # 기준 위치를 최솟값 위치로 가정
+		for j in range(i+1, n): # 전체를 훑으면서 진짜 최솟값의 인덱스를 찾음
+			if arr[min_idx] > a[j]:
+				min_idx = j
+		# 구간의 최솟값을 기준위치로 이동
+		arr[i], arr[min_idx] = arr[min_idx], arr[i]
+```
+
+# 셀렉션 알고리즘 Selection Algorithm
+
+- 저장되어 있는 자료로부터 k번째로 큰 혹은 작은 원소를 찾는 방법을 셀렉션 알고리즘이라 함.
+    - 최솟값, 최댓값 혹은 중간값을 찾는 알고리즘을 의미하기도 한다.
+
+## Selection Algorithm 선택 과정
+
+- 정렬 알고리즘을 이용하여 자료 정렬하기
+- 원하는 순서에 있는 원소 가져오기
+
+## 일반적인 셀렉션 알고리즘
+
+- k번째로 작은 원소를 찾는 알고리즘
+    - 1번 부터 k번째 까지 작은 원소를 찾아 배열의 앞쪽으로 이동시키고, 배열의 k번째를 반환한다.
+    - k가 비교적 작을 때 유용
+- 시간 복잡도 $O(kn)$
+
+## Selection Algorithm 코드
+
+```python
+def select(arr, k):
+	for i in range(0, k):
+		min_index = i
+		for j in range(i+1, len(arr)):
+			if arr[min_index] > arr[j]:
+				min_index = j
+		arr[i], arr[min_index] = arr[min_index], arr[i]
+	
+	return arr[k-1]	
+```
+
+# 포켓볼 순서대로 정렬하기
+
+- 흩어진 당구공을 오른쪽 정리한다고 하자. 어떻게 하겠는가?
+- 많은 사람들은 당구대 위에 있는 공 중 가장 작은 숫자의 공부터 골라서 차례대로 정리할 것이다. 이것이 바로 선택 정렬이다.
