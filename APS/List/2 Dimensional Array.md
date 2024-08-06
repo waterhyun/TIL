@@ -13,7 +13,8 @@
 - [부분집합](#부분집합)
   - [itertools 라이브러리의 combinations 메서드 사용하기](#itertools-라이브러리의-combinations-메서드-사용하기)
   - [단순 반복문과 배열](#단순-반복문과-배열)
-  - [재귀](#재귀)
+  - [집합 사용](#집합-사용)
+  - [재귀적 방법](#재귀적-방법)
   - [비트연산](#비트연산)
 - [Search 검색](#search-검색)
   - [순차 검색 Sequential Search](#순차-검색-sequential-search)
@@ -256,13 +257,76 @@ print(list(zip(*arr)))  # [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
   - {1, 2, 3, 4} ➡ 2 X 2 X 2 X 2 = 16가지
 
 ## itertools 라이브러리의 combinations 메서드 사용하기
-🤔
+
+```python
+from itertools import combinations
+
+def generate_subsets(nums):
+    result = []
+    for r in range(len(nums) + 1):
+        result.extend(combinations(nums, r))
+    return [list(subset) for subset in result]
+
+# 사용 예시
+nums = [1, 2, 3]
+print(generate_subsets(nums))
+
+
+# [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+
+```
 
 ## 단순 반복문과 배열
-🤔
 
-## 재귀
-🤔
+```py
+def generate_subsets(nums):
+    subsets = [[]]
+    for num in nums:
+        subsets += [curr + [num] for curr in subsets]
+    return subsets
+
+# 사용 예시
+nums = [1, 2, 3]
+print(generate_subsets(nums))
+```
+
+## 집합 사용
+```py
+def generate_subsets(nums):
+    result = {frozenset()}
+
+    for num in nums:
+        result |= {subset | {num} for subset in result}
+    
+    return [list(subset) for subset in result]
+
+# 사용 예시
+nums = [1, 2, 3]
+print(generate_subsets(nums))
+```
+
+## 재귀적 방법
+각 원소에 대해 두 가지 선택이 있다는 아이디어를 기반으로 함.
+```py
+def generate_subsets(nums):
+    def backtrack(start, path):
+        # 현재 부분집합을 결과에 추가
+        result.append(path)
+        # 나머지 원소를 고려하여 모든 조합 생성
+        for i in range(start, len(nums)):
+            backtrack(i + 1, path + [nums[i]])
+
+    result = []
+    backtrack(0, [])
+    return result
+
+
+# 사용예시
+nums = [1, 2, 3]
+print(generate_subsets(nums))
+
+# [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]
+```
 
 ## 비트연산
 
@@ -451,6 +515,27 @@ for i in range(1 << n):
 ```
 
 </details>
+
+정리! 📌비트 마스크 방법 : Bit Masking Method
+```py
+def generate_subsets(nums):
+    result = []
+    n = len(nums)
+    for i in range(1 << n):  # 2^n 가지 경우의 수
+        subset = []
+        for j in range(n):
+            if i & (1 << j):  # j번째 비트가 설정되어 있는지 확인
+                subset.append(nums[j])
+        result.append(subset)
+    return result
+
+# 사용 예시
+nums = [1, 2, 3]
+print(generate_subsets(nums))
+
+# [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+```
+
 
 
 # Search 검색
