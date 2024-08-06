@@ -1,34 +1,36 @@
 # Python_basic_syntax 2
 ## Contents
+- [Python\_basic\_syntax 2](#python_basic_syntax-2)
+  - [Contents](#contents)
 - [Data Types](#data-types)
-  * [Numeric Types](#numeric-types)
-    + [1. int](#1-int)
-    + [2. float](#2-float)
-    + [3. complex](#3-complex)
-  * [Sequence Types](#sequence-types)
-    + [1. str](#1-str)
-    + [2. list](#2-list)
-    + [3. tuple](#3-tuple)
-    + [4. range](#4-range)
-  * [Non-sequence Types](#non-sequence-types)
-    + [1. dict](#1-dict)
-    + [2. set](#2-set)
-  * [Other Types](#other-types)
-    + [1. None](#1-none)
-    + [2. Boolean](#2-boolean)
+  - [Numeric Types](#numeric-types)
+    - [1. int](#1-int)
+    - [2. float](#2-float)
+    - [3. complex](#3-complex)
+  - [Sequence Types](#sequence-types)
+    - [1. str](#1-str)
+    - [2. list](#2-list)
+    - [3. tuple](#3-tuple)
+    - [4. range](#4-range)
+  - [Non-sequence Types](#non-sequence-types)
+    - [1. dict](#1-dict)
+    - [2. set](#2-set)
+  - [Other Types](#other-types)
+    - [1. None](#1-none)
+    - [2. Boolean](#2-boolean)
 - [Collection](#collection)
-- [형변환 Type Conversion](#형변환-Type-Conversion)
-  * [암시적 형변화 implicit type conversion](#암시적-형변화-implicit-type-conversion)
-  * [명시적 형변화 Explicit Type conversion](#명시적-형변화-Explicit-Type-conversion)
+- [형변환 Type Conversion](#형변환-type-conversion)
+  - [암시적 형변화 implicit type conversion](#암시적-형변화-implicit-type-conversion)
+  - [명시적 형변화 Explicit Type conversion](#명시적-형변화-explicit-type-conversion)
 - [연산자](#연산자)
-  * [산술 연산자](#산술-연산자)
-  * [복합 연산자](#복합-연산자)
-  * [비교 연산자](#비교-연산자)
-  * [논리 연산자](#논리-연산자)
-  * [단축평가](#단축평가)
-  * [멤버십 연산자](#멤버십-연산자)
-  * [시퀀스형 연산자](#시퀀스형-연산자)
-  * [연산자 우선순위 정리](#연산자-우선순위-정리)  
+  - [산술 연산자](#산술-연산자)
+  - [복합 연산자](#복합-연산자)
+  - [비교 연산자](#비교-연산자)
+  - [논리 연산자](#논리-연산자)
+  - [단축평가](#단축평가)
+  - [멤버십 연산자](#멤버십-연산자)
+  - [시퀀스형 연산자](#시퀀스형-연산자)
+  - [연산자 우선순위 정리](#연산자-우선순위-정리)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -222,6 +224,17 @@ for i in range(1, 10, 2):
 # 7
 # 9
 
+```
+
+```py
+# range(0)일 때
+remain = [1]
+print(range(len(remain)-1)) # range(0, 0)
+for i in range(len(remain)-1):
+    print(i) # 나오는 거 없음
+
+result = [i for i in range(0)]
+print(result) # []
 ```
 
 ## Non-sequence Types
