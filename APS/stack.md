@@ -17,6 +17,18 @@
     - [장점](#장점)
     - [단점](#단점)
   - [재귀 호출을 사용할 때 주의할 점](#재귀-호출을-사용할-때-주의할-점)
+- [Memoization](#memoization)
+- [동적 계획법(DP; Dynamic Programming)](#동적-계획법dp-dynamic-programming)
+    - [일반적인 절차](#일반적인-절차)
+    - [동적 계획법의 접근 방식](#동적-계획법의-접근-방식)
+    - [DP 예제 - 피보나치 수열](#dp-예제---피보나치-수열)
+    - [DP의 구현 방식](#dp의-구현-방식)
+    - [동적 계획법의 활용 예시](#동적-계획법의-활용-예시)
+- [깊이 우선 탐색 DFS; Depth-First Search](#깊이-우선-탐색-dfs-depth-first-search)
+  - [DFS 주요 특징](#dfs-주요-특징)
+  - [DFS의 동작 방식](#dfs의-동작-방식)
+  - [DFS의 구현](#dfs의-구현)
+  - [DFS의 응용](#dfs의-응용)
 
 <!-- TOC end -->
 
@@ -354,3 +366,461 @@
     - pypy가 더 깊이 표현이 가능함
 
 재귀 호출은 강력한 프로그래밍 기법이지만, 적절히 사용하지 않으면 성능 문제를 일으킬 수 있으므로 신중하게 설계하는 것이 중요
+
+
+# Memoization
+
+- 컴퓨터 과학에서 성능을 향상시키기 위한 기법으로, 특히 **재귀 호출이 많은 알고리즘에서 유용**하게 사용
+
+- 이 기법의 기본 아이디어는 이미 계산한 결과를 저장해두고, 동일한 계산이 필요할 때 다시 계산하지 않고 저장된 결과를 재사용하는 것입니다.  
+    > = 이전에 계산한 값을 메모리에 저장해서 매번 다시 계산하지 않도록 하여 전체적인   실행속도를 빠르게 하는 기술 ⇒ 동적 계획법의 핵심이 되는 기술
+
+  - **문제의 정의**  
+    : 주로 문제를 작은 하위 문제로 나누어 해결하는 알고리즘에서 사용됩니다. 예를 들어, **피보나치 수열**이나 **동적 계획법**(Dynamic Programming) 문제에서 자주 사용
+  - **캐시 저장**  
+    : 각 하위 문제의 결과를 저장할 캐시(주로 해시 테이블이나 배열 형태)를 사용합니다. 이 캐시를 통해 이미 계산된 값을 저장해 두고, 같은 하위 문제를 다시 해결할 때 저장된 값을 즉시 반환
+  - **계산 최적화**  
+    : 메모이제이션을 사용하면 중복된 계산을 피할 수 있기 때문에 알고리즘의 시간 복잡도를 줄일 수 있습니다.   
+    예를 들어, 피보나치 수열의 경우, 메모이제이션 없이 단순 재귀 호출을 사용하면 지수 시간 복잡도가 발생하지만, 메모이제이션을 사용하면 선형 시간 복잡도로 해결할 수 있음.
+
+- Memoization = To put in Memory : 메모리에 넣기
+    - 기억되어야 할 것이라는 뜻의 라틴어 memorandum에서 파생되었다. 흔히 ‘기억하기’, ‘암기하기’라는 뜻의 memorization과 혼동하지만, 정확한 단어는 memoization이며 동사형은 memoize다
+
+- 구현 방법
+  - **Top-Down Approach**
+    : 주어진 문제를 재귀적으로 해결하면서 하위 문제의 결과를 캐시에 저장
+  - **Bottom-Up Approach**  
+    : 하위 문제부터 시작하여 차례대로 문제를 해결해 나가면서 결과를 저장합니다. 이 방식은 보통 반복문을 사용하여 구현
+- 예시 : 피보나치 수열
+    - 피보나치 수를 구하는 함수를 재귀함수로 구현한 알고리즘의 경우 ‘엄청난 중복 호출이 존재한다’는 문제점이 있다
+        
+        <p align = 'center'>
+        <image src = 'image\stack-memoization.png' width = 400>
+        </p>
+        
+        
+        fibo(n)의 값을 계산하자마자 저장하면(=memoize), 실행시간을 Θ(n)으로 줄일 수 있다.
+    ```py
+    # DP의 구현 방식 1 : Recursive 방식
+    # memo를 위한 배열을 할당하고, 모두 0으로 초기화
+    # memo[0]을 0으로 memo[1]는 1로 초기화 한다.
+
+    def fibo1(n):
+            global memo
+            if n >= 2 and memo[n] == 0:
+                    memo[n] = fibo1(n-1) + fibo1(n-2)
+            return memo[n]
+    memo = [0] * (n+1)
+    memo[0] = 0
+    memo[1] = 1
+    ```
+    ```py
+    def fib(n, memo={}):
+        if n in memo:
+            return memo[n]
+        if n <= 1:
+            return n
+        memo[n] = fib(n-1, memo) + fib(n-2, memo)
+        return memo[n]
+
+    print(fib(10))  # Output: 55
+    ```
+
+# 동적 계획법(DP; Dynamic Programming)
+
+
+> 💡 복잡한 문제를 해결하기 위해 사용되는 알고리즘 기법
+그리디 알고리즘과 같이 최적화 문제를 해결하는 알고리즘
+
+
+- 문제를 여러 하위 문제로 나누어 해결하고, 하위 문제의 해답을 조합하여 원래 문제를 해결하는 방식
+  - 먼저 입력 크기가 작은 부분 문제들을 모두 해결한 후에 그 해들을 이용하여 보다 큰 크기의 부분 문제들을 해결하여, 최종적으로 원래 주어진 입력의 문제를 해결하는 알고리즘
+- 동적 계획법의 주요 속성
+  - **중복되는 하위 문제** : 원래 문제를 해결하기 위해 같은 하위 문제를 여러 번 계산해야 할 때
+  - **최적 부분 구조**  : 원래 문제의 최적해가 하위 문제의 최적해로 구성될 때
+- 동적 계획법의 핵심 아이디어는 **메모이제이션**을 사용하여 하위 문제의 해답을 저장해 두고, 같은 하위 문제를 다시 계산하지 않고 저장된 결과를 재사용하는 것
+
+### 일반적인 절차
+
+1. 문제 정의   
+: 문제를 해결하기 위한 함수와 그 함수가 반환해야 하는 결과를 정의
+2. 하위 문제 정의  
+: 문제를 해결하기 위한 하위 문제를 정의하고, 각 하위 문제의 해답이 무엇인지 결정
+3. 메모이제이션 또는 테이블 구축  
+: 하위 문제의 결과를 저장하기 위한 방법을 결정.  
+메모이제이션(탑다운 접근 방식) 또는 테이블 기반 접근 방식(바텀업 접근 방식)을 사용할 수 있음
+4. 최적 해답 구성  
+: 하위 문제의 결과를 조합하여 원래 문제의 최적 해답을 구성
+
+### 동적 계획법의 접근 방식
+
+- **탑다운 방식 (Memoization)**:
+  - 재귀적으로 문제를 해결하면서, 하위 문제의 결과를 저장
+  - 이미 계산된 결과는 캐시에서 가져와서 중복 계산을 피함
+- **바텀업 방식 (Tabulation)**:
+  - 하위 문제부터 시작하여 점진적으로 문제를 해결
+  - 테이블(보통 배열이나 행렬)을 사용하여 하위 문제의 결과를 저장하고, 이를 이용해 더 큰 문제를 해결합니다.
+
+### DP 예제 - 피보나치 수열
+
+1. 문제 정의 : 피보나치 수열의 n번째 항을 구하는 문제
+2. 하위 문제 정의 : F(n) = F(n-1) + F(n-2) 를 계산
+    1. 부분 문제로 나누는 일을 끝냈으면 가장 작은 부분 문제부터 해를 구함
+    2. 그 결과를 테이블에 저장하고, 테이블에 저장된 부분 문제의 해를 이용하여 상위 문제의 해를 구함
+        
+    <p align = 'center'>
+    <image src = 'image\stack-dp1.png' width = 300>
+    </p>
+    
+        
+    
+    ```python
+    # DP의 구현 방식 2 : Iterative 방식
+    def fibo2(n):
+    		f = [0] * (n+1)
+    		f[0] = 0
+    		f[1] = 1
+    		for i in range(2, n+1):
+    				f[i] = f[i-1] + f[i-2]
+    		
+    		return f[n]
+    ```
+    
+3. Top-Down Approach
+    
+    ```python
+    def fib(n, memo={}):
+        if n in memo:
+            return memo[n]
+        if n <= 1:
+            return n
+        memo[n] = fib(n-1, memo) + fib(n-2, memo)
+        return memo[n]
+    ```
+    
+4. Bottom-Up Approach
+    
+    ```python
+    def fib(n):
+        if n <= 1:
+            return n
+        dp = [0] * (n + 1)
+        dp[1] = 1
+        for i in range(2, n + 1):
+            dp[i] = dp[i-1] + dp[i-2]
+        return dp[n]
+    ```
+    
+
+### DP의 구현 방식
+
+- recursive 방식 (예시 - fibo1())
+- iterative 방식 (예시 - fibo2())
+
+memoization을 재귀적 구조에 사용하는 것보다 반복적 구조로 DP를 구현한 것 성능 면에서 보다 효율적이다.
+
+재귀적 구조는 내부에 시스템 호출 스택을 사용하는 오버헤드가 발생하기 때문이다.
+
+### 동적 계획법의 활용 예시
+
+- **최단 경로 문제**: 다익스트라 알고리즘, 벨만-포드 알고리즘.
+- **최적화 문제**: 배낭 문제, 최장 공통 부분 수열(Longest Common Subsequence).
+- **계획 문제**: 작업 스케줄링, 자원 할당 문제
+
+동적 계획법은 효율적인 문제 해결을 위한 강력한 도구이며, 복잡한 문제를 보다 간결하고 최적화된 방법으로 해결할 수 있게 해줍니다.
+
+# 깊이 우선 탐색 DFS; Depth-First Search
+
+> 💡 그래프나 트리 구조를 탐색하는 데 사용되는 알고리즘으로, 
+가능한 깊이 들어가면서 방문하지 않는 노드를 탐색하며, 
+더 이상 깊이 들어갈 수 없을 때 이전 노드로 돌아가서 다른 경로를 탐색. 
+주로 그래프의 모든 정점을 방문하거나 특정 정점을 찾는 데 사용
+
+
+## DFS 주요 특징
+
+- **탐색 방식**:
+  - DFS는 한 정점에서 시작하여 가능한 한 깊이 탐색을 진행
+  - 더 이상 진행할 수 없는 상태가 되면, 이전의 노드로 돌아가서 다른 경로를 탐색
+    > 시작 정점의 한 방향으로 갈 수 있는 경로가 있는 곳까지 깊이 탐색해 가다가 더 이상 갈 곳이 없게 되면, 가장 마지막에 만났던 갈림길 간선이 있는 정점으로 되돌아와서 다른 방향의 정점으로 탐색을 계속 반복하여 결국 모든 정점을 방문하는 순회 방법
+- **구현 방법: ⁉ 꼭 스택만 있는게 아니라는 점을 알아두기**
+  - **재귀적 구현**: 함수가 자기 자신을 호출하여 탐색을 진행
+  - **스택 기반 구현**: 스택을 사용하여 탐색할 노드를 관리 (스택은 LIFO(Last In, First Out) 구조입니다.)
+    > 가장 마지막에 만났던 갈림길의 정점으로 되돌아가서 다시 깊이 우선 탐색을 반복해야 하므로 후입선출 구조의 스택 사용
+- **시간 복잡도**:
+  - 그래프의 정점 수를 V, 간선 수를 E라고 할 때,  
+    DFS의 시간 복잡도는 O(V+E)
+        
+- **공간 복잡도**:
+  - 스택을 사용하는 경우, 최악의 경우 O(V)의 공간이 필요
+
+## DFS의 동작 방식
+1. **시작**:
+   - 시작 정점을 선택하고, 이 정점을 방문합니다.
+   - 방문한 정점을 기록하여 무한 루프를 방지합니다.
+2. **재귀 호출 (또는 스택 사용)**:
+   - 현재 정점의 모든 인접 정점에 대해, 그 정점이 방문되지 않은 경우 재귀 호출(또는 스택에 푸시)하여 깊이 탐색을 계속합니다.
+3. **백트래킹**:
+   - 모든 인접 정점을 탐색한 후에는 이전 정점으로 돌아가서 다른 경로를 탐색합니다.
+4. **종료**:
+   - 모든 정점이 방문되거나, 특정 조건(예: 목표 정점 도달)이 충족될 때 탐색을 종료합니다.
+
+## DFS의 구현
+
+- 재귀적 구현
+    
+    ```python
+    def dfs_recursive(graph, node, visited):
+        if node not in visited:
+            visited.add(node)
+            print(node)  # 노드 방문 처리
+            for neighbor in graph[node]:
+                dfs_recursive(graph, neighbor, visited)
+    
+    # 예제 사용법
+    graph = {
+        'A': ['B', 'C'],
+        'B': ['A', 'D', 'E'],
+        'C': ['A', 'F'],
+        'D': ['B'],
+        'E': ['B', 'F'],
+        'F': ['C', 'E']
+    }
+    visited = set()
+    dfs_recursive(graph, 'A', visited)
+    
+    # A
+    # B
+    # D
+    # E
+    # F
+    # C
+    ```
+    
+- 스택 기반 구현
+    
+    ```python
+    def dfs_stack(graph, start):
+        visited = set()
+        stack = [start]
+        
+        while stack:
+            node = stack.pop()
+            if node not in visited:
+                visited.add(node)
+                print(node)  # 노드 방문 처리
+                stack.extend(neighbor for neighbor in graph[node] if neighbor not in visited)
+    
+    # 예제 사용법
+    graph = {
+        'A': ['B', 'C'],
+        'B': ['A', 'D', 'E'],
+        'C': ['A', 'F'],
+        'D': ['B'],
+        'E': ['B', 'F'],
+        'F': ['C', 'E']
+    }
+    dfs_stack(graph, 'A')
+    
+    # A
+    # C
+    # F
+    # E
+    # B
+    # D
+    ```
+    
+    ```python
+    # 슈도코드
+    visited[], stack[] 초기화
+    DFS(V)
+    	시작점 V 방문;
+    	visited[v] <- true:
+    	while{
+    		if (v의 인접 정점 중 방문 안한 정점 w가 있으면)
+    			push(v);
+    			v <- w; (w에 방문)
+    			visited[w] <- True;
+    		else:
+    			if (스택이 비어 있지 않으면)
+    				v <- pop(stack)
+    			else:
+    				break
+    	}
+    end DFS()
+    ```
+    
+<details>
+<summary>Click to toggle contents of DFS</summary>
+    
+**DFS 알고리즘 구현 단계**
+    
+1. 시작 정점 v를 결정하여 방문한다.
+  1. 정점 v에 인접한 정점 중에서
+      1. 방문하지 않은 정점 w가 있으면
+          1. 정점 v를 스택에 push하고
+          2. 정점 w를 방문
+          3. 그리고 w를 v로 하여 다시 2번을 반복
+      2. 방문하지 않은 정점이 없으면,
+          1. 탐색의 방향을 바꾸기 위해서 스택을 pop하여 받은 가장 마지막 방문 정점을 v로 하여 다시 2번 반복
+  2. 스택이 공백이 될 때까지 2번을 반복
+---
+1. 초기 상태: 배열 visited를 False로 초기화하고, 공백 스택을 생성
+        
+    <p align = 'center'>
+    <image src = 'image\stack-dfs1.png' width = 500>
+    </p>
+        
+2. 정점 A를 시작으로 깊이 우선 탐색을 시작
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs2.png' width = 500>
+    </p>
+        
+3. 정점 A에 방문하지 않은 정점 B, C가 있으므로 A를 스택에 push하고, 인접정점 B와 C 중에서 **오름차순**에 따라 B를 선택하여 탐색을 계속한다.
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs3.png' width = 500>
+    </p>    
+    
+4. 정점 B에 방문하지 않은 정점 D, E가 있으므로 B를 스택에 push하고, 인접정점 D와 E중에서 **오름차순**에 따라 D를 선택하여 탐색을 계속한다
+  
+    <p align = 'center'>
+    <image src = 'image\stack-dfs4.png' width = 500>
+    </p>    
+
+5. 정점 D에 방문하지 않은 정점 F가 있으므로 D를 스택에 push하고, 인접정점 F를 선택하여 탐색을 계속한다.
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs5.png' width = 500>
+    </p>    
+  
+6. 정점 F에 방문하지 않은 정점 E, G가 있으므로 F를 스택에 push 하고, 인접정점 E와 G 중에서 오름차순에 따라 E를 선택하여 탐색을 계속한다.
+  
+    <p align = 'center'>
+    <image src = 'image\stack-dfs6.png' width = 500>
+    </p>    
+
+7.  정점 E에 방문하지 않은 정점 C가 있으므로 E를 스택에 push하고, 인접정점 C를 선택하여 탐색을 계속한다.
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs7.png' width = 500>
+    </p>    
+  
+8.  정점 C에서 방문하지 않은 인접정점이 없으므로, 마지막 정점으로 돌아가기 위해 스택을 pop하여 받은 정점 E에 대해서 방문하지 않은 인접정점이 있는지 확인
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs8.png' width = 500>
+    </p>    
+
+  
+9.  정점 E는 방문하지 않은 인접정점이 없으므로, 다시 스택을 pop하여 받은 정점 F에 대해서 방문하지 않은 인접정점이 있는지 확인한다.
+  
+    <p align = 'center'>
+    <image src = 'image\stack-dfs9.png' width = 500>
+    </p>    
+
+10. 정점 F에 방문하지 않은 정점 G가 있으므로 F를 스택에 push하고, 인접정점 G를 선택하여 탐색을 계속한다.
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs10.png' width = 500>
+    </p>    
+  
+11. 정점 G에서 방문하지 않은 인접정점이 없으므로, 마지막 정점으로 돌아가기 위해 스택을 pop하여 받은 정점 F에 대해서 방문하지 않은 인접정점이 있는지 확인
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs11.png' width = 500>
+    </p>    
+  
+12. 정점 F에서 방문하지 않은 인접정점이 없으므로, 다시 마지막 정점으로 돌아가기 위해 스택을 pop하여 받은 정점 D에 대해서 방문하지 않은 인접정점이 있는지 확인한다.
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs12.png' width = 500>
+    </p>    
+
+13. 정점 D에서 방문하지 않은 인접정점이 없으므로, 다시 마지막 정점으로 돌아가기 위해 스택을 pop하여 받은 정점 B에 대해서 방문하지 않은 인접정점이 있는지 확인한다.
+  
+    <p align = 'center'>
+    <image src = 'image\stack-dfs13.png' width = 500>
+    </p>    
+
+  
+14. 정점 B에서 방문하지 않은 인접정점이 없으므로, 다시 마지막 정점으로 돌아가기 위해 스택을 pop하여 받은 정점 A에 대해서 방문하지 않은 인접정점이 있는지 확인한다.
+  
+    <p align = 'center'>
+    <image src = 'image\stack-dfs14.png' width = 500>
+    </p>    
+  
+15. 현재 정점 A에서 방문하지 않은 인접 정점이 없으므로 마지막 정점으로 돌아가기 위해 스택을 pop하는데, 스택이 공백이므로 깊이 우선 탐색을 종료한다.
+
+    <p align = 'center'>
+    <image src = 'image\stack-dfs15.png' width = 500>
+    </p>    
+        
+    
+---
+
+입력은 보통 노드 수와 간선 개수를 알려줌
+
+그리고 인접 정점 정보를 1-2, 2-4, 2-5 이런식으로 알려줌
+
+```python
+'''
+1
+7 8
+1 2 1 3 2 4 2 5 4 6 5 6 6 7 3 7
+'''
+
+def DFS(s, V):          # s: 시작 정점, V 정점 개수(1번 부터인 정점의 마지막 정점)
+    visited = [0]*(V+1) # 방문한 정점을 표시
+    stack = []          # 스택 생성
+    print(s)
+    visited[s] = 1      # 시작정점 방문 표시
+    v = s
+    while True:
+        for w in adjL[v]:       # v에 인접하고, 방문안한 w가 있으면
+            if visited[w] == 0:
+                stack.append(v) # push(v) 현재 정점을 push
+                v = w
+                print(v)        # w에 방문
+                visited[w] = 1  # w에 방문 표시
+                break # for w에 대한 break # v부터 다시 탐색
+        else:                   # 남은 인접정점이 없어서 break가 걸리지 않은 경우
+            if stack:           # 이전 갈림길을 스택에서 꺼내서
+                v = stack.pop()
+            else:
+                break # while에 대한 break
+
+T = int(input())
+for tc in range(1, T+1):
+    V, E = map(int, input().split())
+
+    # adjl = [[], [2, 3] ... ]
+    adjL = [[] for _ in range(V+1)]
+    arr = list(map(int, input().split()))
+
+    for i in range(E):
+        v1, v2 = arr[i*2], arr[i*2+1]
+        adjL[v1].append(v2) # 노드 별로 인접한 행렬  정보 입력하기
+
+    DFS(1,V)
+    
+
+# 1
+# 2
+# 4
+# 6
+# 7
+# 5
+# 3
+```
+</details>
+
+## DFS의 응용
+
+- **경로 찾기**: 특정 정점으로 가는 경로를 찾는 데 사용될 수 있습니다.
+- **정점의 연결성 검사**: 그래프의 모든 정점이 서로 연결되어 있는지 확인합니다.
+- **사이클 탐지**: 그래프에 사이클이 존재하는지 검사합니다.
+- **토폴로지 정렬**: DAG(Directed Acyclic Graph)에서 정점의 순서를 정렬합니다.
+
+DFS는 그래프의 구조와 성질을 깊이 탐색하는 데 유용하며, 다양한 그래프 관련 문제를 해결하는 데 중요한 알고리즘입니다.
