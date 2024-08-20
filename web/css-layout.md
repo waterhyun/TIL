@@ -337,8 +337,35 @@ justify-items 및 justify-self 속성이 없는 이유
 
 ## 참고  
 ### 마진 상쇄
+📍 Margin collapsing  
+두 block 타입 요소의 martin top과 bottom이 만나 더 큰 margin으로 결합되는 현상  
+<p align='center'><img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*irihT0essp7Rs2cqtHxyQw.png" width="400"></p>
+
+📌 마진 상쇄 이유
+- 복잡한 레이아웃에서 요소 간 간격을 일관되게 유지하기 위함
+- 요소 간의 간격을 더 예측 가능하고 관리하기 쉽게 만듦
+- 일관성, 단순화
+
+📌 마진 상쇄 예시
+- 두 요소 모두 margin 20px이지만 실제 두 요소의 상/하 공간은 40이 아닌 20으로 상쇄
+<p align='center'><img src="images/margin-collapsing.png" width="400"></p>
+
+
 ### 박스 타입 별 수평 정렬
-Block 요소의 수평 정렬 [예시](https://github.com/waterhyun/TIL/blob/master/web/02-box-model/99-horizontal-align.html)
+[예시](https://github.com/waterhyun/TIL/blob/master/web/02-box-model/99-horizontal-align.html)
+
+Block 요소의 수평 정렬
+- margin: auto 사용
+  - 블록 요소의 너비를 지정하고 좌우 마진을 auto로 설정  <p align='center'><img src="images/block-horizontal.png" width="300"></p>
+
+Inline 요소의 수평 정렬
+- text-align 사용
+  - 부모 요소에 적용  <p align='center'><img src="images/inline-horizontal.png" width="300"></p>
+
+Inline-block 요소의 수평 정렬
+- text-align 사용
+  - 부모 요소에 적용  <p align='center'><img src="images/inline-block-horizontal.png" width="300"></p>
+
 ### 실제 position 활용 예시
 ### flexbox shorthand 속성
 ### flexbox 속성 정리

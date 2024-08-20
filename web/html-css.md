@@ -281,7 +281,14 @@ CSS Selectors 종류
     }
   </style>
 ```
-우선순위 : 아이디 선택자 > 클래스 선택자 > 요소 선택자 > 전체 선택자
+CSS 명시도 우선순위
+- !important
+- inline style
+- id 선택자
+- class 선택자
+- 요소(tag) 선택자
+- 전체 선택자
+- 소스 순서 - 동일한 우선순위의 스타일 규칙이 충돌할 경우, 나중에 정의된 규칙이 적용됨
       
 <p align = 'center'>
 <img src="images\css-selectors.png" align="center" width=200> 
@@ -368,6 +375,8 @@ CSS Selectors 종류
 - 상속되지 않는 속성 (배치 관련)
   - box model 관련 요소 (width, height, border, box-sizing ...)
   - position 관련 요소 (position, top/right/bottom/left, z-index) 등
+
+[참고 자료 : 스타일의 상속과 적용 우선 순위](https://poiemaweb.com/css3-inheritance-cascading)
 
 ```html
 <!DOCTYPE html>
