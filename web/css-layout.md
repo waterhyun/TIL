@@ -49,7 +49,7 @@
 </p>
 
 #### 구성 요소 예시
-[예시](02-box-model\02-part-of-box.html) 
+[예시](https://github.com/waterhyun/TIL/blob/master/web/02-box-model/02-part-of-box.html) 
 - 테두리 큰 속성 3가지
   - 색, 굵기, 선의 종류
 - shorthand
@@ -110,7 +110,7 @@
 <img src="images\box-sizing.png" width="400">
 </p>
 
-[예시](02-box-model\03-box-sizing.html) 
+[예시](https://github.com/waterhyun/TIL/blob/master/web/02-box-model/03-box-sizing.html) 
 
 ### 기타 display 속성
 1. inline-block
@@ -119,11 +119,11 @@
    - padding, margin 및 border로 인해 다른 요소가 상자에서 밀려남 ➡ block
    - 새로운 행으로 넘어가지 않음 ➡ inline
    - 요소가 줄 바꿈 되는 것을 원하지 않으면서 너비와 높이를 적용하고 싶은 경우에 사용
-   - [예시](02-box-model\04-inline-block.html) 
+   - [예시](https://github.com/waterhyun/TIL/blob/master/web/02-box-model/04-inline-block.html) 
 2. none
    - 요소를 화면에 표시하지 않고, 공간조차 부여되지 않음
    - Java Script를 통해 제어를 많이 함
-   - [예시](02-box-model\05-none.html) 
+   - [예시](https://github.com/waterhyun/TIL/blob/master/web/02-box-model/05-none.html) 
 
 
 ## CSS position
@@ -152,6 +152,7 @@
 - sticky
 
 ### static
+[예시](https://github.com/waterhyun/TIL/blob/master/web/03-css-layout-position/01-position.html)
 - 요소를 normal flow에 따라 배치
 - top, right, bottom, left 속성이 적용되지 않음
 - 기본 값
@@ -164,7 +165,7 @@
 - 다른 요소의 레이아웃에 영향을 주지 않음(요소가 차지하는 공간은 static일 때와 같음) - 📌 absolute와 다른 점
 
 ### absolute
-[예시](03-css-layout-position\03-absolute.html)
+[예시](https://github.com/waterhyun/TIL/blob/master/web/03-css-layout-position/03-absolute.html)
 - 요소를 normal flow에서 제거
 - 가장 가까운 relative 부모 요소를 기준으로 이동
   - 만족하는 부모 요소가 없다면 body 태그를 기준으로 함
@@ -180,7 +181,7 @@
 - 문서에서 요소가 차지하는 공간이 없어짐
 
 ### sticky
-[예시](03-css-layout-position\02-sticky.html)
+[예시](https://github.com/waterhyun/TIL/blob/master/web/03-css-layout-position/02-sticky.html)
 - relative와 fixed의 특성을 결합한 속성
 - 스크롤 위치가 임계점에 도달하기 전에는 relative처럼 동작
 - 스크롤리 특정 임계점에 도달하면 fixed처럼 동작하여 화면에 고정됨
@@ -268,7 +269,7 @@
      - flex item은 기본적으로 행(주 축의 기본값인 가로 방향)으로 나열
      - flex item은 주 축의 시작 선에서 시작
      - flex item은 교차 축의 크기를 채우기 위해 늘어남
-     - [예시](04-css-layout-flexible-box\01-flexbox.html) <p align='center'><img src="images/flex-container.png" width="400"></p>   
+     - [예시](https://github.com/waterhyun/TIL/blob/master/web/04-css-layout-flexible-box/01-flexbox.html) <p align='center'><img src="images/flex-container.png" width="400"></p>   
 2. flex-direction
      - flex item이 나열되는 방향을 지정
      - column으로 지정할 경우 주 축이 변경됨
@@ -314,19 +315,19 @@
   - items
   - self
 
-8. flex-grow  <p align='center'><img src="images/flex-grow.png" width="400"></p>  [예시](04-css-layout-flexible-box\02-flexbox-grow.html)
+1. flex-grow  <p align='center'><img src="images/flex-grow.png" width="400"></p>  [예시](https://github.com/waterhyun/TIL/blob/master/web/04-css-layout-flexible-box/02-flexbox-grow.html)
    - 남는 행 여백을 비율에 따라 각 flex item에 분배
      - 아이템이 컨테이너 내에서 확장하는 비율을 지정
      - 남는 공간을 분배해서 제공(여백을 지우고 싶을 때 사용!)
      - flex-grow의 반대는 flex-shrink  
-9. flex-basis  <p align='center'><img src="images/flex-basis.png" width="400"></p>  [예시](04-css-layout-flexible-box\03-flexbox-basis.html)
+2. flex-basis  <p align='center'><img src="images/flex-basis.png" width="400"></p>  [예시](https://github.com/waterhyun/TIL/blob/master/web/04-css-layout-flexible-box/03-flexbox-basis.html)
     - flex item의 초기 크기 값을 지정
     - flex-basis와 width 값을 동시에 적용한 경우 **flex-basis**가 우선
 
 
 ### flex-wrap 응용
 📍 반응형 레이아웃  
-다양한 디바이스와 화면 크기에 자동으로 적응하여 콘텐츠를 최적으로 표시하는 웹 레이아웃 방식  <p align='center'><img src="images/flex-wrap-layout.png" width="400"></p>  [예시](04-css-layout-flexible-box\04-flexbox-responsive.html)
+다양한 디바이스와 화면 크기에 자동으로 적응하여 콘텐츠를 최적으로 표시하는 웹 레이아웃 방식  <p align='center'><img src="images/flex-wrap-layout.png" width="400"></p>  [예시](https://github.com/waterhyun/TIL/blob/master/web/04-css-layout-flexible-box/04-flexbox-responsive.html)
 
 justify-items 및 justify-self 속성이 없는 이유  
 "필요 없기 때문"
@@ -337,7 +338,7 @@ justify-items 및 justify-self 속성이 없는 이유
 ## 참고  
 ### 마진 상쇄
 ### 박스 타입 별 수평 정렬
-Block 요소의 수평 정렬 [예시](02-box-model\99-horizontal-align.html)
+Block 요소의 수평 정렬 [예시](https://github.com/waterhyun/TIL/blob/master/web/02-box-model/99-horizontal-align.html)
 ### 실제 position 활용 예시
 ### flexbox shorthand 속성
 ### flexbox 속성 정리
