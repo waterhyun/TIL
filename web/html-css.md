@@ -10,8 +10,8 @@ Web site, Web application 등을 통해 사용자들이 정보를 검색하고 �
 
 ## Web page 구성 요소
 <p align="center">  
-<img src="image\web-page.png" width="45%">  
-<img src="image\web-page2.png" width="45%">  
+<img src="images\web-page.png" width="45%">  
+<img src="images\web-page2.png" width="45%">  
 </p>
 
 
@@ -30,17 +30,17 @@ Web site, Web application 등을 통해 사용자들이 정보를 검색하고 �
   - 의미 : 태그 등을 이용하여 **문서나 데이터의 구조를 명시하는 언어** (ex: HTML, **Markdown**)
   - 예시
     <p align = 'center'>
-      <img src="image\html-ex1.png" align="center" width=450>  
-      <img src="image\html-ex2.png" align="center" width=450> 
+      <img src="images\html-ex1.png" align="center" width=450>  
+      <img src="images\html-ex2.png" align="center" width=450> 
   - 더 읽기가 편해졌고, 이를 위해 HTML tag가 등장 ➡ 페이지를 구조화
-      <img src="image\html-ex3.png" align="center" width=450> 
-      <img src="image\html-ex4.png" align="center" width=450> 
+      <img src="images\html-ex3.png" align="center" width=450> 
+      <img src="images\html-ex4.png" align="center" width=450> 
     </p>
 
 ## Structure of HTML
 
 <p align = 'center'>
-<img src="image\structure-html.png" align="center" width=450> 
+<img src="images\structure-html.png" align="center" width=450> 
 </p>
 
 - `<!DOCTYPE html>` : 해당 문서가 html로 문서라는 것을 나타냄
@@ -48,7 +48,7 @@ Web site, Web application 등을 통해 사용자들이 정보를 검색하고 �
 - `<title></title>` : 브라우저 탭 및 즐겨찾기 시 표시되는 제목으로 사용
 
 <p align = 'center'>
-<img src="image\structure-html2.png" align="center" width=450> 
+<img src="images\structure-html2.png" align="center" width=450> 
 </p>
 
 - `<head></head>`
@@ -74,7 +74,7 @@ Web site, Web application 등을 통해 사용자들이 정보를 검색하고 �
     - (모든 태그 외울 필요는 없음)
   
   <p align = 'center'>
-  <img src="image\html-element.png" align="center" width=450> 
+  <img src="images\html-element.png" align="center" width=450> 
   </p>
 
 ### HTML Attributes
@@ -84,7 +84,7 @@ Web site, Web application 등을 통해 사용자들이 정보를 검색하고 �
   - CSS에서 스타일 적용을 위해 해당 요소를 선택하기 위한 값으로 활용됨
 
   <p align = 'center'>
-  <img src="image\html-attributes.png" align="center" width=500> 
+  <img src="images\html-attributes.png" align="center" width=500> 
   </p>
 
 - 속성 작성 규칙
@@ -153,7 +153,7 @@ HTML Text structure : HTML의 주요 목적 중 하나는 **텍스트 구조와 
 
 CSS를 적용하지 않은 웹 사이트 모습
   <p align = 'center'>
-  <img src="image\css-ex1.png" align="center" width=500> 
+  <img src="images\css-ex1.png" align="center" width=500> 
   </p>
 
 ```css
@@ -164,7 +164,7 @@ h1 {
 ```
 
   <p align = 'center'>
-  <img src="image\css-ex2.png" align="center" width=500> 
+  <img src="images\css-ex2.png" align="center" width=500> 
   </p>
 
 - 2가지가 선언된 것
@@ -179,18 +179,18 @@ h1 {
     - HTML 요소 안에 style 속성 값으로 작성
     - 길어지면 직관성이 떨어지기 때문에 잘 안 씀 
       <p align = 'center'>
-      <img src="image\css-style1.png" align="center" width=500> 
+      <img src="images\css-style1.png" align="center" width=500> 
       </p>
 2. 내부(Internal) 스타일 시트
     - head 태그 안에 style 태그에 작성
     - 가장 많이 사용할 예정(2-3 많이 사용)  
       <p align = 'center'>
-      <img src="image\css-style2.png" align="center" width=500> 
+      <img src="images\css-style2.png" align="center" width=500> 
       </p>
 3. 외부(External) 스타일 시트
     - 별도 CSS 파일 생성 후 HTML link 태그를 사용해 불러오기 
       <p align = 'center'>
-      <img src="image\css-style3.png" align="center" width=500> 
+      <img src="images\css-style3.png" align="center" width=500> 
       </p>
 
 ```html
@@ -284,7 +284,7 @@ CSS Selectors 종류
 우선순위 : 아이디 선택자 > 클래스 선택자 > 요소 선택자 > 전체 선택자
       
 <p align = 'center'>
-<img src="image\css-selectors.png" align="center" width=200> 
+<img src="images\css-selectors.png" align="center" width=200> 
 </p>
 
 ## 명시도
@@ -298,8 +298,8 @@ CSS Selectors 종류
 - 동일한 요소를 가리키는 2개 이상의 CSS 규칙이 있는 경우 가장 높은 명시도를 가진 Selector가 승리하여 스타일이 적용됨
 
 <p align="center">  
-<img src="image\css-cascade.png" width="215">  
-<img src="image\css-cascade2.png" width="300">  
+<img src="images\css-cascade.png" width="215">  
+<img src="images\css-cascade2.png" width="300">  
 </p>
 
 **명시도가 높은 순**
@@ -397,7 +397,7 @@ CSS Selectors 종류
 
 </html>
 ```
-<img src="image\css-parent.png" width="400">  
+<img src="images\css-parent.png" width="400">  
 
 <br>
 
@@ -408,7 +408,7 @@ MDN의 각 속성별 문서 하단에서 상속 여부를 확인할 수 있음
 # CSS Box Model
 웹 페이지의 모든 HTML 요소를 감싸는 사각형 상자 모델
 
-<img src="image\css-box-model.png" width="400">  
+<img src="images\css-box-model.png" width="400">  
 원은 네모 박스를 깎은 것
 
 ## 박스 타입
@@ -419,7 +419,7 @@ MDN의 각 속성별 문서 하단에서 상속 여부를 확인할 수 있음
 
 📌 박스 표시(Display) 타입
 1. Outer display type  
-    <p align = 'center'> <img src="image\css-box-model-outer-display-type.png" width="400"> </p>
+    <p align = 'center'> <img src="images\css-box-model-outer-display-type.png" width="400"> </p>
 
      - 박스가 문서 흐름에서 어떻게 동작할 지를 결정
      - 속성
@@ -444,20 +444,21 @@ MDN의 각 속성별 문서 하단에서 상속 여부를 확인할 수 있음
          - a, img, span, strong, em
      - Normal flow
        - 일반적인 흐름 또는 레이아웃을 변경하지 않은 경우 웹 페이지 요소가 배치되는 방식   
-         <p align = 'center'><img src="image\css-box-model-normal-flow.png" width="400"> </p>
+         <p align = 'center'><img src="images\css-box-model-normal-flow.png" width="400"> </p>
        - 예시  
          <p align = 'center'>
-           <img src="image\css-box-model-normal-flow-ex1.png" width="400">
-           <img src="image\css-box-model-normal-flow-ex2.png" width="400">
+           <img src="images\css-box-model-normal-flow-ex1.png" width="400">
+           <img src="images\css-box-model-normal-flow-ex2.png" width="400">
          </p>
 2. Inner display type  
     flexbox
-    <p align = 'center'> <img src="image\css-box-model-inner-display-type.png" width="400"> </p>
+    <p align = 'center'> <img src="images\css-box-model-inner-display-type.png" width="400"> </p>
     
       - 박스 내부의 요소들이 어떻게 배치될지를 결정
       - 속성
         - flex
       - 추후 CSS layout - Flexbox에서 진행 예정
+
 
 # 참고
 ## 명시도 관련 문서
