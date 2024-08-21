@@ -1,3 +1,43 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [CSS-Layout](#css-layout)
+  - [CSS Box Model](#css-box-model)
+    - [Box type](#box-type)
+    - [Box Display type](#box-display-type)
+    - [Box 구성요소](#box-구성요소)
+      - [Box 구성의 방향 별 속성 값](#box-구성의-방향-별-속성-값)
+      - [구성 요소 예시](#구성-요소-예시)
+    - [shorthand 속성](#shorthand-속성)
+    - [box-sizing 속성](#box-sizing-속성)
+    - [기타 display 속성](#기타-display-속성)
+  - [CSS position](#css-position)
+    - [static](#static)
+    - [relative](#relative)
+    - [absolute](#absolute)
+    - [fixed](#fixed)
+    - [sticky](#sticky)
+  - [z-index](#z-index)
+  - [CSS Flexbox](#css-flexbox)
+    - [flexbox 구성 요소](#flexbox-구성-요소)
+      - [main axis](#main-axis)
+      - [cross axis](#cross-axis)
+      - [flex container](#flex-container)
+      - [flex item](#flex-item)
+    - [flexbox 속성](#flexbox-속성)
+    - [flex-wrap 응용](#flex-wrap-응용)
+  - [참고](#참고)
+    - [마진 상쇄](#마진-상쇄)
+    - [박스 타입 별 수평 정렬](#박스-타입-별-수평-정렬)
+    - [실제 position 활용 예시](#실제-position-활용-예시)
+    - [flexbox shorthand 속성](#flexbox-shorthand-속성)
+    - [flexbox 속성 정리](#flexbox-속성-정리)
+
+<!-- TOC end -->
+
+
+
+
+
 # CSS-Layout
 ## CSS Box Model
 📍 CSS Box Model  
@@ -21,7 +61,8 @@
 2. Inner display type : 박스 내부의 요소들이 어떻게 배치될지를 결정
    1. Flexbox(속성: flex)
 
-### Box 구성요소  <p align='center'>
+### Box 구성요소  
+<p align='center'>
 <img src="images\css-box-model-consist.png" width="400">
 </p> 
 
@@ -44,6 +85,7 @@
   - width 및 height 속성을 사용하여 크기 조정
 
 #### Box 구성의 방향 별 속성 값
+
 <p align='center'>
 <img src="images\css-box-model-consist-direction.png" width="400" center>
 </p>
@@ -326,8 +368,8 @@
 
 
 ### flex-wrap 응용
-📍 반응형 레이아웃  
-다양한 디바이스와 화면 크기에 자동으로 적응하여 콘텐츠를 최적으로 표시하는 웹 레이아웃 방식  <p align='center'><img src="images/flex-wrap-layout.png" width="400"></p>  [예시](https://github.com/waterhyun/TIL/blob/master/web/04-css-layout-flexible-box/04-flexbox-responsive.html)
+📍 반응형 레이아웃 responsive layouts
+다양한 디바이스와 화면 크기에 **자동으로 적응**하여 콘텐츠를 최적으로 표시하는 웹 레이아웃 방식  <p align='center'><img src="images/flex-wrap-layout.png" width="400"></p>  [예시](https://github.com/waterhyun/TIL/blob/master/web/04-css-layout-flexible-box/04-flexbox-responsive.html)
 
 justify-items 및 justify-self 속성이 없는 이유  
 "필요 없기 때문"
