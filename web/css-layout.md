@@ -367,5 +367,42 @@ Inline-block 요소의 수평 정렬
   - 부모 요소에 적용  <p align='center'><img src="images/inline-block-horizontal.png" width="300"></p>
 
 ### 실제 position 활용 예시
+
+position  <p align='center'><img src="images/position-absolute-example.png" width="400"></p>  
+fixed  <p align='center'><img src="images/position-fixed-example.png" width="400"></p>  
+sticky  <p align='center'><img src="images/position-sticky-example.png" width="400"></p>   
+
 ### flexbox shorthand 속성
+
+```css
+.container {
+  flex-flow: flex-direction flex-wrap;
+}
+```
+
+Shorthand - "flex"
+```css
+/* One value, unitless number: flex-grow */
+flex: 2;
+
+/* One value, length or percentage: flex-basis */
+flex: 10rem;
+flex: 30%;
+
+/* Two values: flex-grow | flex-basis */
+flex: 1 30px;
+
+/* Two values: flex-grow | flex-shrink */
+flex: 2 2;
+
+/* Two values: flex-grow | flex-shrink | flex-basis */
+flex: 2 2 10%
+```
+
 ### flexbox 속성 정리
+flex-direction  <p align='center'><img src="images/reference-flex-direction.png"></p>   
+flex-wrap  <p align='center'><img src="images/reference-flex-wrap.png"></p>    
+justify-content  <p align='center'><img src="images/reference-justify-content.png"></p>   
+align-content  <p align='center'><img src="images/reference-align-content.png"></p>   
+align-items  <p align='center'><img src="images/reference-align-items.png"></p>   
+align-self  <p align='center'><img src="images/reference-align-self.png"></p>   
