@@ -46,7 +46,7 @@
 - [Numpy](https://github.com/waterhyun/TIL/blob/master/python/numpy.md)
 
 ### 📁 Algorithm
-- [복잡도]()
+- [복잡도](https://github.com/waterhyun/TIL/blob/master/algorithm/complexity.md)
 - List
   - [List1](https://github.com/waterhyun/TIL/blob/master/algorithm/list/1-dimensional-array.md)
     - 1차원 배열
