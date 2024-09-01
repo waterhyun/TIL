@@ -148,7 +148,8 @@ A binary search tree is a binary tree in which data with lesser values are store
 - 왼쪽 서브트리 → 루트 → 오른쪽 서브트리
 - BST에서 `오름차순 정렬` 결과 얻음
 - [예시] 3 ➡️ 16 ➡️ 22 ➡️ 23 ➡️ 37 ➡️ 45 ➡️ 99
-- [예시] 편지 전달  <img src="../image/bst-dfs.png" width="500">
+- [예시] 편지 전달  <p style="text-align: center;"> <img src="../image/bst-dfs.png" width="500"></p>
+
   - 각 노드는 세 가지 미션을 순서대로 수행해야 함
     - 미션1. 왼쪽 노드를 편지를 즉시 전달받는다.
     - 미션2. 왼쪽 노드로부터 편지를 돌려 받는다면, 편지를 읽는다
