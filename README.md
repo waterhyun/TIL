@@ -83,10 +83,9 @@
   - 연결 큐 및 우선순위 큐 및 버퍼
   - BFS
 - Tree
-  - 트리
-  - 이진트리
-  - 순회
-  - Heap
+  - [트리](https://github.com/waterhyun/TIL/blob/master/algorithm/tree/tree.md)
+  - [이진 탐색 트리](https://github.com/waterhyun/TIL/blob/master/algorithm/tree/binary-search-tree.md)
+  - [Heap](https://github.com/waterhyun/TIL/blob/master/algorithm/tree/heap.md)
 
 
 ### 📁 Web
