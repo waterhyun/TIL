@@ -15,7 +15,7 @@
   - [성능](#성능)
   - [주요 특성](#주요-특성)
   - [구현 및 사용](#구현-및-사용)
-  - [Summary](#summary)
+- [Summary](#summary)
 
 <!-- TOC end -->
 
@@ -186,7 +186,7 @@ A binary search tree is a binary tree in which data with lesser values are store
 
 이진 탐색 트리는 효율적인 데이터 관리와 검색을 위한 중요한 자료구조로, 많은 응용 분야에서 활용됩니다.
 
-## Summary
+# Summary
 
 - 탐색작업을 효율적으로 하기 위한 자료구조
 - 모든 원소는 서로 다른 유일한 키를 갖는다. → 문제마다 다를 수 있음
