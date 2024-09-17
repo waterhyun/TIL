@@ -94,6 +94,10 @@
 - [Bootstrap](https://github.com/waterhyun/TIL/blob/master/web/bootstrap.md)
 - [Responsive Web](https://github.com/waterhyun/TIL/blob/master/web/responsive-web.md)
 
+
+### 📁 Django
+- [Intro & Degisn Pattern](https://github.com/waterhyun/TIL/blob/master/django/01-design-pattern.md)
+
 ### 📁 기타
 - [정규표현식 regexp](https://github.com/waterhyun/TIL/blob/master/regexp.md)
 - [명명 규칙 Naming Rules](https://github.com/waterhyun/TIL/blob/master/naming-rule.md)
