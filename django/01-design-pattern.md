@@ -1,5 +1,32 @@
 # 01 - Intro and Design Pattern
 
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [01 - Intro and Design Pattern](#01---intro-and-design-pattern)
+  - [Web Application](#web-application)
+    - [클라이언트와 서버](#클라이언트와-서버)
+    - [Frontend \& Backend](#frontend--backend)
+  - [Framework](#framework)
+    - [Web Framework](#web-framework)
+    - [Django Framework](#django-framework)
+    - [가상환경](#가상환경)
+    - [Django 프로젝트](#django-프로젝트)
+  - [Django Design Pattern](#django-design-pattern)
+    - [Design Pattern](#design-pattern)
+    - [Project \& App](#project--app)
+  - [요청과 응답](#요청과-응답)
+    - [Django에서의 요청과 응답](#django에서의-요청과-응답)
+  - [참고](#참고)
+    - [가상환경 생성 루틴](#가상환경-생성-루틴)
+    - [Django 관련](#django-관련)
+    - [render 함수](#render-함수)
+    - [MTV 디자인 패턴 정리](#mtv-디자인-패턴-정리)
+    - [Trailing Comma](#trailing-comma)
+    - [프레임워크의 규칙 및 설계 철학](#프레임워크의-규칙-및-설계-철학)
+
+<!-- TOC end -->
+
+
 ## Web Application
 📌 Web application (web service) 개발
 - 인터넷을 통해 사용자에게 제공되는 소프트웨어 프로그램을 구축하는 과정
