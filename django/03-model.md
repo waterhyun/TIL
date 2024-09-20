@@ -32,7 +32,7 @@
 
 4. Model Field
    - 데이터베이스 테이블의 열(column)을 나타내는 중요한 구성 요소
-   - "데이터의 유형"과 "제약 조건"을 정의
+   - "데이터의 유형"과 "제약 조건"을 정의  
      <img src='images/model-class05.png' width="500" style="margin:1rem">
 
 
