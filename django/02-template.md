@@ -7,8 +7,8 @@
 HTML의 콘텐츠를 변수 값에 따라 변경하기
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-  <img src='images/django-template-system.png' width="350">
-  <img src='images/django-template-system2.png' width="350" style ="margin-bottom:2rem">
+  <img src='images/django-template-system.png' width="500">
+  <img src='images/django-template-system2.png' width="500" style ="margin-bottom:2rem">
 </div>
 
 ✏ urls.py, index.html, views.py를 사용할 예정
@@ -56,7 +56,7 @@ Template에서 조건, 반복, 변수 등의 프로그래밍적 기능을 제공
   
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
   <img src='images/dtl-example01.png' width="500">
-  <img src='images/dtl-example02.png' width="500">
+  <img src='images/dtl-example02.png' width="700">
 </div>
 
 
@@ -78,7 +78,7 @@ Template에서 조건, 반복, 변수 등의 프로그래밍적 기능을 제공
 - 기존 하위 템플릿의 변화
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-  <img src='images/base-html2.png' width="450">
+  <img src='images/base-html2.png' width="700">
 </div>
 
 
@@ -97,7 +97,7 @@ Template에서 조건, 반복, 변수 등의 프로그래밍적 기능을 제공
 - 상위 템플릿에 작성하며 하위 템플릿이 작성할 수 있는 공간을 지정하는 것
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-  <img src='images/block-tag.png' width="450">
+  <img src='images/block-tag.png' width="550">
 </div>
 
 
@@ -114,15 +114,15 @@ a 태그로 요청을 보낼 수 있으나, 데이터를 전송할 수 없음. �
 > 📌 HTML `form`은 HTTP 요청을 서버에 보내는 가장 편리한 방법
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;  margin-bottom:2rem;">
-  <img src='images/html-form-http.png' width="300" style="margin-bottom: 20px;">
-  <img src='images/html-form-http2.png' width="500">
+  <img src='images/html-form-http.png' width="500" style="margin-bottom: 20px;">
+  <img src='images/html-form-http2.png' width="600">
   <p> form과 input 태그에 집중</p>
 </div>
 
 📌 실제 웹 서비스에서 form이 사용되는 예시  
 네이버 & 구글의 로그인 화면에서 사용하는 HTML form 요소
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom:2rem;">
-  <img src='images/html-form-example.png' width="600">
+  <img src='images/html-form-example.png' width="1000">
 </div>
 
 > ⭐ 페이지 `이동`이 아닌 `요청`이라는 것을 알아두기 ⭐
@@ -132,7 +132,7 @@ a 태그로 요청을 보낼 수 있으나, 데이터를 전송할 수 없음. �
 
 📌 fake Naver 실습
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px;">
-  <img src='images/fake-naver01.png' width="500" style="margin-bottom: 20px;">
+  <img src='images/fake-naver01.png' width="750" style="margin-bottom: 20px;">
   <img src='images/fake-naver02.png' width="500" style="margin-bottom: 20px;">
   <img src='images/fake-naver03.png' width="500" style="margin-bottom: 20px;">
   <p> 3번 이미지 : 실제 naver에서 검색 후 URL 확인</p>
@@ -180,14 +180,14 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 ❓ View 함수는 몇 개가 필요할까? 2️⃣개
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <img src='images/form-application.png' width="400">
+  <img src='images/form-application.png' width="550">
 </div>
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
   <p style="margin: 1rem;"> 1. throw 로직 작성</p>
-  <img src='images/form-application-step1.png' width="400">
+  <img src='images/form-application-step1.png' width="700">
   <p style="margin: 1rem;"> 2. catch 로직 작성</p>
-  <img src='images/form-application-step2.png' width="400">
+  <img src='images/form-application-step2.png' width="700">
 </div>
 
 📌 HTTP request 객체
@@ -195,20 +195,20 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 - view 함수의 첫번째 인자로 전달됨
 
 
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+<div style="display: flex; flex-direction: column; align-content: center; justify-content: center;">
   <p style="margin: 1rem;"> request 객체 살펴보기</p>
-  <img src='images/request.png' width="400">
+  <img src='images/request.png' width="750">
   <p style="margin: 1rem;"> request 객체에서 form 데이터 추출</p>
-  <img src='images/request-get.png' width="400">
+  <img src='images/request-get.png' width="500">
   <p style="margin: 1rem;"> 3. catch 로직 마무리</p>
-  <img src='images/request-catch.png' width="400" style="margin-bottom: 2rem;">
+  <img src='images/request-catch.png' width="750" style="margin-bottom: 2rem;">
 </div>
 
 📌 throw-catch간 요청과 응답 정리  
 
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <img src='images/throw-catch-logic01.png' width="500">
-  <img src='images/throw-catch-logic02.png' width="500">
+<div style="display: flex; flex-direction: column; align-content: center; justify-content: center;">
+  <img src='images/throw-catch-logic01.png' width="550">
+  <img src='images/throw-catch-logic02.png' width="550">
 </div>
 
 
@@ -236,7 +236,7 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 📌 Variable Routing 작성법
 - `<path_converter:variable_name>`
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-      <img src='images/variable-routing02.png' width="300">
+      <img src='images/variable-routing02.png' width="400">
     </div>
 
    - Path converters
@@ -244,8 +244,8 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
       - str, int 등 5가지 타입 지원
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <img src='images/variable-routing03.png' width="500" style ="margin-bottom:1rem">
-  <img src='images/variable-routing04.png' width="500">
+  <img src='images/variable-routing03.png' width="700" style ="margin-bottom:1rem">
+  <img src='images/variable-routing04.png' width="700">
 </div>
 
 
@@ -261,7 +261,7 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 > "URL을 각자 app에서 관리하자"
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <img src='images/app-urls.png' width="300" style ="margin-bottom:1rem">
+  <img src='images/app-urls.png' width="500" style ="margin-bottom:1rem">
 </div>
 
 |기존 url 구조| 변경 url 구조|
@@ -270,7 +270,7 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
   <p>url 구조 변화</p>
-  <img src='images/app-urls04.png' width="300" style ="margin-bottom:1rem">
+  <img src='images/app-urls04.png' width="700" style ="margin-bottom:1rem">
 </div>
 
 #### include
@@ -291,7 +291,7 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 > URL에 이름을 지어주면 이름만 기억하면 되지 않을까?
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <img src='images/naming-url-patterns.png' width="600" style ="margin-bottom:1rem">
+  <img src='images/naming-url-patterns.png' width="700" style ="margin-bottom:1rem">
 </div>
 
 📌 Naming URL patterns
@@ -300,9 +300,9 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
   <p> path 함수의 name 키워드 인자를 정의</p>
-  <img src='images/naming-url-patterns02.png' width="600" style ="margin-bottom:1rem">
+  <img src='images/naming-url-patterns02.png' width="700" style ="margin-bottom:1rem">
   <p style = "text-align:center;"> URL 표기 변화 <br> url을 작성하는 모든 곳에서 변경 <br> (a 태그의 href 속성 값 뿐만 아니라 form의 action 속성 등도 포함)</p>
-  <img src='images/naming-url-patterns03.png' width="600" style ="margin-bottom:1rem">
+  <img src='images/naming-url-patterns03.png' width="700" style ="margin-bottom:1rem">
 </div>
 
 
@@ -335,7 +335,7 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 ### 추가 템플릿 경로
 📌 템플릿 기본 경로 외 커스텀 경로 추가하기
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <img src='images/base-dir.png' width="500" style ="margin-bottom:1rem">
+  <img src='images/base-dir.png' width="600" style ="margin-bottom:1rem">
   <img src='images/base-dir02.png' width="500" style ="margin-bottom:1rem">
 </div>
 
