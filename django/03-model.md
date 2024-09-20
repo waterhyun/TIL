@@ -121,7 +121,7 @@
     <img src='images/migrations06.png' width="500" style="margin:1rem">
 
     - auto_now : 수정일
-    - auto_now_add : 생성일
+    - auto_now_add : 생성일/작성일
 
 - 이미 기존 테이블이 존재하기 때문에 필드를 추가할 때 필드의 기본 값 설정이 필요
 - 1번은 현재 대화를 유지하면서 직접 기본 값을 입력하는 방법
