@@ -22,12 +22,12 @@
 2. django.db.models 모듈의 Model이라는 부모클래스를 상속받음
    - Model은 model에 관련된 모든 코드가 이미 작성 되어있는 클래스
      - [링크](https://github.com/django/django/blob/main/django/db/models/base.py#L460)
-   - 개발자는 가장 중요한 `테이블 구조를 어떻게 설계할지에 대한 코드만 작성하도록` 하기 위한 것(상속을 활용한 프레임워크의 기능 제공)
+   - 개발자는 가장 중요한 `테이블 구조를 어떻게 설계할지에 대한 코드만 작성하도록` 하기 위한 것(상속을 활용한 프레임워크의 기능 제공)  
      <img src='images/model-class03.png' width="500" style="margin:1rem">
 
 
 3. 클래스 변수명
-   - 테이블의 각 "필드(열) 이름"
+   - 테이블의 각 "필드(열) 이름"  
      <img src='images/model-class04.png' width="500" style="margin:1rem">
 
 4. Model Field
@@ -82,7 +82,7 @@
 
 ## Field options
 📌 Field options 필드 옵션
-- 필드의 `동작`과 `제약 조건`을 정의  
+- 필드의 `동작`과 `제약 조건`을 정의    
     <img src='images/field-options01.png' width="400" style="margin:1rem">
 
 📌 주요 필드 옵션
@@ -117,7 +117,7 @@
 📌 추가 모델 필드 작성  
 <img src='images/migrations05.png' width="500" style="margin:1rem"> 
 
-- DateTimeField의 필드 옵션(optional)
+- DateTimeField의 필드 옵션(optional)  
     <img src='images/migrations06.png' width="500" style="margin:1rem">   
 
 - 이미 기존 테이블이 존재하기 때문에 필드를 추가할 때 필드의 기본 값 설정이 필요
