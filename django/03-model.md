@@ -1,3 +1,26 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Model](#model)
+  - [model class](#model-class)
+- [Model Field](#model-field)
+  - [Field types](#field-types)
+    - [문자열 필드](#문자열-필드)
+    - [숫자 필드](#숫자-필드)
+    - [날짜/시간 필드](#날짜시간-필드)
+    - [파일 관련 필드](#파일-관련-필드)
+  - [Field options](#field-options)
+    - [Constraint](#constraint)
+- [Migrations](#migrations)
+  - [추가 Migrations](#추가-migrations)
+- [Admin site](#admin-site)
+- [참고](#참고)
+  - [데이터베이스 초기화](#데이터베이스-초기화)
+  - [Migrations 관련](#migrations-관련)
+  - [SQLite](#sqlite)
+
+<!-- TOC end -->
+
+
 # Model
 📌 Model을 통한 DB(데이터베이스) 관리
 <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom:2rem;">

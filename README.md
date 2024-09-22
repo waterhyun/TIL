@@ -97,6 +97,8 @@
 
 ### 📁 Django
 - [Intro & Degisn Pattern](https://github.com/waterhyun/TIL/blob/master/django/01-design-pattern.md)
+- [Template & URLs](https://github.com/waterhyun/TIL/blob/master/django/02-template.md)
+- [Models](https://github.com/waterhyun/TIL/blob/master/django/03-model.md)
 
 ### 📁 기타
 - [정규표현식 regexp](https://github.com/waterhyun/TIL/blob/master/regexp.md)
