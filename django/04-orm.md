@@ -23,15 +23,18 @@
 <!-- TOC end -->
 
 ## ORM
-📌 ORM; Object-Relational-Mapping  
+📌 ORM; Object-Relational-Mapping   
 객체 지향 프로그래밍 언어를 사용하여 호환되지 않는 유형의 시스템 간에 데이터를 변환하는 기술
+- mapping : 연결
 
 📌 ORM의 역할
 1. Django와 DB간에 사용하는 언어가 다르기 때문에 소통 불가  
    <img src ='images/orm-role.png' width="600">
 
 2. Django에 내장된 ORM이 중간에서 이를 해석  
-   <img src ='images/orm-role2.png' width="600">
+   <img src ='images/orm-role2.png' width="600">  
+   <img src ='images/orm-role3.png' width="600">  
+      - 동그라미 친 곳만 집중 "어떻게 ORM 문법을 활용할 것인가"
 
 
 
@@ -42,8 +45,16 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
 
    <img src ='images/queryset-api.png' width="600" style="margin:1rem">
 
+- queryset : 단일 객체가 아닐 때(여러 개)
+- instance : 단일 객체일 때
+
+
 📌 QuerySet API 구문  
    <img src ='images/queryset-api02.png' width="400" style="margin:1rem">
+
+- model class : 조작하고자 하는 클래스
+- manager : 뒤에 붙어있는 메서드를 제공하는 보관함
+- QuerySet API : 메서드
 
 📌 QuerySet API 구문 동작 예시  
    <img src ='images/queryset-api03.png' width="600" style="margin:1rem">
@@ -57,23 +68,29 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
 ### QuerySet
 📌 QuerySet
 - 데이터베이스에게서 전달 받은 객체 목록(데이터 모음)
-   - 순회가 가능한 데이터로써 1개 이상의 데이터를 불러와 사용할 수 있음
+   - `순회가 가능`한 데이터로써 `1개 이상의 데이터`를 불러와 사용할 수 있음
 - Django ORM을 통해 만들어진 자료형
-- 단, 데이터베이스가 단일한 객체를 반환 할 때는 QuerySet이 아닌 모델(Class)의 인스턴스로 반환됨
+- 단, 데이터베이스가 `단일한 객체를 반환` 할 때는 QuerySet이 아닌 `모델(Class)의 인스턴스`로 반환됨 (a = class())
 
 > QuerySet API는 python의 모델 클래스와 인스턴스를 활용해 DB에 데이터를 저장, 조회, 수정, 삭제하는 것
 
 ### CRUD
 - 소프트웨어가 가지는 기본적인 데이터 처리 기능
-- Creat 저장
-- Read 조회
-- Update 갱신
-- Delete 삭제
+- `C`reat 저장
+- `R`ead 조회
+- `U`pdate 갱신
+- `D`elete 삭제
 
 ## QuerySet API 실습
 ### 사전준비
-- 외부 라이브러리 설치 및 설정
+- 외부 라이브러리 설치 및 설정  
    <img src ='images/queryset-api04.png' width="500" style="margin:1rem">
+
+- DB 설계도는 gitignore에 들어가지 않으나 DB가 공유가 안됨
+   - DB 구조를 외부 사람이 보면 안됨(데이터도 들어가 있음)
+   - git에 들어가지 않기 때문에
+   - makemigrations은 안해도 되지만 `migrate는 해야한다.`
+
 
 - Django Shell 실행
    ```bash
@@ -82,6 +99,9 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
   - Django Shell 
      - Django 환경 안에서 실행되는 python shell
      - 입력하는 QuerySet API 구문이 Django 프로젝트에 영향을 미침
+     - settings.py에 app등록 해야함(일부 그런 라이브러리가 존재)
+  - 그냥 Django shell은 기능이 적고 자동완성이 되지 않음 ➡ 그래서 라이브러리를 설치(shell_plus)
+  - python manage.py shell_plus를 실행하게 되면 장고의 프로젝트안에서 idle 오픈한거랑 똑같음
 
 ### Create
 - 데이터 객체를 만드는(생성하는) 3가지 방법
@@ -99,8 +119,11 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
 
 📌 `save()`
 - 객체를 데이터베이스에 저장하는 인스턴스 메서드
-- [참고](https://docs.djangoproject.com/en/4.2/ref/models/instances/#saving-objects)
+- [참고](https://docs.djangoproject.com/en/4.2/ref/models/instances/#saving-objects)  
+<img src ='images/save.png' width="500" style="margin:1rem">
+<img src ='images/save02.png' width="450" style="margin:1rem">
 
+- 실제로는 id인데 pk라는 이름으로 접근할 수 있게함
   
 ### Read
 📌 대표적인 조회 메서드
@@ -109,15 +132,18 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
    - `filter()` ➡ 주어진 매개변수와 일치하는 객체를 포함하는 QuerySet 반환
 - Do not reutrn QuertSets
    - `get()` ➡ 주어진 매개변수와 일치하는 객체를 반환
-     - 객체를 찾을 수 없으면 DoesnotExist 예외를 발생시키고, 
-     - 둘 이상의 객체를 찾으면 MultipleObjectsReturned 예외를 발생시킴
-     - 위와 같은 특징을 가지고 있기 때문에 primary key와 같이 고유성(uniqueness)을 보장하는 조회에서 사용해야 함
+     - `객체를 찾을 수 없으면` `DoesnotExist 예외`를 `발생`시키고, 
+     - `둘 이상의 객체`를 찾으면 `MultipleObjectsReturned 예외`를 발생시킴
+     - 위와 같은 특징을 가지고 있기 때문에 `primary key`와 같이 `고유성`(uniqueness)을 `보장하는 조회`에서 사용해야 함
 
 
 - all()
    <img src ='images/read-all.png' width="800" style="margin:1rem">
 - filter()
    <img src ='images/read-filter.png' width="800" style="margin:1rem">
+   - 조건이 일치하는 것만 줌
+   - 없다고 안 주지 않음(*하나라도 항상 queryset을 반환)
+   - list 형식으로 제공
 - get()
    <img src ='images/read-get.png' width="800" style="margin:1rem">
 
@@ -132,6 +158,9 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
    - 삭제하려는 데이터 조회 후 delete 메서드 호출
    <img src ='images/delete.png' width="600" style="margin:1rem">
 
+> ⭐ 지워진 pk는 다시 생성되지 않음(2, 3을 지우고 새로 create를 하면 pk=4) ⭐ 
+> 장고에서 지워진 pk는 문제가 있는 pk라고 생각하는 것
+
 ## ORM with view
 Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용하기
 
@@ -141,6 +170,7 @@ Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용�
    <img src ='images/orm-with-view-read01.png' width="500" style="margin:1rem">  
    <img src ='images/orm-with-view-read02.png' width="800" style="margin:1rem">
   2. 단일 게시글 조회
+     - 조금 어려워서 다음 시간에
 
 
 
