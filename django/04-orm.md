@@ -102,6 +102,7 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
      - settings.py에 app등록 해야함(일부 그런 라이브러리가 존재)
   - 그냥 Django shell은 기능이 적고 자동완성이 되지 않음 ➡ 그래서 라이브러리를 설치(shell_plus)
   - python manage.py shell_plus를 실행하게 되면 장고의 프로젝트안에서 idle 오픈한거랑 똑같음
+- 끄기 `exit`
 
 ### Create
 - 데이터 객체를 만드는(생성하는) 3가지 방법
@@ -124,6 +125,7 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
 <img src ='images/save02.png' width="450" style="margin:1rem">
 
 - 실제로는 id인데 pk라는 이름으로 접근할 수 있게함
+   - pk를 권장
   
 ### Read
 📌 대표적인 조회 메서드
