@@ -74,6 +74,7 @@ Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용�
    - 새 데이터 생성(예시: 새 게시글 작성)
    - API에서 데이터 변경 요청
 
+
 📌 GET과 POST는 각각의 특성에 맞게 적절히 사용해야함
 |GET|POST|
 |:---:|:---:|
