@@ -81,6 +81,7 @@
       <img src = 'images/modelform06.png' width='600' style='margin:1rem'>
     - 별도로 명시하지 않았지만, 모델 필드에는 기본적으로 빈 값은 허용하지 않은 제약조건이 설정되어 있음
     - 빈 값은 is_valid()에 의해 False로 평가되고 form 객체에는 그에 맞는 에러 메시지가 포함되어 다음 코드로 진행됨
+      - 입력을 안 한거랑 빈값이랑 다른 거임
 - ModelForm을 적용한 edit 로직  
     <img src = 'images/modelform07.png' width='1000' style='margin:1rem'>
 - ModelForm을 적용한 update 로직  
