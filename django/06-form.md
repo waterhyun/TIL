@@ -132,7 +132,7 @@
      <img src = 'images/new-create09.png' width='600' style='margin:1rem'>
 - request method에 따른 요청의 변화  
    <img src = 'images/new-create10.png' width='500' style='margin:1rem'>
-- 
+  
 
 ### edit & update 함수 결합
 - 새로운 update view 함수
