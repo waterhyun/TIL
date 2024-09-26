@@ -22,18 +22,18 @@
 > app폴더/static
 
 - step1 : articles/static/articles/경로에 이미지 파일 배치  
-   <img src = 'images/static-files-base-path.png' width='300' style='margin:1rem'>
+   <img src = 'images/static-files-base-path.png' width='200' style='margin:1rem'>
 - step2:
   - static files 경로는 DTL의 static tag를 사용해야 함
   - built-in tag가 아니기 때문에 load tag를 사용해 import 후 사용 가능  
-     <img src = 'images/static-files-base-path02.png' width='600' style='margin:1rem'>
+     <img src = 'images/static-files-base-path02.png' width='500' style='margin:1rem'>
 - step3 : static_URL 확인 http://127.0.0.1:8000/static/articles/sample-1.png
-     <img src = 'images/static-files-base-path03.png' width='750' style='margin:1rem'>
+     <img src = 'images/static-files-base-path03.png' width='700' style='margin:1rem'>
   - STATIC_URL
     - 기본 경로 및 추가 경로에 위치한 정적 파일을 참조하기 위한 URL
     - 실제 파일이나 디렉터리 경로가 아니며, URL로만 존재    
-     <img src = 'images/static-url.png' width='450' style='margin:1rem'>  
-     <img src = 'images/static-url02.png' width='500' style='margin:1rem'>
+     <img src = 'images/static-url.png' width='300' style='margin:1rem'>  
+     <img src = 'images/static-url02.png' width='400' style='margin:1rem'>
 
 
 
@@ -45,13 +45,13 @@
     - 정적 파일의 기본 경로외에 추가적인 경로 목록을 정의하는 리스트
 - 추가 경로 static files  제공하기
   - step1 : 임의의 추가 경로 설정  
-     <img src = 'images/add-static-files.png' width='500' style='margin:1rem'> 
+     <img src = 'images/add-static-files.png' width='300' style='margin:1rem'> 
   - step2 : 추가 경로에 이미지 파일 배치  
-     <img src = 'images/add-static-files02.png' width='300' style='margin:1rem'>
+     <img src = 'images/add-static-files02.png' width='200' style='margin:1rem'>
   - step3 : static tag를 사용해 이미지 파일에 대한 경로 제공  
      <img src = 'images/add-static-files03.png' width='500' style='margin:1rem'>
   - stpe4 : 이미지를 제공 받기 위해 요청하는 Request URL 확인  
-     <img src = 'images/add-static-files04.png' width='500' style='margin:1rem'>
+     <img src = 'images/add-static-files04.png' width='600' style='margin:1rem'>
 
 > 정적 파일을 제공하려면 요청에 응답하기 위한 URL이 필요
 
@@ -67,12 +67,12 @@
 - 미디어 파일을 제공하기 전 준비사항
   1. settings.py에 `MEDIA_ROOT`, `MEDIA_URL` 설정  
      - MEDIA_ROOT : 미디어 파일들이 위치하는 디렉터리의 절대 경로  
-         <img src = 'images/imagefield-media-root.png' width='450' style='margin:1rem'> 
+         <img src = 'images/imagefield-media-root.png' width='300' style='margin:1rem'> 
      - MEDIA_URL : MEDIA_ROOT에서 제공되는 미디어 파일에 대한 주소를 생성
        - STATIC_URL과 동일한 역할      
-         <img src = 'images/imagefield-media-url.png' width='450' style='margin:1rem'>
+         <img src = 'images/imagefield-media-url.png' width='300' style='margin:1rem'>
   2. 작성한 `MEDIA_ROOT`와 `MEDIA_URL`에 대한 URL 지정  
-    <img src = 'images/imagefield-media-rooturl.png' width='700' style='margin:1rem'>
+    <img src = 'images/imagefield-media-rooturl.png' width='600' style='margin:1rem'>  
      - 업로드 된 파일의 URL == settings.MEDIA_URL
      - MEDIA_URL을 통해 참조한느 파일의 실제 위치 == settings.MEDIA_ROOT
 - 이미지 업로드
@@ -85,7 +85,7 @@
      <img src = 'images/image-upload03.png' width='700' style='margin:1rem'>
   - step4 : ModelForm의 2번째 인자로 요청 받은 파일 데이터 작성
     - ModelForm의 상위 클래스 BaseModelForm의 생성자 함수의 2번째 위치 인자로 파일을 받도록 설정되어 있음  
-     <img src = 'images/image-upload04.png' width='700' style='margin:1rem'>
+     <img src = 'images/image-upload04.png' width='600' style='margin:1rem'>
   - step5 : 이미지 업로드 input 확인  
      <img src = 'images/image-upload05.png' width='700' style='margin:1rem'>
   - step6 : 이미지 업로드 결과 확인
@@ -95,7 +95,7 @@
 ### 업로드 이미지 제공
 - 업로드 이미지 제공하기
   - step1  
-     <img src = 'images/supply-image.png' width='600' style='margin:1rem'>
+     <img src = 'images/supply-image.png' width='500' style='margin:1rem'>
     - `url` 속성을 통해 업로드 파일의 경로 값을 얻을 수 있음
     - article.image.url
       - 업로드 파일의 경로
@@ -105,7 +105,7 @@
     - 업로드 이미지 출력 확인 및 MEDIA_URL 확인  
      <img src = 'images/supply-image02.png' width='800' style='margin:1rem'>
   - step3  
-     <img src = 'images/supply-image03.png' width='600' style='margin:1rem'>
+     <img src = 'images/supply-image03.png' width='500' style='margin:1rem'>
     - 이미지를 업로드 하지 않은 게시물은 detail 템플릿을 렌더링 할 수 없음
     - 이미지 데이터가 있는 경우만 이미지를 출력할 수 있도록 처리하기  
 
@@ -114,16 +114,16 @@
   - step1 : 수정 페이지 form 요소에 enctype 속성 추가  
      <img src = 'images/update-image.png' width='800' style='margin:1rem'>
   - step2 : update view 함수에서 업로드 파일에 대한 추가 코드 작성  
-     <img src = 'images/update-image02.png' width='700' style='margin:1rem'>
+     <img src = 'images/update-image02.png' width='500' style='margin:1rem'>
 
 ## 참고
 ### 미디어 파일 추가 경로
 - `upload_to` argument
   - ImageField()의 upload_to 속성을 사용해 다양한 추가 경로 설정  
-     <img src = 'images/upload-to.png' width='700' style='margin:1rem'>
+     <img src = 'images/upload-to.png' width='500' style='margin:1rem'>
 
 
 ### BaseModelForm
 - request.FILES가 두번째 위치 인지인 이유
-- ModelForm의 상위 클래스 BaseModelForm의 생성자 함수 키워드 인자 참고 
-   <img src = 'images/basemodelform.png' width='400' style='margin:1rem'>
+- ModelForm의 상위 클래스 BaseModelForm의 생성자 함수 키워드 인자 참고  
+   <img src = 'images/basemodelform.png' width='200' style='margin:1rem'>
