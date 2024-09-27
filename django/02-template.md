@@ -98,7 +98,7 @@ Template에서 조건, 반복, 변수 등의 프로그래밍적 기능을 제공
 - 만약 모든 템플릿에 bootstrap을 적용하려면? ➡ 모든 템플릿에 bootstrap CDN을 작성해야 할까?
 
 📌 템플릿 상속 Template inheritance
-- `1️⃣페이지의 공통요소를 포함`하고, `2️⃣하위 템플릿이 재정의 할 수 있는 공간`을 정의하는 기본 `skeleton` 템플릿을 자것아형 상속 구조를 구축
+- `1️⃣페이지의 공통요소를 포함`하고, `2️⃣하위 템플릿이 재정의 할 수 있는 공간`을 정의하는 기본 `skeleton` 템플릿을 작성하여 상속 구조를 구축
 
 📌 상속 구조 만들기
 - skeleton 역할을 하게 되는 상위 템플릿(base.html) 작성
@@ -150,6 +150,8 @@ a 태그로 요청을 보낼 수 있으나, 데이터를 전송할 수 없음. �
   <img src='images/html-form-http2.png' width="600">
   <p> form과 input 태그에 집중</p>
 </div>
+
+- [input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
 📌 실제 웹 서비스에서 form이 사용되는 예시  
 네이버 & 구글의 로그인 화면에서 사용하는 HTML form 요소
@@ -319,7 +321,7 @@ https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&qu
 ## URL 이름 지정
 ### Naming URL patterns
 📌 url 구조 변경에 따른 문제점
-- 기존 'articles/' 주소가 'articles/index/'로 변겨오딤에 따라 해당 url을 사용하는 모든 위치를 찾아가 변경해야 함
+- 기존 'articles/' 주소가 'articles/index/'로 변경됨에 따라 해당 url을 사용하는 모든 위치를 찾아가 변경해야 함
 > URL에 이름을 지어주면 이름만 기억하면 되지 않을까?
 
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">

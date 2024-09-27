@@ -36,7 +36,7 @@
 ### 클라이언트와 서버
 
 - 웹의 동작 방식
-  - 우리가 컴퓨터 혹은 모바일 기기로 웹 페이지를 보게 될 떄까지 무슨 일이 일어날 까?
+  - 우리가 컴퓨터 혹은 모바일 기기로 웹 페이지를 보게 될 때까지 무슨 일이 일어날 까?
   - `클라이언트-서버` 구조  
     <p style = "text-align:center;"> <img src = 'images/client-server.png' width ="350"> </p>
 
@@ -88,7 +88,7 @@
   - 커뮤니티 지원
     - 개발자를 위한 지원, 문서 및 업데이트를 제공하는 활성화 된 커뮤니티
 - 검증된 웹 프레임워크
-  - 대규모 트래픽 서비스ㅇ서도 안정적인 서비스를 제공
+  - 대규모 트래픽 서비스에서도 안정적인 서비스를 제공
   - 예시 : spotify, instagram, dropbox, delivery hero ...
 - [가장 인기있는 backend framework(2024)](https://daily.dev/blog/top-10-backend-frameworks-2024#top-10-backend-frameworks-in-2024)
   - 1~2등을 차지
@@ -241,7 +241,7 @@ deactivate
 
 📌 Django application
 - 독립적으로 작동하는 기능 단위 모듈
-- 각자 특정한 기능을 담당하며 다른 앱들과 함꼐 하나의 프로젝트를 구성
+- 각자 특정한 기능을 담당하며 다른 앱들과 함께 하나의 프로젝트를 구성
 
 📌 만약 온라인 커뮤니티 카페를 만든다면?
 |프로젝트|앱|
@@ -339,7 +339,7 @@ deactivate
 📌 Django에서 template을 인식하는 경로 규칙
 - `app폴더 / templates / articles / index.html`
 - `app폴더 / templates / example.html`
-- 'app폴더 / template /`이 지점까지는 기본 경로로 인식하기 때문에 view 함수에서 template 경로 작성 시 이 지점 이후의 경로를 작성해야 함
+- 'app폴더 / templates /`이 지점까지는 기본 경로로 인식하기 때문에 view 함수에서 template 경로 작성 시 이 지점 이후의 경로를 작성해야 함
    <p style = "text-align:center;"> <img src = 'images/template-rule.png' width ="400"></p>
 
 
@@ -431,7 +431,7 @@ render(request, template_name, context)
 - 사용하는 이유
   - 새로운 요소를 추가하거나 순서를 변경할 때 편리
   - 값의 목록, 인자, 또는 import 항목들이 시간이 지남에 따라 확장될 것으로 예상되는 경우에 주로 사용
-  - 여러 줄에 걸쳐 작성된 데이터 구조에서 유용하며, 코드의 가독성과 유지보수성을 향상시크는 데 도움
+  - 여러 줄에 걸쳐 작성된 데이터 구조에서 유용하며, 코드의 가독성과 유지보수성을 향상시키는 데 도움
   - 일반적인 패턴은 각 값(등)을 별도의 줄에 배치하고, 항상 후행 쉼표를 추가한 뒤, 닫는 괄호/대괄호/중괄호를 다음 줄에 배치하는 것
   - 닫는 구분 기호와 같은 줄에 후행 쉼표를 두는 것은 권장하지 않음
 

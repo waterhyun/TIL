@@ -18,14 +18,14 @@ Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용�
 
 - new 기능 구현  
    <img src ='images/new.png' width="500" style="margin:1rem">  
-   - 유효성 검사로 저장 2번을 주로 사용할 예정(save전에 유효성 검사)
    <img src ='images/new02.png' width="800" style="margin:1rem">
    - 메인 페이지에 new 페이지로 이동할 수 있는 하이퍼링크 작성  
    <img src ='images/new03.png' width="800" style="margin:1rem">  
 
 - create 기능 구현  
    <img src ='images/create.png' width="500" style="margin:1rem">  
-   <img src ='images/create02.png' width="800" style="margin:1rem">
+   <img src ='images/create02.png' width="800" style="margin:1rem">  
+   - 유효성 검사로 저장 2번을 주로 사용할 예정(save전에 유효성 검사)  
    <img src ='images/create03.png' width="800" style="margin:1rem">  
 
 ## HTTP request methods
@@ -57,17 +57,17 @@ Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용�
    - API에서 데이터 조회
 
 ### POST method
-- 서버에 데이터를 제출하여 리소스를 변경(생성, 수정, 삭제)하는 데 사용
+- 서버에 데이터를 제출하여 리소스를 변경(`생성, 수정, 삭제`)하는 데 사용
 - 특징
    1. 데이터 전송
-     - HTTP body를 통해 데이터를 전송
+      - HTTP body를 통해 데이터를 전송
    2. 데이터 제한
-     - GET에 비해 더 많은 양의 데이터를 전송할 수 있음
+      - GET에 비해 더 많은 양의 데이터를 전송할 수 있음
    3. 브라우저 히스토리
-     - POST 요청은 브라우저 히스토리에 남지 않음
+      - POST 요청은 브라우저 히스토리에 남지 않음
    4. 캐싱
-     - POST 요청은 기본적으로 캐시 할 수 없음
-     - POST 요청이 일반적으로 서버의 상태를 변경하는 작업을 수행하기 때문
+      - POST 요청은 기본적으로 캐시 할 수 없음
+      - POST 요청이 일반적으로 서버의 상태를 변경하는 작업을 수행하기 때문
 - 사용 예시
    - 로그인 정보 제출
    - 파일 업로드
@@ -174,7 +174,8 @@ Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용�
    <img src ='images/edit.png' width="500" style="margin:1rem">  
    <img src ='images/edit02.png' width="800" style="margin:1rem">  
    - 수정 시 이전 데이터가 출력 될 수 있도록 작성하기  
-   <img src ='images/edit03.png' width="600" style="margin:1rem">  
+   <img src ='images/edit03.png' width="600" style="margin:1rem">   
+   
    - edit 페이지로 이동하기 위한 하이퍼링크 작성  
    <img src ='images/edit04.png' width="500" style="margin:1rem">  
 - update 기능 구현  
