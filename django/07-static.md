@@ -81,12 +81,13 @@
 - 미디어 파일을 제공하기 전 준비사항
   1. settings.py에 `MEDIA_ROOT`, `MEDIA_URL` 설정  
      - MEDIA_ROOT : 미디어 파일들이 위치하는 디렉터리의 절대 경로  
-         <img src = 'images/imagefield-media-root.png' width='300' style='margin:1rem'> 
+         <img src = 'images/imagefield-media-root.png' width='300' style='margin:1rem'>  
      - MEDIA_URL : MEDIA_ROOT에서 제공되는 미디어 파일에 대한 주소를 생성
        - STATIC_URL과 동일한 역할      
-         <img src = 'images/imagefield-media-url.png' width='300' style='margin:1rem'>
-  2. 작성한 `MEDIA_ROOT`와 `MEDIA_URL`에 대한 URL 지정  
+         <img src = 'images/imagefield-media-url.png' width='300' style='margin:1rem'>  
+  2. 작성한 `MEDIA_ROOT`와 `MEDIA_URL`에 대한 URL 지정   
     <img src = 'images/imagefield-media-rooturl.png' width='600' style='margin:1rem'>  
+    
      - 업로드 된 파일의 URL == settings.MEDIA_URL
      - MEDIA_URL을 통해 참조한느 파일의 실제 위치 == settings.MEDIA_ROOT
      - path() 형태가 아니기 때문에 보통 `+`로 붙여줌 (안에 넣어줘도 괜찮긴 함)

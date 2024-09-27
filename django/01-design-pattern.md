@@ -125,7 +125,7 @@
    - 활성화 명령어가 OS에 따라 다름
    - Windows:
      ```bash
-     venv\Scripts\activate
+     source venv/Scripts/activate
      ```
    - macOS/Linux:
      ```bash
