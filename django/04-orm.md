@@ -3,22 +3,22 @@
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [ORM](#orm)
-   * [ORM](#orm-1)
-   * [QuerySet API](#queryset-api)
-      + [Query](#query)
-      + [QuerySet](#queryset)
-      + [CRUD](#crud)
-   * [QuerySet API 실습](#queryset-api-실습)
-      + [사전준비](#사전준비)
-      + [Create](#create)
-      + [Read](#read)
-      + [Update](#update)
-      + [Delete](#delete)
-   * [ORM with view](#orm-with-view)
-      + [전체 게시글 조회](#전체-게시글-조회)
-   * [참고](#참고)
-      + [Field lookups](#field-lookups)
-      + [ORM, QuerySet API를 사용하는 이유](#orm-queryset-api를-사용하는-이유)
+  - [ORM](#orm-1)
+  - [QuerySet API](#queryset-api)
+    - [Query](#query)
+    - [QuerySet](#queryset)
+    - [CRUD](#crud)
+  - [QuerySet API 실습](#queryset-api-실습)
+    - [사전준비](#사전준비)
+    - [Create](#create)
+    - [Read](#read)
+    - [Update](#update)
+    - [Delete](#delete)
+  - [ORM with view](#orm-with-view)
+    - [전체 게시글 조회](#전체-게시글-조회)
+  - [참고](#참고)
+    - [Field lookups](#field-lookups)
+    - [ORM, QuerySet API를 사용하는 이유](#orm-queryset-api를-사용하는-이유)
 
 <!-- TOC end -->
 
@@ -139,14 +139,14 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
      - 위와 같은 특징을 가지고 있기 때문에 `primary key`와 같이 `고유성`(uniqueness)을 `보장하는 조회`에서 사용해야 함
 
 
-- all()
+- all()  
    <img src ='images/read-all.png' width="800" style="margin:1rem">
-- filter()
+- filter()  
    <img src ='images/read-filter.png' width="800" style="margin:1rem">
    - 조건이 일치하는 것만 줌
    - 없다고 안 주지 않음(*하나라도 항상 queryset을 반환)
    - list 형식으로 제공
-- get()
+- get()  
    <img src ='images/read-get.png' width="800" style="margin:1rem">
 
 
