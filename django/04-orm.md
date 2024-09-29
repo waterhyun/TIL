@@ -109,7 +109,7 @@ ORM에서 데이터를 검색, 필터링, 정렬 및 그룹화 하는 데 사용
    1. 첫번째 방법  
       <img src ='images/how-to-create-data-object01.png' width="1000" style="margin:1rem">
       <img src ='images/how-to-create-data-object02.png' width="500" style="margin:1rem">
-      <img src ='images/how-to-create-data-object01.png' width="1000" style="margin:1rem"> 
+      <img src ='images/how-to-create-data-object03.png' width="1000" style="margin:1rem"> 
    2. 두번째 방법
       - save 메서드를 호출해야 비로소 DB에 데이터가 저장됨
       - 테이블에 한 행(레코드)이 쓰여진 것 
