@@ -170,7 +170,8 @@ Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용�
 - 2가지 Read(조회)
   1. 전체 게시글 조회 ✅  
    <img src ='images/orm-with-view-read01.png' width="500" style="margin:1rem">  
-   <img src ='images/orm-with-view-read02.png' width="800" style="margin:1rem">
+   <img src ='images/orm-with-view-read02.png' width="800" style="margin:1rem">  
+
   2. 단일 게시글 조회
      - 조금 어려워서 다음 시간에
 
