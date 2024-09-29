@@ -1,3 +1,5 @@
+# Model
+
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [Model](#model)
@@ -21,7 +23,6 @@
 <!-- TOC end -->
 
 
-# Model
 📌 Model을 통한 DB(데이터베이스) 관리
 <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom:2rem;">
   <img src='images/model-database.png' width="500">

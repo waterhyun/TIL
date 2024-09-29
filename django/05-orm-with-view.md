@@ -1,6 +1,26 @@
 # Django ORM with View
 Django shell에서 연습했던 QuerySet API를 직접 view 함수에서 사용하기
 
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Django ORM with View](#django-orm-with-view)
+  - [Read](#read)
+  - [Create](#create)
+  - [HTTP request methods](#http-request-methods)
+    - [GET method](#get-method)
+    - [POST method](#post-method)
+    - [Post method 변경](#post-method-변경)
+  - [HTTP response status code](#http-response-status-code)
+    - [CSRF](#csrf)
+  - [Redirect](#redirect)
+  - [Delete](#delete)
+  - [Update](#update)
+  - [참고](#참고)
+    - [GET \& POST](#get--post)
+    - [캐시(Cache)](#캐시cache)
+
+<!-- TOC end -->
+
 ## Read
 1. [전체 게시글 조회(04-orm.md 참고)](https://github.com/waterhyun/TIL/blob/master/django/04-orm.md)
 2. 단일 게시글 조회✅  

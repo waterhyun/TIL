@@ -1,8 +1,8 @@
-# 01 - Intro and Design Pattern
+# Intro and Design Pattern
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
-- [01 - Intro and Design Pattern](#01---intro-and-design-pattern)
+- [Intro and Design Pattern](#intro-and-design-pattern)
   - [Web Application](#web-application)
     - [클라이언트와 서버](#클라이언트와-서버)
     - [Frontend \& Backend](#frontend--backend)
