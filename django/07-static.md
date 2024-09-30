@@ -82,7 +82,7 @@
   - stpe4 : 이미지를 제공 받기 위해 요청하는 Request URL 확인  
     - 네트워크 탭 보기  
     - 요청을 보낸 것들을 볼 수 있음  
-     <img src = 'images/add-static-files04.png' width='600' style='margin:1rem'>
+     <img src = 'images/add-static-files04.png' width='600' style='margin:1rem'>  
 
 > 정적 파일을 제공하려면 요청에 응답하기 위한 URL이 필요
 
