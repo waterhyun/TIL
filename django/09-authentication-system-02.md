@@ -29,6 +29,8 @@
   - `get_user_model()`
     - 현재 프로젝트에서 활성화된 사용자 모델(active user model)을 반환하는 함수
 - User 모델을 직접 참조하지 않는 이유
+  - Django는 User 모델을 직접 참조하는 것을 권장하지 않음
+  - 그래서 Django는 User 모델을 간접적으로 참조할 수 있는 방법을 별도로 제공한다. ➡ `get_user_model` 자동으로 현재 활성화된 User를 반환됨
   - `get_user_model()` 을 사용해 User 모델을 참조하면 커스텀 User 모델을 자동으로 반환해주기 때문
   - Django는 필수적으로 User 클래스를 직접 참조하는 대신 get_user_model()을 사용해 참조해야 한다고 강조하고 있음
   - User model 참조에 대한 자세한 내용은 추후 모델 관계에서 다룸
@@ -69,7 +71,11 @@
     - step 1 : User Model의 필드 목록 확인
       - https://docs.djangoproject.com/en/4.2/ref/contrib/auth/   
         <img src = 'images/user-update-form04.png' width='500' style='margin:1rem'>
-    - step 2 : 회원정보 수정 페이지 확인  
+    - step 2 : 회원정보 수정 페이지 확인 
+      - 비밀번호는 세션을 수정하는 것이라 안 지워짐 
+        - `password = None`을 CustomUserChangeForm에 넣으면 되긴 함
+          - 근데 링크 쓰기로~
+      - 회원정보는 user 객체를 수정  
         <img src = 'images/user-update-form05.png' width='500' style='margin:1rem'>
 - 회원정보 수정 로직 완성  
   <img src = 'images/user-update-form06.png' width='700' style='margin:1rem'>
@@ -82,6 +88,7 @@
 - 비밀번호 변경 페이지 작성
   - step 1 : django는 비밀번호 변경 페이지를 회원정보 수정 form 하단에 별도 주소로 안내
     - 📌 /user_pk/password/  
+    - 이 주소는 앱의 url이 아니라, 프로젝트 url을 사용해야 함  
     <img src = 'images/password-change-form.png' width='700' style='margin:1rem'>   
   - step 2  
     <img src = 'images/password-change-form02.png' width='900' style='margin:1rem'>   
