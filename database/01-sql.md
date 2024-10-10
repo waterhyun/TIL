@@ -132,7 +132,7 @@
   2. 각 SQL statements의 끝에는 세미콜론(';')이 필요
      - 세미콜론은 각 SQL statements를 구분하는 방법(명령어의 마침표)
 
-💡 요약
+💡 요약  
 <img src="images/sql-summary.png" width=350 style='margin:1rem'>
 
 ### SQL Statements
@@ -251,11 +251,11 @@
   - SELECT DISTINCT 키워드 다음에 고유한 값을 선택하려는 하나 이상의 필드를 지정
 - 활용
   - 테이블 customers에서 Country 필드의 모든 데이터를 오름차순 조회  
-   <img src="images/distinct-03.png" width=400 style='margin:1rem'>
-   <img src="images/distinct-02.png" width=150 style='margin:1rem'>
+    <img src="images/distinct-03.png" width=400 style='margin:1rem'>
+    <img src="images/distinct-02.png" width=150 style='margin:1rem'>
   - 테이블 customers에서 Country 필드의 모든 데이터를 중복없이 오름차순 조회  
-   <img src="images/distinct-05.png" width=400 style='margin:1rem'>
-   <img src="images/distinct-04.png" width=150 style='margin:1rem'>
+    <img src="images/distinct-05.png" width=400 style='margin:1rem'>
+    <img src="images/distinct-04.png" width=150 style='margin:1rem'>
 
 #### WHERE
 - WHERE statement
@@ -343,8 +343,8 @@
    <img src="images/group-by05.png" width=150 style='margin:1rem'>
 - 활용
   - 테이블 tracks에서 Composer 필드를 그룹화하여 각 그룹에 대한 Bytes의 평균 값을 내림차순 조회  
-   <img src="images/group-by06.png" width=500 style='margin:1rem'>
-   <img src="images/group-by07.png" width=400 style='margin:1rem'>
+   <img src="images/group-by06.png" width=500 style='margin:1rem'>  
+   <img src="images/group-by07.png" width=400 style='margin:1rem'>  
    <img src="images/group-by08.png" width=400 style='margin:1rem'>
   - 테이블 tracks에서 Composer 필드를 그룹화하여 각 그룹에 대한 Milliseconds의 평균 값이 10 미만인 데이터 조회
     - 단, Milliseconds 필드는 60,000으로 나눠 분 단위 값의 평균으로 계산  
@@ -608,6 +608,6 @@
     - 왼쪽 테이블의 모든 레코드를 표기
     - 오른족 테이블과 맻이되는 레코드가 없으면 NUL을 표시
   - 활용
-    - 게시글을 작성한 이력이 없는 회원 정보 조회
-      <img src="images/left-join08.png" width=400 style='margin:1rem'>   
+    - 게시글을 작성한 이력이 없는 회원 정보 조회  
+      <img src="images/left-join08.png" width=400 style='margin:1rem'>
       <img src="images/left-join07.png" width=100 style='margin:1rem'>
