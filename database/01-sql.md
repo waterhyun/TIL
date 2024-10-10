@@ -491,14 +491,14 @@
   - VALUES 키워드 다음 괄호 안에 해당 필드에 삽입할 값 목록 작성
 - 활용
   - articles 테이블에 다음과 같은 데이터 입력  
-   <img src="images/insert04.png" width=400 style='margin:1rem'>
-   <img src="images/insert03.png" width=300 style='margin:1rem'>
-  - articles 테이블에 다음과 같은 데이터 추가 입력  
-   <img src="images/insert06.png" width=400 style='margin:1rem'>
-   <img src="images/insert05.png" width=300 style='margin:1rem'>
+    <img src="images/insert04.png" width=400 style='margin:1rem'>
+    <img src="images/insert03.png" width=300 style='margin:1rem'>
+  - articles 테이블에 다음과 같은 데이터 추가 입력    
+    <img src="images/insert06.png" width=400 style='margin:1rem'>
+    <img src="images/insert05.png" width=300 style='margin:1rem'>
   - DATE 함수를 사용해 articles 테이블에 다음과 같은 데이터 추가 입력  
-   <img src="images/insert08.png" width=400 style='margin:1rem'>
-   <img src="images/insert07.png" width=300 style='margin:1rem'>
+    <img src="images/insert08.png" width=400 style='margin:1rem'>
+    <img src="images/insert07.png" width=300 style='margin:1rem'>
 
 ### Update data
 - 📌 UPDATE statement : 테이블 레코드 수정  
