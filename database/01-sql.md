@@ -260,7 +260,7 @@
 #### WHERE
 - WHERE statement
   - 조회 시 특정 검색 조건을 지정  
-   <img src="images/where.png" width=500 style='margin:1rem'>
+    <img src="images/where.png" width=500 style='margin:1rem'>  
   - FROM clause 뒤에 위치
   - search_condition은 비교연산자 및 논리연산자(AND, OR, NOT 등)를 사용하는 구문이 사용됨
 - 활용
@@ -336,11 +336,11 @@
   - GROUP BY 절 뒤에 그룹화 할 필드 목록을 작성
 - 예시
   1. Country 필드를 그룹화  
-     <img src="images/group-by02.png" width=300 style='margin:1rem'>
-    <img src="images/group-by03.png" width=150 style='margin:1rem'>
+      <img src="images/group-by02.png" width=300 style='margin:1rem'>
+      <img src="images/group-by03.png" width=150 style='margin:1rem'>
   2. COUNT 함수가 각 그룹에 대한 집계된 값을 계산  
-    <img src="images/group-by04.png" width=300 style='margin:1rem'>
-    <img src="images/group-by05.png" width=150 style='margin:1rem'>
+      <img src="images/group-by04.png" width=300 style='margin:1rem'>
+      <img src="images/group-by05.png" width=150 style='margin:1rem'>
 - 활용
   - 테이블 tracks에서 Composer 필드를 그룹화하여 각 그룹에 대한 Bytes의 평균 값을 내림차순 조회  
     <img src="images/group-by06.png" width=500 style='margin:1rem'>  
@@ -349,7 +349,7 @@
   - 테이블 tracks에서 Composer 필드를 그룹화하여 각 그룹에 대한 Milliseconds의 평균 값이 10 미만인 데이터 조회
     - 단, Milliseconds 필드는 60,000으로 나눠 분 단위 값의 평균으로 계산  
       <img src="images/group-by09.png" width=500 style='margin:1rem'>
-      <img src="images/group-by10.png" width=500 style='margin:1rem'>
+      <img src="images/group-by10.png" width=450 style='margin:1rem'>
     - HAVING clause  
         <img src="images/group-by11.png" width=500 style='margin:1rem'>
       - 집계 항목에 대한 세부 조건을 지정
@@ -374,15 +374,15 @@
   - 테이블 및 필드에 대한 제약조건(constraints) 작성
 - 활용
   - examples 테이블 생성 및 확인  
-    <img src="images/create02.png" width=500 style='margin:1rem'>
+      <img src="images/create02.png" width=500 style='margin:1rem'>
 - PRAGMA
   - 테이블 schema(구조) 확인  
-    <img src="images/create03.png" width=500 style='margin:1rem'>
+     <img src="images/create03.png" width=500 style='margin:1rem'>
   - 'cid'
     - Column ID를 의미하며 각 컬럼의 고유한 식별자를 나타내는 정수 값
-    - 직접 사용하지 않으며 PRAGMA 명렬ㅇ과 같은 메타데이터 조회에서 출력 값으로 활용됨
+    - 직접 사용하지 않으며 PRAGMA 명령과 같은 메타데이터 조회에서 출력 값으로 활용됨
 - 데이터 타입  
-    <img src="images/create04.png" width=400 style='margin:1rem'>
+      <img src="images/create04.png" width=400 style='margin:1rem'>
   - SQLite 데이터 타입
     1. NULL : 아무런 값도 포함하지 않음을 나타냄
     2. INTEGER : 정수
@@ -390,7 +390,7 @@
     4. TEXT : 문자열
     5. BLOB  : 이미지, 동영상, 문서 등의 바이너리 데이터
 - 제약조건  
-    <img src="images/create05.png" width=400 style='margin:1rem'>
+      <img src="images/create05.png" width=400 style='margin:1rem'>
   - 테이블의 필드에 적용되는 규칙 또는 제한 사항
   - 데이터의 무결성을 유지하고 데이터베이스의 일관성을 보장
   - 대표 제약 조건 3가지
@@ -402,7 +402,7 @@
     3. FOREIGN KEY 
        - 다른 테이블과의 외래 키 관계를 정의
 - AUTOINCREMENT 키워드  
-    <img src="images/create06.png" width=400 style='margin:1rem'>
+      <img src="images/create06.png" width=400 style='margin:1rem'>
   - 자동으로 고유한 정수 값을 생성하고 할당하는 필드 속성
   - 특징
     - 필드의 자동 증가를 나타내는 특수한 키워드
@@ -421,7 +421,7 @@
      |ALTER TABLE `DROP COLUMN`|필드 삭제|
      |ALTER TABLE `RENAME TO`|테이블 이름 변경|
 - ALTER TABLE ADD COLUMN syntax  
-    <img src="images/alter-table.png" width=500 style='margin:1rem'>
+      <img src="images/alter-table.png" width=500 style='margin:1rem'>
   - ADD COLUMN 키워드 이후 추가하고자 하는 새 필드 이름과 데이터 타입 및 제약 조건 작성
   - 단, 추가하고자 하는 필드에 NOT NULL 제약 조건이 있을 경우 NULL이 아닌 기본 값 설정 필요
   - 활용
