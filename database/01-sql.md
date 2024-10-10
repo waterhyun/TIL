@@ -245,7 +245,7 @@
 
 #### DISTINCT
 - DISTINCT statement    
-  - 조회 결과에서 중복된 레코드를 제거
+  - 조회 결과에서 중복된 레코드를 제거  
      <img src="images/distinct-01.png" width=500 style='margin:1rem'>
   - SELECT 키워드 바로 뒤에 작성해야 함
   - SELECT DISTINCT 키워드 다음에 고유한 값을 선택하려는 하나 이상의 필드를 지정
@@ -265,35 +265,35 @@
   - search_condition은 비교연산자 및 논리연산자(AND, OR, NOT 등)를 사용하는 구문이 사용됨
 - 활용
   - 테이블 customers에서 City 필드 값이 'Prague'인 데이터의 LastName, FirstName, City 조회  
-   <img src="images/where03.png" width=500 style='margin:1rem'>
-   <img src="images/where02.png" width=300 style='margin:1rem'>
+    <img src="images/where03.png" width=500 style='margin:1rem'>
+    <img src="images/where02.png" width=300 style='margin:1rem'>
   - 테이블 customers에서 City 필드 값이 'Prague'가 아닌 데이터의 LastName, FirstName, City 조회  
-   <img src="images/where05.png" width=500 style='margin:1rem'>
-   <img src="images/where04.png" width=300 style='margin:1rem'>
+    <img src="images/where05.png" width=500 style='margin:1rem'>
+    <img src="images/where04.png" width=300 style='margin:1rem'>
   - 테이블 customers에서 Company 필드 값이 NULL이고 Country 필드 값이 'USA'인 데이터의 LastName, FirstName, Company, Country 조회  
-   <img src="images/where07.png" width=500 style='margin:1rem'>
-   <img src="images/where06.png" width=300 style='margin:1rem'>
+    <img src="images/where07.png" width=500 style='margin:1rem'>
+    <img src="images/where06.png" width=300 style='margin:1rem'>
   - 테이블 customers에서 Company 필드 값이 NULL이거나 Country 필드 값이 'USA'인 데이터의 LastName, FirstName, Company, Country 조회  
-   <img src="images/where09.png" width=500 style='margin:1rem'>
-   <img src="images/where08.png" width=300 style='margin:1rem'>
+    <img src="images/where09.png" width=500 style='margin:1rem'>
+    <img src="images/where08.png" width=300 style='margin:1rem'>
   - 테이블 tracks에서 Bytes 필드 값이 10,000 이상 500,000 이하인 데이터의 Name, Bytes 조회  
-   <img src="images/where11.png" width=500 style='margin:1rem'>
-   <img src="images/where10.png" width=250 style='margin:1rem'>
+    <img src="images/where11.png" width=500 style='margin:1rem'>
+    <img src="images/where10.png" width=250 style='margin:1rem'>
   - 테이블 tracks에서 Bytes 필드 값이 10,000 이상 500,000 이하인 데이터의 Name, Bytes를 Bytes 기준으로 오름차순 조회  
-   <img src="images/where13.png" width=500 style='margin:1rem'>
-   <img src="images/where12.png" width=250 style='margin:1rem'>
+    <img src="images/where13.png" width=500 style='margin:1rem'>
+    <img src="images/where12.png" width=250 style='margin:1rem'>
   - 테이블 customers에서 Country 필드 값이 'Canada' 또는 'Germany' 또는 'France'인 데이터의 LastName, FirstName, Country 조회  
-   <img src="images/where15.png" width=500 style='margin:1rem'>
-   <img src="images/where14.png" width=300 style='margin:1rem'>
+    <img src="images/where15.png" width=500 style='margin:1rem'>
+    <img src="images/where14.png" width=300 style='margin:1rem'>
   - 테이블 customers에서 Country 필드 값이 'Canada' 또는 'Germany' 또는 'France'가 아닌 데이터의 LastName, FirstName, Country 조회  
-   <img src="images/where17.png" width=500 style='margin:1rem'>
-   <img src="images/where16.png" width=250 style='margin:1rem'>
+    <img src="images/where17.png" width=500 style='margin:1rem'>
+    <img src="images/where16.png" width=250 style='margin:1rem'>
   - 테이블 customers에서 LastName 필드 값이 'son'으로 끝나는 데이터의 LastName, FirstName 조회  
-   <img src="images/where19.png" width=500 style='margin:1rem'>
-   <img src="images/where18.png" width=200 style='margin:1rem'>
+    <img src="images/where19.png" width=500 style='margin:1rem'>
+    <img src="images/where18.png" width=200 style='margin:1rem'>
   - 테이블 customers에서 FirstName 필드 값이 4자리면서 'a'로 끝나는 데이터의 LastName, FirstName 조회  
-   <img src="images/where21.png" width=500 style='margin:1rem'>
-   <img src="images/where20.png" width=200 style='margin:1rem'>
+    <img src="images/where21.png" width=500 style='margin:1rem'>
+    <img src="images/where20.png" width=200 style='margin:1rem'>
 
 #### Operator
 - 📌 Comparison Operators 비교 연산자
@@ -316,11 +316,11 @@
   <img src="images/limit02.png" width=500 style='margin:1rem'>
 - 활용
   - 테이블 tracks에서 TrackId, Name, Bytes 필드 데이터를 Bytes 기준 내림차순으로 7개만 조회  
-  <img src="images/limit04.png" width=500 style='margin:1rem'>
-  <img src="images/limit03.png" width=400 style='margin:1rem'>
+    <img src="images/limit04.png" width=500 style='margin:1rem'>
+    <img src="images/limit03.png" width=400 style='margin:1rem'>
   - 테이블 tracks에서 TrackId, Name, Bytes 필드 데이터를 Bytes 기준 내림차순으로 4번째 부터 7번째 데이터만 조회  
-  <img src="images/limit06.png" width=500 style='margin:1rem'>
-  <img src="images/limit05.png" width=400 style='margin:1rem'>
+    <img src="images/limit06.png" width=500 style='margin:1rem'>
+    <img src="images/limit05.png" width=400 style='margin:1rem'>
 
 ### Grouping data
 
@@ -336,16 +336,16 @@
   - GROUP BY 절 뒤에 그룹화 할 필드 목록을 작성
 - 예시
   1. Country 필드를 그룹화  
-   <img src="images/group-by02.png" width=300 style='margin:1rem'>
-   <img src="images/group-by03.png" width=150 style='margin:1rem'>
+     <img src="images/group-by02.png" width=300 style='margin:1rem'>
+    <img src="images/group-by03.png" width=150 style='margin:1rem'>
   2. COUNT 함수가 각 그룹에 대한 집계된 값을 계산  
-   <img src="images/group-by04.png" width=300 style='margin:1rem'>
-   <img src="images/group-by05.png" width=150 style='margin:1rem'>
+    <img src="images/group-by04.png" width=300 style='margin:1rem'>
+    <img src="images/group-by05.png" width=150 style='margin:1rem'>
 - 활용
   - 테이블 tracks에서 Composer 필드를 그룹화하여 각 그룹에 대한 Bytes의 평균 값을 내림차순 조회  
-   <img src="images/group-by06.png" width=500 style='margin:1rem'>  
-   <img src="images/group-by07.png" width=400 style='margin:1rem'>  
-   <img src="images/group-by08.png" width=400 style='margin:1rem'>
+    <img src="images/group-by06.png" width=500 style='margin:1rem'>  
+    <img src="images/group-by07.png" width=400 style='margin:1rem'>  
+    <img src="images/group-by08.png" width=400 style='margin:1rem'>
   - 테이블 tracks에서 Composer 필드를 그룹화하여 각 그룹에 대한 Milliseconds의 평균 값이 10 미만인 데이터 조회
     - 단, Milliseconds 필드는 60,000으로 나눠 분 단위 값의 평균으로 계산  
       <img src="images/group-by09.png" width=500 style='margin:1rem'>
@@ -355,7 +355,7 @@
       - 집계 항목에 대한 세부 조건을 지정
       - 주로 GROUP BY와 함께 사용되며 GROUP BY가 없다면 WHERE 처럼 동작
 
-💡 SELECT statement 실행순서  
+💡 SELECT statement 실행순서    
 <img src="images/group-by11.png" width=500 style='margin:1rem'>
   
 1. 테이블에서 (FROM)
