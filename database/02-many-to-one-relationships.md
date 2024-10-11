@@ -192,7 +192,8 @@
 
 # Article & User
 ## 모델 관계 설정
-- User 외래키 정의
+- User 외래키 정의  
+    <img src="images/article-user.png" width=600 style='margin:8px'>    
 - User 모델을 참조하는 2가지 방법
   - `get_user_model()`
   - `settings.AUTH_USER_MODEL`
