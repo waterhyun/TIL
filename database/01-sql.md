@@ -1,6 +1,7 @@
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
+- [Database](#database)
 - [Relational Database](#relational-database)
   - [RDBMS](#rdbms)
 - [SQL](#sql)
@@ -31,7 +32,7 @@
   - [Joining tables](#joining-tables)
 
 <!-- TOC end -->
- Database
+# Database
 - 📌 데이터 베이스
   - 체계적인 데이터 모음
 - 📌 데이터
