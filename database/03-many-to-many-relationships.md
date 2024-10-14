@@ -1,3 +1,17 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Many to many relationships](#many-to-many-relationships)
+  - [N:1의 한계](#n1의-한계)
+  - [중개 모델](#중개-모델)
+  - [ManyToManyField](#manytomanyfield)
+  - ['through' argument](#through-argument)
+- [ManyToManyField](#manytomanyfield-1)
+- [좋아요 기능 구현](#좋아요-기능-구현)
+  - [모델 관계 설정](#모델-관계-설정)
+  - [기능 구현](#기능-구현)
+
+<!-- TOC end -->
+
 # Many to many relationships
 - N:M or M:N
 - 한 테이블의 0개 이상의 레코드가 다른 테이블의 0개 이상의 레코드와 관련된 경우
@@ -19,9 +33,11 @@ M:N 관계의 역할과 필요성 이해하기
 - N:1의 한계 상황
   - 1번 환자(carol)가 두 의사 모두에게 진료를 받고자 한다면 환자 테이블에 1번 환자 데이터가 중복으로 입력될 수 밖에 없음  
   <img src="images/doctor-patient04.png" width=450 style='margin:8px'>   
+
   - 동시에 예약을 남길 순 없을까?  
   <img src="images/doctor-patient05.png" width=600 style='margin:8px'>   
   <img src="images/doctor-patient06.png" width=450 style='margin:8px'>   
+
   - 동일한 환자지만 다른 의사에게도 진료받기 위해 예약하기 위해서는 객체를 하나 더 만들어 진행해야 함
   - 외래키 컬럼에 '1, 2'형태로 저장하는 것은 DB 타입 문제로 불가능
   - 💡 예약 테이블을 따로 만들자
@@ -136,6 +152,7 @@ M:N 관계 주요 사항
   - ManyToManyField가 동일한 모델을 가리키는 정의에서만 사용
   - 기본 값: True  
   <img src="images/symmetrical-arguments.png" width=600 style='margin:8px'>   
+
   - True일 경우
     - source 모델의 인스턴스가 target 모델의 인스턴스를 참조하면 자동으로 target 모델 인스턴스도 source 모델 인스턴스를 자동으로 참조하도록 함(대칭)
     - 즉, 내가 당신의 친구라면 자동으로 당신도 내 친구가 됨
@@ -198,13 +215,17 @@ M:N 관계 주요 사항
   - user.like_articles : 유저가 좋아요 한 게시글(역참조) (M:N)
 
 ## 기능 구현
-- url 작성  
+1. url 작성  
 <img src="images/like-users05.png" width=600 style='margin:8px'>  
-- view 함수 작성  
+
+2. view 함수 작성  
 <img src="images/like-users06.png" width=600 style='margin:8px'>  
-- index 템플릿에서 각 게시글에 좋아요 버튼 출력  
+
+3. index 템플릿에서 각 게시글에 좋아요 버튼 출력  
 <img src="images/like-users07.png" width=600 style='margin:8px'>  
-- 좋아요 버튼 출력 확인  
+
+4. 좋아요 버튼 출력 확인  
 <img src="images/like-users08.png" width=400 style='margin:8px'>  
-- 좋아요 버튼 클릭 후 테이블 확인  
+
+5. 좋아요 버튼 클릭 후 테이블 확인  
 <img src="images/like-users09.png" width=300 style='margin:8px'>  
