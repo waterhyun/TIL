@@ -603,7 +603,7 @@
   - 두 테이블에서 값이 일치하는 레코드에 대해서만 결과를 반환  
     <img src="images/inner-join.png" width=200 style='margin:1rem'>
   - INNER JOIN syntax  
-    <img src="images/inner-join02.png" width=200 style='margin:1rem'>
+    <img src="images/inner-join02.png" width=450 style='margin:1rem'>
     - FROM 절 이후 메인 테이블 지정(table_a)
     - INNER JOIN 절 이후 메인 테이블과 조인할 테이블을 지정(table_b)
     - ON 키워드 이후 조인 조건을 작성
