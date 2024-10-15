@@ -234,14 +234,14 @@
   |<img src="images/exists03.png" style='margin:8px'>|<img src="images/exists04.png" style='margin:8px'>|
 
 ## 한꺼번에 dump 하기
-- 모든 모델을 한꺼번에 dump하기
+- 모든 모델을 한꺼번에 dump하기  
   <img src="images/dump.png" width=700 style='margin:8px'>   
 
 
 ## loaddata 인코딩 에러 
 - loaddata 시 Encoding codec 관련 에러가 발생하는 경우
 - 2가지 방법 중 택 1
-  - dumpdata 시 추가 옵션 작성
+  - dumpdata 시 추가 옵션 작성  
     <img src="images/loaddata-error.png" width=450 style='margin:8px'>   
   - 메모장 활용
     - 메모장으로 json 파일 열기

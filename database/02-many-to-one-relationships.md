@@ -106,11 +106,11 @@
       - `article.comment_set.all()`
   - 연습
     - shell_plus 실행 및 1번 게시글 조회  
-     <img src="images/related_manager02.png" width=450 style='margin:8px'>    
+      <img src="images/related_manager02.png" width=450 style='margin:8px'>    
     - 1번 게시글에 작성된 모든 댓글 조회하기 (역참조)  
-     <img src="images/related_manager03.png" width=450 style='margin:8px'>    
+      <img src="images/related_manager03.png" width=450 style='margin:8px'>    
     - 1번 게시글에 작성된 모든 댓글 내용 출력  
-     <img src="images/related_manager04.png" width=450 style='margin:8px'>    
+      <img src="images/related_manager04.png" width=450 style='margin:8px'>    
 
 # 댓글 구현
 ## 댓글 CREATE
