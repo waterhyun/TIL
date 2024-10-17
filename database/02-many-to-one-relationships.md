@@ -65,7 +65,7 @@
 - Migration 이후 댓글 테이블 확인
   - 댓글 테이블의 article_id 외래키 필드 확인
   - 만들어 지는 필드 이름
-    - `참조 대상 클래스 이름`+`_`+`클래스 이름`
+    - `참조 대상 클래스 이름`+`_`+`id`
   - 참조하는 클래스 이름의 소문자(단수형)로 작성하는 것이 권장 되었던 이유  
     <img src="images/migration.png" width=250 style='margin:8px'>    
 
