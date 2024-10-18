@@ -121,15 +121,15 @@
 - DRF 위한 OpenAPI 3.0 구조 생성을 도와주는 라이브러리
 - drf-spectacular 라이브러리
   - 설치 및 등록 `$ pip install drf-spectacular`    
-   <img src="images/drf-spectacular.png" width=650 style='margin:8px'>  
+     <img src="images/drf-spectacular.png" width=650 style='margin:8px'>  
   - 관련 설정 코드 입력 (OpenAPI 구조 자동 생성 코드)    
-   <img src="images/drf-spectacular02.png" width=650 style='margin:8px'>  
+     <img src="images/drf-spectacular02.png" width=650 style='margin:8px'>  
   - swagger, redoc 페이지 제공을 위한 url 작성  
-   <img src="images/drf-spectacular03.png" width=650 style='margin:8px'>  
+     <img src="images/drf-spectacular03.png" width=650 style='margin:8px'>  
   - http://127.0.0.1:8000/api/schema/swagger-ui/ 페이지 확인  
-   <img src="images/drf-spectacular04.png" width=650 style='margin:8px'>  
+     <img src="images/drf-spectacular04.png" width=650 style='margin:8px'>  
   - http://127.0.0.1:8000/api/schema/redoc/ 페이지 확인  
-   <img src="images/drf-spectacular05.png" width=650 style='margin:8px'>  
+     <img src="images/drf-spectacular05.png" width=650 style='margin:8px'>  
 
 - 설계 우선 접근법
   - OAS의 핵심 이점
