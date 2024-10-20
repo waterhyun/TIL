@@ -9,8 +9,9 @@
 
 
 ### 📁 Git
-- [Git](https://github.com/waterhyun/TIL/blob/master/git.md)
-- [Git 프로필 작성하기](https://github.com/waterhyun/TIL/blob/master/git%20profile.md)
+- [Git](https://github.com/waterhyun/TIL/blob/master/git/git.md)
+- [Git Branch](https://github.com/waterhyun/TIL/blob/master/git/git-branch.md)
+- [Git 프로필 작성하기](https://github.com/waterhyun/TIL/blob/master/git/git%20profile.md)
 
 
 ### 📁 API
