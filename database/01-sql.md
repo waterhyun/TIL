@@ -1,9 +1,38 @@
-# SQL
 
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
+- [Database](#database)
+- [Relational Database](#relational-database)
+  - [RDBMS](#rdbms)
+- [SQL](#sql)
+  - [SQL Statements](#sql-statements)
+- [Single Table Queries](#single-table-queries)
+  - [Querying data](#querying-data)
+  - [Sorting data](#sorting-data)
+    - [ORDER BY](#order-by)
+  - [Filtering data](#filtering-data)
+    - [DISTINCT](#distinct)
+    - [WHERE](#where)
+    - [Operator](#operator)
+    - [LIMIT](#limit)
+  - [Grouping data](#grouping-data)
+    - [GROUP BY](#group-by)
+- [Managing Tables (DDL)](#managing-tables-ddl)
+  - [Create a table](#create-a-table)
+  - [Modifying table fields](#modifying-table-fields)
+  - [Delete a table](#delete-a-table)
+  - [참고](#참고)
+- [Modifying Data](#modifying-data)
+  - [Insert data](#insert-data)
+  - [Update data](#update-data)
+  - [Delete data](#delete-data)
+  - [참고](#참고-1)
+- [Multi table queries](#multi-table-queries)
+  - [Join](#join)
+  - [Joining tables](#joining-tables)
 
-
-## Database
+<!-- TOC end -->
+# Database
 - 📌 데이터 베이스
   - 체계적인 데이터 모음
 - 📌 데이터
@@ -45,7 +74,7 @@
 - 📌 데이터베이스 역할
   - 데이터를 저장하고 조작 CRUD
 
-## Relational Database
+# Relational Database
 - 📌 데이터베이스 역할
   - 데이터를 저장(구조적 저장)하고 조작 CRUD
 - 📌 관계형 데이터베이스
@@ -98,7 +127,7 @@
         <img src="images/rdbms-word-06.png" width=500 style='margin:1rem'>
 
 
-### RDBMS
+## RDBMS
 - 📌 DBMS; Database Management System
   - 데이터베이스를 관리하는 소프트웨어 프로그램
   - 데이터 저장 및 관리를 용이하게 하는 시스템
@@ -119,7 +148,7 @@
   - `외래 키`를 사용하여 각 행에서 서로 다른 테이블 간의 관계를 만들 수 있음
 - 데이터는 기본 키 또는 외래 키를 통해 결합(join)될 수 있는 여러 테이블에 걸쳐 구조화 됨
 
-## SQL
+# SQL
 - Structure Query Language
   - 데이터베이스에 정보를 저장하고 처리하기 위한 프로그래밍 언어
   - 테이블의 형태로 구조화(`Structure`)된 관계형 데이터베이스에게 요청을 질의(요청)(`Query`)
@@ -135,7 +164,7 @@
 💡 요약  
 <img src="images/sql-summary.png" width=350 style='margin:1rem'>
 
-### SQL Statements
+## SQL Statements
 - SQL statements
   - SQL을 구성하는 가장 기본적인 코드 블록
   - 예시   
@@ -167,8 +196,8 @@
     - 다만, 각 RDBMS마다 독자적인 기능에 따라 표준을 벗어나는 문법이 존재하니 주의
 
 
-## Single Table Queries
-### Querying data
+# Single Table Queries
+## Querying data
 - SELECT statement
   - 테이블에서 데이터를 조회
 - SELECT syntax  
@@ -198,8 +227,8 @@
   - 테이블의 데이터를 조회 및 반환
   - `*` (asterisk)를 사용하여 모든 필드 선택
 
-### Sorting data
-#### ORDER BY
+## Sorting data
+### ORDER BY
 - ORDER BY statement
   - 조회 결과의 레코드를 정렬
   - ORDER BY syntax
@@ -230,7 +259,7 @@
     - 정렬 ORDER BY
 
 
-### Filtering data
+## Filtering data
 - 📌 Filtering data 관련 Keywords
   - Clause
     - DISTINCT
@@ -243,7 +272,7 @@
     - Comparison
     - Logical
 
-#### DISTINCT
+### DISTINCT
 - DISTINCT statement    
   - 조회 결과에서 중복된 레코드를 제거  
      <img src="images/distinct-01.png" width=500 style='margin:1rem'>
@@ -257,7 +286,7 @@
     <img src="images/distinct-05.png" width=400 style='margin:1rem'>
     <img src="images/distinct-04.png" width=150 style='margin:1rem'>
 
-#### WHERE
+### WHERE
 - WHERE statement
   - 조회 시 특정 검색 조건을 지정  
     <img src="images/where.png" width=500 style='margin:1rem'>  
@@ -295,7 +324,7 @@
     <img src="images/where21.png" width=500 style='margin:1rem'>
     <img src="images/where20.png" width=200 style='margin:1rem'>
 
-#### Operator
+### Operator
 - 📌 Comparison Operators 비교 연산자
   - =, >=, <=, !=, IS, LIKE, IN, BETWEEN, ..., AND
 - 📌 Logical Operators 논리 연산자
@@ -307,7 +336,7 @@
     - `%` : 0개 이상의 문자열과 일치 하는지 확인
     - `_` : 단일 문자와 일치하는지 확인
 
-#### LIMIT
+### LIMIT
 - LIMIT clause : 조회하는 레코드 수를 제한  
    <img src="images/limit.png" width=500 style='margin:1rem'>
   - 하나 또는 두 개의 인자를 사용(0 또는 양의 정수)
@@ -322,9 +351,9 @@
     <img src="images/limit06.png" width=500 style='margin:1rem'>
     <img src="images/limit05.png" width=400 style='margin:1rem'>
 
-### Grouping data
+## Grouping data
 
-#### GROUP BY
+### GROUP BY
 - 📌 GROUP BY clause
   - 레코드를 그룹화하여 요약본 생성('집계 함수'와 함께 사용)
 - 📌 Aggregation Functions 집계 함수
@@ -366,8 +395,8 @@
 6. 정렬하고 (ORDER BY)
 7. 특정 위치의 값을 가져옴 (LIMIT)
 
-## Managing Tables (DDL)
-### Create a table
+# Managing Tables (DDL)
+## Create a table
 - 📌 CREATE TABLE statement : 테이블 생성  
     <img src="images/create.png" width=500 style='margin:1rem'>
   - 각 필드에 적용할 데이터 타입 작성
@@ -411,7 +440,7 @@
     - 삭제된 값은 무시되며 재사용할 수 없게 됨
 
 
-### Modifying table fields
+## Modifying table fields
 - 📌 ALTER TABLE statement : 테이블 및 필드 조작
   - ALTER TABLE의 역할
      |명령어|역할|
@@ -454,7 +483,7 @@
    <img src="images/alter-table13.png" width=500 style='margin:1rem'>
    <img src="images/alter-table12.png" width=300 style='margin:1rem'>
 
-### Delete a table
+## Delete a table
 - 📌 DROP TABLE statement : 테이블 삭제  
    <img src="images/drop-table.png" width=500 style='margin:1rem'>
   - DROP TABLE statement 이후 삭제할 테이블 이름 작성
@@ -462,7 +491,7 @@
   - new_examples 테이블 삭제  
    <img src="images/drop-table02.png" width=300 style='margin:1rem'>
 
-### 참고
+## 참고
 - 타입 선호도(Type Affinity)  
    <img src="images/type-affinity.png" width=500 style='margin:1rem'>
   - 컬럼에 데이터 타입이 명시적으로 지정되지 않았거나 지원하지 않을 때 SQLite가 자동으로 데이터 타입을 추론하는 것
@@ -480,9 +509,9 @@
   - 하지만 데이터베이스를 사용하는 프로그램에 따라 NULL을 저장할 필요가 없는 경우가 많으므로 대부분 NOT NULL을 정의
   - "값이 없다"라는 표현을 테이블에 기록하는 것은 "0"이나 "빈 문자열" 등을 사용하는 것으로 대체하는 것을 권장
 
-## Modifying Data
+# Modifying Data
 
-### Insert data
+## Insert data
 - 사전 준비 : 실습 테이블 생성    
    <img src="images/insert.png" width=400 style='margin:1rem'>
 - 📌 INSERT statement : 테이블 레코드 삽입   
@@ -500,7 +529,7 @@
     <img src="images/insert08.png" width=400 style='margin:1rem'>
     <img src="images/insert07.png" width=300 style='margin:1rem'>
 
-### Update data
+## Update data
 - 📌 UPDATE statement : 테이블 레코드 수정  
    <img src="images/update.png" width=400 style='margin:1rem'>
   - SET 절 다음에 수정 할 필드와 새 값을 지정
@@ -514,7 +543,7 @@
     <img src="images/update05.png" width=400 style='margin:1rem'>
     <img src="images/update04.png" width=300 style='margin:1rem'>
 
-### Delete data
+## Delete data
 - 📌 DELETE statement : 테이블 레코드 삭제  
     <img src="images/delete.png" width=400 style='margin:1rem'>
   - DELETE FROM 절 다음에 테이블 이름 작성
@@ -528,15 +557,15 @@
     <img src="images/delete05.png" width=500 style='margin:1rem'>
     <img src="images/delete04.png" width=300 style='margin:1rem'>
 
-### 참고
+## 참고
 - SQLite의 날짜와 시간
   - SQLite에는 날짜 및/또는 시간을 저장하기 위한 별도 데이터 타입이 없음
   - 대신 날짜 및 시간에 대한 함수를 사용해 표기 형식에 따라 TEXT, REAL, INTEGER 값으로 저장
   - https://www.sqlite.org/datatype3.html
 
-## Multi table queries
+# Multi table queries
 
-### Join
+## Join
 - 관계
   - 여러 테이블 간의 (논리적) 연결
 - 관계의 필요성
@@ -560,7 +589,7 @@
   - 테이블을 분리하면 데이터 관리는 용이해질 수 있으나 출력시에는 문제가 있음
   - 테이블 한 개만을 출력할 수 밖에 없어 다른 테이블과 결합하여 출력하는 것이 필요해짐 ➡️ 이때 사용하는 것이 "JOIN"
 
-### Joining tables
+## Joining tables
 - 📌 JOIN clause : 둘 이상의 테이블에서 데이터를 검색하는 방법
   - 종류
     - INNER JOIN
@@ -574,7 +603,7 @@
   - 두 테이블에서 값이 일치하는 레코드에 대해서만 결과를 반환  
     <img src="images/inner-join.png" width=200 style='margin:1rem'>
   - INNER JOIN syntax  
-    <img src="images/inner-join02.png" width=200 style='margin:1rem'>
+    <img src="images/inner-join02.png" width=450 style='margin:1rem'>
     - FROM 절 이후 메인 테이블 지정(table_a)
     - INNER JOIN 절 이후 메인 테이블과 조인할 테이블을 지정(table_b)
     - ON 키워드 이후 조인 조건을 작성
