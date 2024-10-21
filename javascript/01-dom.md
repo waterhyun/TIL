@@ -1,3 +1,35 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [Histroy of JavaScript](#histroy-of-javascript)
+  - [웹 브라우저와 JavaScript](#웹-브라우저와-javascript)
+  - [ECMAScript](#ecmascript)
+- [변수](#변수)
+  - [JavaScript 문법 학습](#javascript-문법-학습)
+  - [변수 작성 규칙](#변수-작성-규칙)
+  - [변수 선언 키워드](#변수-선언-키워드)
+    - [let](#let)
+    - [const](#const)
+  - [block scope](#block-scope)
+- [DOM](#dom)
+  - [문서 구조](#문서-구조)
+  - [DOM](#dom-1)
+- [document 객체](#document-객체)
+- [DOM 선택](#dom-선택)
+  - [선택 메서드](#선택-메서드)
+- [DOM 조작](#dom-조작)
+  - [속성 조작](#속성-조작)
+  - [HTML 콘텐츠 조작](#html-콘텐츠-조작)
+  - [DOM 요소 조작](#dom-요소-조작)
+  - [style 조작](#style-조작)
+- [참고](#참고)
+  - [DOM 속성 확인 Tip](#dom-속성-확인-tip)
+  - [용어 정리](#용어-정리)
+  - [세미콜론](#세미콜론)
+  - [var](#var)
+  - [호이스팅](#호이스팅)
+
+<!-- TOC end -->
+
 # Histroy of JavaScript
 ## 웹 브라우저와 JavaScript
 - 웹의 탄생(1990)
