@@ -262,7 +262,7 @@
 - `testContent` property : 요소의 텍스트 콘텐츠를 표현
   - `<p> lorem </p>`에서 lorem 부분
 - HTML 콘텐츠 조작 실습  
-  <img src='images\testContent.png' width=700 style='margin:8px'>
+  <img src='images\testcontent.png' width=700 style='margin:8px'>
   
  
 ## DOM 요소 조작
