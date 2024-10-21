@@ -1,3 +1,26 @@
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [팔로우 기능 구현](#팔로우-기능-구현)
+  - [프로필 페이지](#프로필-페이지)
+  - [모델 관계 설정](#모델-관계-설정)
+  - [기능 구현](#기능-구현)
+- [Fixtures](#fixtures)
+  - [dumpadata](#dumpadata)
+  - [loaddata](#loaddata)
+- [Improve query](#improve-query)
+  - [사전 준비](#사전-준비)
+  - [annotate](#annotate)
+  - [select\_related](#select_related)
+  - [prefetch\_related](#prefetch_related)
+  - [select\_related \& prefetch\_related](#select_related--prefetch_related)
+- [참고](#참고)
+  - ['exists' method](#exists-method)
+  - [한꺼번에 dump 하기](#한꺼번에-dump-하기)
+  - [loaddata 인코딩 에러](#loaddata-인코딩-에러)
+
+<!-- TOC end -->
+
+
 # 팔로우 기능 구현
 ## 프로필 페이지
 - 각 회원의 개인 프로필 페이지에 팔로우 기능을 구현하기 위해 프로필 페이지를 먼저 구현하기
