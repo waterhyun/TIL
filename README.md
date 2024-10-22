@@ -117,7 +117,7 @@
   - [many to many relationships 1](https://github.com/waterhyun/TIL/blob/master/database/03-many-to-many-relationships.md)
   - [many to many relationships 2](https://github.com/waterhyun/TIL/blob/master/database/04-many-to-many-relationships.md)
 
-### JavaScript
+### 📁 JavaScript
 - [DOM](https://github.com/waterhyun/TIL/blob/master/javascript/01-dom.md)
 - [Basic Syntax](https://github.com/waterhyun/TIL/blob/master/javascript/02-basic-syntax.md)
 
