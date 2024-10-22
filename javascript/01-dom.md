@@ -341,7 +341,7 @@
 - Element
   - Node의 하위 유형
   - Element는 DOM 트리에서 HTML 요소를 나타내는 특별한 유형의 Node
-  - 예를 들어 <p>, <div>, <span>, <body> 등의 HTML 태그들이 Element 노드를 생성
+  - 예를 들어 `<p>`, `<div>`, `<span>`, `<body>`등의 HTML 태그들이 Element 노드를 생성
   - Node의 속성과 메서드를 모두 가지고 있으며 추가적으로 요소 특화된 기능 (예: className, innerHTML, id 등)을 가지고 있음
   - 모든 Element는 Node이지만, 모든 Node가 Element인 것은 아님
 - 📌 Parsing
