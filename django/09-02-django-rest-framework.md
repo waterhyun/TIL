@@ -63,7 +63,10 @@
 - POST http://127.0.0.1:8000/api/v1/articles/1/comments/ 응답 확인
   - 상태코드 400 응답 확인  
      <img src="images/drf-with-n-1-relation-post03.png" width=650 style='margin:8px'>    
-  - CommentSerializer에서 외래 키에 해당하는 article field 또한 사용자로부터 입력 받도록 설정되어 있기 때문에 서버 측에서는 누락되었다고 판단한 것
+  - **CommentSerializer**에서 외래 키에 해당하는 **article** field 또한 사용자로부터 입력 받도록 설정되어 있기 때문에 서버 측에서는 누락되었다고 판단한 것
+    - 외래키 데이터는
+      - 유효성 검사에서는 제외하고 싶으며(실제로는 검사 당함)
+      - 결과 데이터에는 포함하고 싶음
   - 유효성 검사 목록에서 제외 필요
   - article field를 `읽기 전용 필드`로 설정하기
     - 읽기 전용 필드(read_only_fields)
