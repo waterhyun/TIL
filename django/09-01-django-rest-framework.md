@@ -87,7 +87,7 @@
    <img src="images/url.png" width=700 style='margin:8px'>    
   - 웹에서 주어진 리소스의 주소
   - 네트워크 상에 리소스가 어디 있는지를 알려주기 위한 약속
-  - 📌 Schema(or Protocol)    
+  - 📌 **Schema(or Protocol)**  
      <img src="images/url02.png" width=700 style='margin:8px'>    
     - 브라우저가 리소스를 요청하는 데 사용해야 하는 규약
     - URL의 첫 부분은 브라우저가 어떤 규약을 사용하는지를 나타냄
@@ -95,29 +95,30 @@
       - 메일을 열기위한 mailto:
       - 파파일을 전송하기 위한 ftp:
       - 등.. 다른 프로토콜도 존재 
-  - 📌 Domain Name  
+  - 📌 **Domain Name**  
      <img src="images/url03.png" width=700 style='margin:8px'>    
     - 요청 중인 웹 서버를 나타냄
     - 어떤 웹 서버가 요구되는 지를 가리키며 직접 IP 주소를 사용하는 것도 가능하지만, 사람이 외우기 어렵기 때문에 주로 Domain Name으로 사용
     - 예시 : 도메인 google.com의 IP 주소는 142.251.42.142
-  - 📌 Port  
+  - 📌 **Port**  
      <img src="images/url04.png" width=700 style='margin:8px'>    
     - 웹 서버의 리소스에 접근하는 데 사용되는 기술적인 문(Gate)
     - HTTP 프로토콜의 표준 포트
       - HTTP - 80
       - HTTPS - 443
     - 표준 포트만 작성 시 생략 가능
-  - 📌 Path  
+  - 📌 **Path**  
      <img src="images/url05.png" width=700 style='margin:8px'>    
     - 웹 서버의 리소스 경로
     - 초기에는 실제 파일이 위치한 물리적 위치를 나타냈지만, 오늘날은 실제 위치가 아닌 추상화된 형태의 구조를 표현
     - 예시 : /articles/create/라는 주소가 실제 articles 폴더안에 create 폴더안을 나타내는 것은 아님
-  - 📌 Parameters  
+  - 📌 **Parameters**  
      <img src="images/url06.png" width=700 style='margin:8px'>    
     - 웹 서버에 제공하는 추가적인 데이터
+      - GET만 해당
     - & 기호로 구분되는 key-value 쌍 목록
     - 서버는 리소스를 응답하기 전에 이러한 파라미터를 사용하여 추가 작업을 수행할 수 있음
-  - 📌 Anchor  
+  - 📌 **Anchor**  
      <img src="images/url07.png" width=700 style='margin:8px'>    
     - 일종의 '북마크'를 나타내며 브라우저에 해당 지점에 있는 콘텐츠를 표시
     - '#' (fragment identifier, 부분 식별자) 이후 부분은 서버에 전송되지 않음
@@ -127,15 +128,15 @@
   - 리소스에 대한 행위(수행하고자 하는 동작)를 정의
   - `HTTP verbs`라고도 함
 - 대표 HTTP Request Methods
-  1. GET
+  1. GET (R)
      - 서버에 리소소의 표현을 요청
      - GET을 사용하는 요청은 데이터만 검색해야 함  
-  2. POST
+  2. POST (C)
      - 데이터를 지정된 리소스에 제출
      - 서버의 상태를 변경 
-  3. PUT
+  3. PUT (U)
      - 요청한 주소의 리소스를 수정
-  4. DELETE 
+  4. DELETE (D) 
      - 지정된 리소스를 삭제
 - HTTP response status codes
   - 특정 HTTP 요청이 성공적으로 완료 되었는지 여부를 나타냄
@@ -150,7 +151,7 @@
 - 그동안 서버가 응답(자원을 표현)했던 것
   - 지금까지 Django 서버는 사용자에게 페이지(html)만 응답하고 있었음
   - 하지만 서버가 응답할 수 있는 것은 페이지 뿐만 아니라 다양한 데이터 타일을 응답할 수 있음
-  - REST API는 이 중에서도 `JSON` 타입으로 응답하는 것을 권장
+  - **REST API**는 이 중에서도 `JSON` 타입으로 응답하는 것을 권장
 - 응답 데이터 타입의 변화
   1. 페이지(html)만을 응답하는 서버  
      <img src="images/rest-api.png" width=450 style='margin:8px'>    
@@ -179,6 +180,8 @@
 - 프로젝트 준비
   - 사전 제공된 DRF 프로젝트 기반 시작
     1. 가상 환경 생성, 활성화 및 패키지 설치
+       - `djangorestframework==3.14.0`
+       - 장고에서 Rest API를 만들 수 있게하는 라이브러리
     2. migrate 진행 `python manage.py migrate`
     3. 준비된 fixtures 파일을 load하여 실습용 초기 데이터 입력 `python manage.py loaddata articles.json`
   - Postman 설치
@@ -226,7 +229,10 @@ URL과 HTTP requests methods 설계
        <img src="images/modelserializer-get.png" width=550 style='margin:8px'>    
   - step 2
     - url 및 view 함수 작성  
-       <img src="images/modelserializer-get02.png" width=550 style='margin:8px'>    
+       <img src="images/modelserializer-get02.png" width=550 style='margin:8px'>   
+      
+      - app_name, url의 name을 지정해줬던 이유 = DTL 태그를 쓰기 위함
+      - 이제는 필요 없어서 굳이 쓰지 않음  
   - step 3
     - http://127.0.0.1:8000/api/v1/articles/ 응답 확인  
        <img src="images/modelserializer-get03.png" width=550 style='margin:8px'>    
