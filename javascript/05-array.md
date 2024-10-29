@@ -234,7 +234,7 @@ names.forEach((name) => {
 |forEach()|간결하고 가독성이 높음 <br> callback 함수를 이용하여 각 요소를 조작하기 용이 <br> break, continue 사용 불가| 사용 권장 |
 
 📌 기타 Array Helper Methods
-- MDN 문서를 참고해 사용해보기  
+- MDN 문서를 참고해 사용해보기 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots 
 
   | 메서드 | 역할 |
   |---|----|
@@ -243,9 +243,45 @@ names.forEach((name) => {
   |some|배열의 요소 중 적어도 하나라도 콜백 함수를 통과하면 true를 반환하며 즉시 배열 순회 중지 <br> 반면에 모두 통과하지 못한다면 false 반환|
   |every|배열의 모든 요소가 콜백 함수를 통과하면 true를 반환<br>반면에 하나라도 통과하지 못하면 즉시 false를 반환하고 배열 순회 중지|
 
+
 ## 배열 with '전개 구문'
+- 배열 복사
+  ```js
+  let parts = ['어깨', '무릎']
+  let lyrics = ['머리', ...parts, '발']
+
+  console.log(lyrics) // [ '머리', '어깨', '무릎', '발' ]
+  ``` 
 
 # 참고
 ## 콜백 함수의 이점
+- 콜백 함수 구조를 사용하는 이유
+  - 함수의 재사용성 측면
+    - 함수를 호출하는 코드에서 콜백 함수의 동작을 자유롭게 변경할 수 있음
+    - 예를 들어, map 함수는 콜백 함수를 인자로 받아 배열의 각 요소를 순회하며 콜백 함수를 실행
+    - 이때, 콜백 함수는 각 요소를 변환하는 로직을 담당하므로, map 함수를 호출하는 코드는 간결하고 가독성이 높아짐
+  - 비동기적 처리 측면
+    <img src='images\callback.png' width=500 style='margin:8px'>   
+    <img src='images\callback02.png' width=500 style='margin:8px'>   
+    - setTimeout 함수는 콜백 함수를 인자로 받아 일정 시간이 지난 후에 실행됨
+    - 이때, setTimeout 함수는 비동기적으로 콜백 함수를 실행하므로, 다른 코드의 실행을 방해하지 않음(비동기 JavaScript 내용 참고)
+
 ## forEach에서 break 사용하기
+- forEach에서는 break 키워드를 사용할 수 없음
+- 대신 some과 every의 특징을 활용해 마치 break를 사용하는 것처럼 활용 할 수 있음  
+  <img src='images\some-every.png' width=800 style='margin:8px'>   
+- some을 활용한 예시  
+  - 콜백 함수가 true를 반환하면서 즉시 순회를 중단하는 특징을 활용  
+    <img src='images\some.png' width=400 style='margin:8px'>   
+- every을 활용한 예시  
+  - 콜백 함수가 false를 반환하면 즉시 순회를 중단하는 특징을 활용  
+  <img src='images\every.png' width=400 style='margin:8px'>   
+
 ## 배열은 객체다
+- 배열도 키와 속성들을 담고 있는 참조 타입의 객체
+- 배열의 요소를 대괄호 접근법을 사용해 접근하는 건 객체 문법과 같음
+  - 배열의 키는 숫자
+- 숫자형 키를 사용함으로써 배열은 객체 기본 기능 외에도
+  - 순서가 있는 컬렉션을 제어하게 해주는 특별한 메서드를 제공하는 것
+- 배열은 인덱스를 키로 가지며 length 속성을 갖는 특수한 객체  
+  <img src='images\array-object.png' width=600 style='margin:8px'>   
