@@ -44,7 +44,7 @@
          - 대소문자 여부에 상관없이 xml 문자로 시작 불가
          - 세미콜론 포함 불가
          - 대문자 포함 불가
-  6. 요청 url 작성 마무리 
+  6. 요청 url 작성 마무리  
      <img src='images\ajax-with-follow06.png' width=600 style='margin:8px'> 
   7. [csrf token 해결 시작] 문서상 input hidden 타입으로 존재하는 csrf token 데이터를 이제는 axios로 전송해야함  
      <img src='images\ajax-with-follow07.png' width=800 style='margin:8px'> 
@@ -83,21 +83,21 @@
       - 응답은 더 이상 HTML 문서가 아닌 JSON 데이터로 응답하도록 변경         
         <img src='images\ajax-with-follow10.png' width=700 style='margin:8px'> 
   11. 팔로우 요청 후 Django 서버로 부터 받은 응답 데이터 확인하기       
-     <img src='images\ajax-with-follow11.png' width=700 style='margin:8px'> 
+     <img src='images\ajax-with-follow11.png' width=700 style='margin:8px'>   
   12. 응답 데이터 is_followed에 따라 팔로우 버튼을 조작하기      
-     <img src='images\ajax-with-follow12.png' width=700 style='margin:8px'> 
+     <img src='images\ajax-with-follow12.png' width=700 style='margin:8px'>  
   13. 클라이언트와 서버 간 XHR 객체를 주고 받는 것을 확인하기 (개발자도구 - Network)     
-     <img src='images\ajax-with-follow13-1.png' width=450 style='margin:8px'>
-     <img src='images\ajax-with-follow13-2.png' width=450 style='margin:8px'> 
+     <img src='images\ajax-with-follow13-1.png' width=450 style='margin:8px'>  
+     <img src='images\ajax-with-follow13-2.png' width=450 style='margin:8px'>   
   14. 팔로잉 수와 팔로워 수 비동기 적용
       - 해당 요소를 선택할 수 있도록 span 태그와 id 속성 작성        
-        <img src='images\ajax-with-follow14.png' width=600 style='margin:8px'> 
+        <img src='images\ajax-with-follow14.png' width=600 style='margin:8px'>   
   15. 각 span 태그를 선택      
-     <img src='images\ajax-with-follow15.png' width=600 style='margin:8px'> 
+     <img src='images\ajax-with-follow15.png' width=600 style='margin:8px'>   
   16. Django view 함수에서 팔로워, 팔로잉 인원 수 연산을 진행하여 결과를 응답 데이터로 전달    
-     <img src='images\ajax-with-follow16.png' width=600 style='margin:8px'> 
+     <img src='images\ajax-with-follow16.png' width=600 style='margin:8px'>   
   17. 응답 데이터를 받아 각 태그의 인원 수 값 변경에 활용    
-     <img src='images\ajax-with-follow17.png' width=600 style='margin:8px'> 
+     <img src='images\ajax-with-follow17.png' width=600 style='margin:8px'>   
 
 # Ajax with likes
 ## 비동기 좋아요 구현
@@ -114,13 +114,13 @@
     - 각 버튼의 공통 조상 요소에 이벤트 핸들러 단 하나만 할당하기!
 - 비동기 좋아요 구현 (Ajax 적용)
   1. 모든 좋아요 form 요소를 포함하는 최상위 요소 작성  
-    <img src='images\ajax-with-like.png' width=500 style='margin:8px'> 
+    <img src='images\ajax-with-like.png' width=500 style='margin:8px'>   
   2. 최상위 요소 선택 ➡ 이벤트 핸들러 할당 ➡ 하위 요소들의 submit 이벤트를 감지하고 submit 기본 이벤트를 취소    
-    <img src='images\ajax-with-like02.png' width=700 style='margin:8px'> 
-  3. axios 코드 작성 (url 작성에 필요한 article pk는 어떻게 작성해야 할까?)  
-    <img src='images\ajax-with-like03.png' width=700 style='margin:8px'> 
+    <img src='images\ajax-with-like02.png' width=700 style='margin:8px'>   
+  3. axios 코드 작성 (url 작성에 필요한 article pk는 어떻게 작성해야 할까?)   
+    <img src='images\ajax-with-like03.png' width=700 style='margin:8px'>   
   4. 각 좋아요 form에 article.pk를 부여 후 HTML의 article.pk 값을 JavaScript에서 참조하기  
-    <img src='images\ajax-with-like04.png' width=500 style='margin:8px'> 
+    <img src='images\ajax-with-like04.png' width=500 style='margin:8px'>   
     - CurrentTarget & target (복습)
       - currentTarget
         - 현재 요소
@@ -131,26 +131,26 @@
         - 실제 이벤트가 시작된 요소
         - 버블링이 진행 되어도 변하지 않음
   5. url 완성 후 요청 및 응답 확인  
-    <img src='images\ajax-with-like05.png' width=700 style='margin:8px'> 
+    <img src='images\ajax-with-like05.png' width=700 style='margin:8px'>   
   6. 좋아요 버튼을 토글하기 위해서는 현재 사용자가 좋아요를 누른 상태인지 좋아요를 누르지 않은 상태인지에 대한 **상태 확인**이 필요
      1. Django의 view 함수에서 좋아요 여부를 파악할 수 있는 변수 추가 생성
      2. JSON 타입으로 응답하기  
   7. 좋아요 상태 여부를 JavaScript에게 전달할 데이터 작성 및 JSON 데이터 응답   
-    <img src='images\ajax-with-like07.png' width=700 style='margin:8px'> 
+    <img src='images\ajax-with-like07.png' width=700 style='margin:8px'>   
   8. 응답 데이터 is_liked를 받아 isLiked 변수에 할당  
-    <img src='images\ajax-with-like08.png' width=700 style='margin:8px'> 
+    <img src='images\ajax-with-like08.png' width=700 style='margin:8px'>   
   9. isLiked에 따라 좋아요 버튼을 토글하기 (그런데 어떤 게시글의 좋아요 버튼을 선택 했는지 구분이 필요)  
-    <img src='images\ajax-with-like09.png' width=700 style='margin:8px'> 
+    <img src='images\ajax-with-like09.png' width=700 style='margin:8px'>   
   10. 문자와 article의 pk값을 혼합하여 각 버튼에 id 속성 값을 설정  
-    <img src='images\ajax-with-like10.png' width=700 style='margin:8px'> 
+    <img src='images\ajax-with-like10.png' width=700 style='margin:8px'>   
   11. 각 좋아요 버튼을 선택 후 isLiked에 따라 버튼을 토글  
-    <img src='images\ajax-with-like11.png' width=700 style='margin:8px'> 
+    <img src='images\ajax-with-like11.png' width=700 style='margin:8px'>   
 
 
 ## 버블링을 활용하지 않는 경우
 1. querySelectorAll()을 사용해 전체 좋아요 버튼을 선택
    - querySelectorAll() 선택을 위한 class 적용   
-     <img src='images\no-use-bubbling.png' width=700 style='margin:8px'> 
+     <img src='images\no-use-bubbling.png' width=700 style='margin:8px'>   
 2. forEach()를 사용해 전체 좋아요 버튼을 순회하면서 진행  
    - forEach()를 사용해 전체 좋아요 버튼을 순회하면서 진행   
-     <img src='images\no-use-bubbling02.png' width=700 style='margin:8px'> 
+     <img src='images\no-use-bubbling02.png' width=700 style='margin:8px'>   
