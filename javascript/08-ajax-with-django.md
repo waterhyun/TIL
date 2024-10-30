@@ -36,7 +36,9 @@
      - 📌 `data-*` 속성
        - 사용자 지정 데이터 특성을 만들어 임의의 데이터를 HTML과 DOM 사이에서 교환할 수 있는 방법 
        - 예시 : data-my-id는 HTML 표기법이라서 myId로 이름을 변경해서 Console창에 뜸(JavaScript)  
-       <img src='images\data.png' width=500 style='margin:8px'>  
+       
+       <img src='images\data.png' width=500 style='margin:8px'>    
+       
        - 모든 사용자 지정 데이터는 JavaScript에서 dataset 속성을 통해 접근
        - ⚠ 주의사항
          - 대소문자 여부에 상관없이 xml 문자로 시작 불가
