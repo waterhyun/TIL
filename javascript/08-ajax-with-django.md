@@ -1,3 +1,11 @@
+- [Ajax와 서버](#ajax와-서버)
+- [Ajax with follow](#ajax-with-follow)
+  - [비동기 팔로우 구현](#비동기-팔로우-구현)
+- [Ajax with likes](#ajax-with-likes)
+  - [비동기 좋아요 구현](#비동기-좋아요-구현)
+  - [버블링을 활용하지 않는 경우](#버블링을-활용하지-않는-경우)
+
+
 # Ajax와 서버
 - Ajax; Asynchronous JavaScript and XML
   - 비동기적인 웹 애플리케이션 개발에 사용하는 기술
