@@ -278,7 +278,7 @@
   - 이를 위해 참조 자료형의 객체 타입으로 구현한 것
     - JavaScript에서는 일반 변수의 접근 또는 변화를 감지할 방법이 없기 때문
     - https://vuejs.org/guide/essentials/reactivity-fundamentals.html#why-refs  
-- 반응형 변수 vs. 일반 변수
+- 반응형 변수 vs. 일반 변수  
   <img src ='images\reactive-value.png' width=500 style='margin:8px'>      
   <img src ='images\reactive-value02.png' width=200 style='margin:8px'>    
 
@@ -303,7 +303,7 @@
 ## SEO
 - SEO; Search Engine Optimization
   - google, bing과 같은 검색 엔진 등에 내 서비스나 제품 등이 효율적으로 검색 엔진에 노출되도록 개선하는 과정을 일컫는 작업
-  - 정보의 대상은 주로 HTMl에 작성된 내용
+  - 정보의 대상은 주로 HTML에 작성된 내용
   - 검색
     - 각 사이트가 운용하는 검색 엔진에 의해 이루어지는 작업
   - 검색 엔진
