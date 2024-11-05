@@ -10,22 +10,24 @@
 <body>
   <div id="app">
     <!-- if else -->
-    <p>true일때 보여요</p>
-    <p>false일때 보여요</p>
-    <button>토글</button>
+    <p v-if="isSeen">true일때 보여요</p>
+    <p v-else>false일때 보여요</p>
+    <button @click="isSeen = !isSeen">토글</button>
 
     <!-- else if -->
-    <div>Alice입니다</div>
-    <div>Bella입니다</div>
-    <div>Cathy입니다</div>
-    <div>아무도 아닙니다.</div>
+    <div v-if="name === 'Alice'">Alice입니다</div>
+    <div v-else-if="name === 'Bella'">Bella입니다</div>
+    <div v-else-if="name === 'Cathy'">Cathy입니다</div>
+    <div v-else>아무도 아닙니다.</div>
 
     <!-- v-if on <template> -->
-    <div>Cathy입니다</div>
-    <div>나이는 30살입니다</div>
+    <template v-if="name === 'Cathy'">
+      <div>Cathy입니다</div>
+      <div>나이는 30살입니다</div>
+    </template>
 
     <!-- v-show -->
-    <div>v-show</div>
+    <div v-show="isShow">v-show</div>
   </div>
 
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

@@ -85,7 +85,7 @@
   - 무조건 computed만 사용하는 것이 아니라 사용 목적과 상황에 맞게 computed와 mehtod를 적절히 조합하여 사용
 - computed 주의사항
   - 의존된 데이터에 따라 자동으로 결과값을 만들어주는데, 결과값을 변경하려고 하지 말 것
-  - computed는 읽기 전용이기 때문에 아래 코드는 경고가 발생한다.
+  - computed는 **읽기 전용**이기 때문에 아래 코드는 경고가 발생한다.
     ```js
     // computed 주의사항
     const a = ref(0)
@@ -131,6 +131,7 @@
   - v-if (cheap inital load, expensive toggle)
     - 초기 조건이 false인 경우 아무 작업도 수행하지 않음
     - 토글 비용이 높음
+      - 지우고/그리고
   - v-show (Expensive initial load, cheap toggle)
     - 초기 조건에 관계 없이 항상 렌더링
     - 초기 렌더링 비용이 더 높음
@@ -216,6 +217,9 @@
 ## computed vs. watch
 <img src ='images\computed-watchers.png' width=600 style='margin:8px'> 
 
+- computed는 api와 소통을 진행할 수 없고
+- watchers는 계산된 값을 만들어 낼 수 없음
+
 # Lifecycle Hooks
 - Vue 컴포넌트의 생명부터 소멸까지 각 단계에서 실행되는 함수
 - Lifecycle Hooks Diagram
@@ -262,7 +266,7 @@
    - computed의 반환 값은 의존하는 데이터의 파생된 값
      - 이미 의존하는 데이터에 의해 계산이 완료된 값
    - 일종의 snapshot이며 의존하는 데이터가 변경될 때만 새 snapshot이 생성됨
-   - 계산된 값은 읽기 전용으로 취급되어야 하며 변경되어서는 안됨
+   - 계산된 값은 **읽기 전용**으로 취급되어야 하며 변경되어서는 안됨
    - 대신 새 값을 얻기 위해서는 의존하는 데이터를 업데이트 해야 함 
 2. computed 사용 시 원본 배열 변경하지 말 것
    - computed에서 reverse() 및 sort() 사용시 원본 배열을 변경하기 때문에 원본 배열의 복사본을 만들어서 진행 해야 함   
@@ -273,6 +277,7 @@
   1. 컴포넌트 상태의 일관성 유지
      - 컴포넌트의 생명주기 동안 상태가 예측 가능하고 일관되게 유지되도록 보장
      - 비동기적으로 실행될 경우, 컴포넌트의 상태가 예상치 못한 시점에 변경될 수 있어 버그 발생 가능성이 높아짐 
+       - 비동기 안에 lifecycle hook 작성하지 말 것
      - 비동기적으로 작성한 lifecycle hook 예시    
        <img src ='images\lifecycle-hooks-ref.png' width=400 style='margin:8px'>   
   2. Vue 내부 메커니즘과의 동기화 

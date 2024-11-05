@@ -16,8 +16,8 @@
       - 단순 배열의 필터링/정렬에 적합
      -->
     <ul>
-      <li>
-        {{ }}
+      <li v-for="number in evenNumbers">
+        {{ number }}
       </li>
     </ul>
 
@@ -28,9 +28,9 @@
       - 중첩된 v-for에서 사용
       - 매개변수가 필요한 경우 사용
     -->
-    <ul>
-      <li>
-        {{ }}
+    <ul v-for="numbers in numberSets">
+      <li v-for="num in evenNumberSets(numbers)">
+        {{ num }}
       </li>
     </ul>
   </div>
@@ -48,10 +48,14 @@
         ])
 
         // 1. computed를 사용한 짝수 필터링
-        const evenNumbers = null
+        const evenNumbers = computed(() => {
+          return numbers.value.filter((number) => number % 2 === 0)
+        })
 
         // 2. method를 사용한 짝수 필터링
-        const evenNumberSets = null
+        const evenNumberSets = function (numbers) {
+          return numbers.filter((number) => number % 2 === 0)
+        }
 
         return {
           numberSets,
