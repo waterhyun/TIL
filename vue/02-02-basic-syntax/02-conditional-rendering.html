@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- if else -->
+    <p>true일때 보여요</p>
+    <p>false일때 보여요</p>
+    <button>토글</button>
+
+    <!-- else if -->
+    <div>Alice입니다</div>
+    <div>Bella입니다</div>
+    <div>Cathy입니다</div>
+    <div>아무도 아닙니다.</div>
+
+    <!-- v-if on <template> -->
+    <div>Cathy입니다</div>
+    <div>나이는 30살입니다</div>
+
+    <!-- v-show -->
+    <div>v-show</div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    const { createApp, ref } = Vue
+
+    const app = createApp({
+      setup() {
+        const isSeen = ref(true)
+        const name = ref('Cathy')
+        const isShow = ref(false)
+
+        return {
+          isSeen,
+          name,
+          isShow
+        }
+      }
+    })
+
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
