@@ -31,7 +31,7 @@
     <img src ='images\sfc02.png' width=500 style='margin:8px'>       
 
 - SFC; Single-File Components
-  - 컴포넌트의 템플릿, 로직 및 스타일을 하나의 파일로 묶어낸 특수한 **파일 형식**
+  - 컴포넌트의 템플릿(template), 로직(JS) 및 스타일(CSS)을 하나의 파일로 묶어낸 특수한 **파일 형식**
   - <mark>*.vue</mark> 파일
 - SFC 파일 예시
   - Vue SFC는 HTML, CSS 및 JavaScript를 단일 파일로 합친 것
@@ -96,6 +96,8 @@
     <img src ='images\sfc-build-tool05.png' width=400 style='margin:8px'>      
     <img src ='images\sfc-build-tool06.png' width=400 style='margin:8px'>      
 
+    - `npm install`하면 node_modules, package-lock.json 두 개의 파일이 생성됨
+
   - step 5 : Vue 프로젝트 서버 실행    
     <img src ='images\sfc-build-tool07.png' width=400 style='margin:8px'>      
     <img src ='images\sfc-build-tool08.png' width=400 style='margin:8px'>     
@@ -109,6 +111,7 @@
 ## NPM
 - 📌 NPM; Node Package Manager
   - Node.js의 기본 패키지 관리자
+    - 파이썬의 경우 PIP
   - Chrome의 V8 JavaScript 엔진을 기반으로 하는 Server-Side 실행 환경
 - Node.js의 영향
   - 기존에 브라우저 안에서만 동작할 수 있었던 JavaScript를 브라우저가 아닌 서버 측에서도 실행할 수 있게 함
@@ -144,6 +147,8 @@
   <img src ='images\vue-project-structure.png' width=250 style='margin:8px'>      
 
   - Node.js 프로젝트에서 사용되는 외부 패키지들이 저장되는 디렉토리
+    - venv랑 비슷한 존재
+    - 활성화, 비활성화 개념은 없음
   - 프로젝트의 의존성 모듈을 저장하고 관리하는 공간
   - 프로젝트가 실행될 때 필요한 라이브러리와 패키지들을 포함
   - **.gitignore에 작성됨**   
@@ -151,7 +156,7 @@
 - 2️⃣ package-lock.json   
   <img src ='images\vue-project-structure02.png' width=250 style='margin:8px'>  
 
-  - 패키지들의 실제 설치 버전, 의존성 관계, 하위 패키지 등을 포함하여 패키지 설치에 필요한 모든 정보를 포함
+  - 패키지들의 **실제 설치 버전**, 의존성 관계, 하위 패키지 등을 포함하여 패키지 설치에 필요한 모든 정보를 포함
   - 패키지들의 정확한 버전을 보장하여, 여러 개발자가 협업하거나 서버 환경에서 일관성 있는 의존성을 유지하는 데 도움을 줌
   - `npm install` 명령을 통해 패키지를 설치할 때, 명시된 버전과 의존성을 기반으로 설치  
 
@@ -159,8 +164,16 @@
   <img src ='images\vue-project-structure03.png' width=250 style='margin:8px'>
 
   - 프로젝트의 <mark>메타 정보</mark>와 <mark>의존성 패키지 목록</mark>을 포함
+    - node_modules의 텍스트화라고 생각하면 편홤
   - 프로젝트의 이름, 버전, 작성자, 라이선스 등과 같은 메타 정보를 정의
-  - package-lock.json과 함게 프로젝트의 의존성을 관리하고, 버전 충돌 및 일관성을 유지하는 역할  
+    - package.json는 설치할 수 있는 패키지의 버전 **범위**를 저장하고
+    - package-lock.json은 그 중 어떤 버전으로 설치되었는지 특정 버전을 정의!
+      - `^` 최대라는 뜻
+    - 두 개의 파일이 상호 보완됨, 직접 수정할 일도 없음
+    - npm install하면 자동으로 저장됨
+  - package-lock.json과 함게 프로젝트의 의존성을 관리하고, 버전 충돌 및 일관성을 유지하는 역할
+    - 프로젝트할 때 팀원과 package-lock.json, package.json의 버전을 잘 맞춰주면 됨 
+    - 그래야 node_modules가 똑같이 설치 됨 
 
 - 4️⃣ public 디렉토리   
   <img src ='images\vue-project-structure04.png' width=250 style='margin:8px'>
@@ -170,32 +183,36 @@
     - **항상 같은 이름을 갖는**
     - **import 할 필요 없는**
   - 항상 root 절대 경로를 사용하여 참조
-    - `public/icon.png`는 소스 코드에서 `/icon.png`로 참조할 수 있음     
+    - `public/icon.png`는 소스 코드에서 `/icon.png`로 참조할 수 있음
+    - 절대 경로에 존재하는 고정적인 정적 파일이다.
+  - 참고 : favicon 파비콘은 "favorites icon"의 줄임말로, 웹사이트나 웹페이지를 대표하는 작은 아이콘
   
 
-- 5️⃣ src 디렉토리   
+- 5️⃣ src 디렉토리 ⭐️⭐️⭐️⭐️⭐️   
   <img src ='images\vue-project-structure05.png' width=250 style='margin:8px'>
 
-  - 프로젝트의 주요 소스 코드를 포함하는 곳
+  - 프로젝트의 **주요 소스 코드**를 포함하는 곳
   - 컴포넌트, 스타일, 라우팅 등 프로젝트의 핵심 코드를 관리  
 
 - 6️⃣ src/assets    
   <img src ='images\vue-project-structure06.png' width=250 style='margin:8px'>
 
-  - 프로젝트 내에서 사용되는 자원(이미지, 폰트, 스타일 시트 등)을 관리
-  - 컴포넌트 자체에서 참조하는 내부 파일을 저장하는 데 사용
-  - 컴포넌트가 아닌 곳에서는 public 디렉토리에 위치한 파일을 사용
+  - 프로젝트 내에서 사용되는 자원(정적파일, 이미지, 폰트, 스타일 시트 등)을 관리
+  - **컴포넌트 자체에서 참조하는 내부 파일을 저장하는 데 사용**
+  - 컴포넌트가 아닌 곳에서는 **public 디렉토리**에 위치한 파일을 사용
 
 - 7️⃣ src/components    
   <img src ='images\vue-project-structure07.png' width=250 style='margin:8px'>
 
-  - Vue 컴포넌트들을 작성하는 곳
+  - **Vue 컴포넌트들을 작성하는 곳**
+    - 작성할 때 최상위 태그가 하나가 되도록 작성할 것.(권장하는 방식)
 
 - 8️⃣ src/App.vue  
   <img src ='images\vue-project-structure08.png' width=250 style='margin:8px'>
   <img src ='images\vue-project-structure09.png' width=250 style='margin:8px'>
   - Vue 앱의 **최상위 Root 컴포넌트**
   - 다른 하위 컴포넌트들을 포함
+    - src/components에서 작성되는 컴포넌트들은 최종적으로 app.vue 컴포넌트로 연결됨
   - 애플리케이션 전체의 레이아웃과 공통적인 요소를 정의
 
 - 9️⃣ src/main.js  
@@ -213,8 +230,10 @@
     - Vue 앱이 SPA인 이유
   - 필요한 스타일 시트, 스크립트 등의 외부 리소스를 로드할 수 있음
     - 예시 : bootstrap CDN 
+  - index.html 파일에서 `<div id="app"></idv>`부분이 있는데 이게 app.vue가 마운트 되어 있다고 보면 됨
+    - main.js 참고하기
   
-- 기타 설정 파일  
+- 기타 설정 파일 (현재 학습에서 직접 다룰 일 없음) 
   <img src ='images\vue-project-structure12.png' width=250 style='margin:8px'>
 
   - 1️⃣1️⃣ jsconfig.json
@@ -232,9 +251,28 @@
   - 초기에 생성된 모든 컴포넌트 삭제(App.vue 제외)
   - App.vue 코드 초기화   
   <img src ='images\vue-component.png' width=500 style='margin:8px'>
+
+  ```vue
+  <template>
+    <h1>App.vue</h1>
+  </template>
+
+  <script setup>
+
+  </script>
+
+  <style scoped>
+
+  </style>
+  ```
+
+  - 자동완성 : vue3~, lang="scss" 부분 지워주기
+
 - 1️⃣ 컴포넌트 파일 생성
   - MyComponent.vue 생성   
     <img src ='images\vue-component02.png' width=500 style='margin:8px'>
+  
+  - `npm run dev` 
 - 2️⃣ 컴포넌트 등록
   - App 컴포넌트에 MyComponent를 등록    
     <img src ='images\vue-component03.png' width=500 style='margin:8px'>
@@ -265,6 +303,8 @@
 
 - 내부 렌더링 과정  
   <img src ='images\rendering-process.png' width=600 style='margin:8px'>
+
+  - 실제 DOM을 선택하지 않음
 
 - Virtual DOM 패턴의 장점
   - 효율성
@@ -326,6 +366,8 @@
     - 사용하지 않으면 모든 컴포넌트에 영향을 미침
   - 그러나 자식 컴포넌트의 최상위 요소(root element)는 부모 CSS와 본인 CSS 모두에게서 영향을 받음
     - 자식 컴포넌트의 최상위 요소는 부모에서 사용되기 때문
+    - App.vue에서 지정한 스타일이 App.vue에 등록된 컴포넌트의 최상위 태그에 영향을 미침
+    - 이를 해결하기 위해서 클래스 선택자를 사용할 것
   - 이는 부모가 레이아웃 목적으로 자식 컴포넌트 최상위 요소의 스타일을 지정할 수 있도록 의도적으로 설계된 것
   - https://vuejs.org/api/sfc-css-features.html 
 - 다음과 같이 App(부모) 컴포넌트에 적용한 스타일에 scoped가 작성 되어 있지만, MyComponent(자식)의 최상위 요소(div)는 부모와 본인의 CSS 모두의 영향을 받기 때문에 부모 컴포넌트에 지정한 스타일이 적용됨    
