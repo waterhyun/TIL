@@ -92,7 +92,7 @@
     <img src ='images\sfc-build-tool03.png' width=400 style='margin:8px'>      
     <img src ='images\sfc-build-tool04.png' width=450 style='margin:8px'>      
 
-  - step 4 : 패키지 설치
+  - step 4 : 패키지 설치  
     <img src ='images\sfc-build-tool05.png' width=400 style='margin:8px'>      
     <img src ='images\sfc-build-tool06.png' width=400 style='margin:8px'>      
 
@@ -233,7 +233,7 @@
   - index.html 파일에서 `<div id="app"></idv>`부분이 있는데 이게 app.vue가 마운트 되어 있다고 보면 됨
     - main.js 참고하기
   
-- 기타 설정 파일 (현재 학습에서 직접 다룰 일 없음) 
+- 기타 설정 파일 (현재 학습에서 직접 다룰 일 없음)   
   <img src ='images\vue-project-structure12.png' width=250 style='margin:8px'>
 
   - 1️⃣1️⃣ jsconfig.json
