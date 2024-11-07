@@ -38,11 +38,11 @@
      <img src ='images\passing-props03.png' width=500 style='margin:8px'>   
   5. App > Parent > ParentChild 컴포넌트 관계 작성 
      1. App 컴포넌트 작성  
-       <img src ='images\passing-props04.png' width=500 style='margin:8px'>   
+        <img src ='images\passing-props04.png' width=500 style='margin:8px'>   
      2. Parent 컴포넌트 작성  
-       <img src ='images\passing-props05.png' width=500 style='margin:8px'>   
+        <img src ='images\passing-props05.png' width=500 style='margin:8px'>   
      3. ParentChild 컴포넌트 작성  
-       <img src ='images\passing-props06.png' width=500 style='margin:8px'>   
+        <img src ='images\passing-props06.png' width=500 style='margin:8px'>   
        
 - Props 선언
   - 부모 컴포넌트에서 내려 보낸 props를 사용하기 위해서는 자식 컴포넌트에서 명시적인 props 선언이 필요
@@ -83,17 +83,17 @@
 
 ## Props 세부사항
 1. Props Name Casing (Props 이름 컨벤션)
-   1. 자식 컴포넌트로 전달 시 (➡️ Kebab-case)  
-    <img src ='images\passing-props19.png' width=500 style='margin:8px'>
-   2. 선언 및 템플릿 참조 시 (➡️ camelCase)  
-    <img src ='images\passing-props20.png' width=500 style='margin:8px'>
+   1. 자식 컴포넌트로 전달 시 (➡️ Kebab-case)    
+      <img src ='images\passing-props19.png' width=500 style='margin:8px'>
+   2. 선언 및 템플릿 참조 시 (➡️ camelCase)    
+      <img src ='images\passing-props20.png' width=500 style='margin:8px'>
 2. Static Props와 Dynamic Props
    1. 지금까지 작성한 것은 Static(정적) props
    2. v-bind를 사용하여 **동적으로 할당된 props**를 사용할 수 있음
    3. Dynamic props 정의   
-     <img src ='images\passing-props21.png' width=500 style='margin:8px'>
+      <img src ='images\passing-props21.png' width=500 style='margin:8px'>
    4. Dynamic props 출력 확인
-     <img src ='images\passing-props22.png' width=500 style='margin:8px'>
+      <img src ='images\passing-props22.png' width=500 style='margin:8px'>
 
   
 
