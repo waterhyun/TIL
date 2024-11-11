@@ -84,8 +84,10 @@
 - 라우팅 기본
   1. index.js에 라우터 관련 설정 작성(주소, 이름, 컴포넌트)    
     <img src ='images\vue-router09.png' width=500 style='margin:8px'>    
+  
   2. RouterLink의 'to' 속성으로 index.js에서 정의한 주소 값(path)을 사용  
     <img src ='images\vue-router10.png' width=500 style='margin:8px'>    
+  
   3. RouterLink 클릭 시 경로와 일치하는 컴포넌트가 RouterView에서 렌더링 됨  
     <img src ='images\vue-router11.png' width=500 style='margin:8px'>    
 
