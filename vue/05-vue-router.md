@@ -245,11 +245,13 @@
   - router.beforeEach 활용
     - Login이 되어 있지 않다면 페이지 진입을 막고 Login 페이지로 이동시키기
     - LoginView 컴포넌트 작성 및 라우트 등록  
-      <img src ='images\navigation-guard04.png' width=500 style='margin:8px'> 
+      <img src ='images\navigation-guard04.png' width=500 style='margin:8px'>  
+    
     - 어떤 RouterLink를 클릭해도 LoginView 컴포넌트만 볼 수 있음  
-      <img src ='images\navigation-guard05.png' width=500 style='margin:8px'> 
+      <img src ='images\navigation-guard05.png' width=500 style='margin:8px'>  
+    
     - 만약 로그인이 되어있고(1), 이동하는 주소 이름이 Login이 아니라면(2) Login 페이지로 redirect
-      <img src ='images\navigation-guard06.png' width=500 style='margin:8px'> 
+      <img src ='images\navigation-guard06.png' width=500 style='margin:8px'>  
 
 ## Per-route Guard
 - 특정 라우터에서만 동작하는 가드
@@ -267,9 +269,11 @@
     1. 라우터 가드 beforeEnter 작성
     2. HomeView에서 UserView로 이동 후 각 인자 값 출력 확인하기    
       <img src ='images\navigation-guard08.png' width=500 style='margin:8px'>   
+    
     3. to에는 이동할 URL인 user 라우트에 대한 정보가, from에는 현재 URL인 home 라우트에 대한 정보가 들어있음
     4. 다른 경로에서 user 라우트를 탐색했을 때 실행된 것  
       <img src ='images\navigation-guard09.png' width=500 style='margin:8px'>   
+  
   - router.beforeEnter 활용
     - 이미 로그인한 상태라면 LoginView 진입을 막고 HomeView로 이동시키기  
       <img src ='images\navigation-guard10.png' width=500 style='margin:8px'>   
