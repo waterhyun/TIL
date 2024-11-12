@@ -77,31 +77,31 @@
   - `defineStore()`의 반환 값의 이름은 use와 store를 사용하는 것을 권장
   - `defineStore()`의 첫 번째 인자는 애플리케이션 전체에 걸쳐 사용하는 **store의 고유 ID** 
   
-- 2️⃣ state
+- 2️⃣ state  
   <img src ='images\pinia03.png' width=500 style='margin:8px'>   
 
   - 반응형 상태(데이터)
   - ref() === state
 
-- 3️⃣ getters  
+- 3️⃣ getters   
   <img src ='images\pinia04.png' width=500 style='margin:8px'>   
 
   - 계산된 값
   - computed() === getters
 
-- 4️⃣ actions  
+- 4️⃣ actions   
   <img src ='images\pinia05.png' width=500 style='margin:8px'>   
 
   - 메서드
   - function() === actions
   
-- ⚠ Setup Stores의 반환 값  
+- ⚠ Setup Stores의 반환 값   
   <img src ='images\pinia06.png' width=500 style='margin:8px'>   
 
   - pinia의 상태들을 사용하려면 <mark>반드시 반환</mark>해야 함
   - **store에서는 공유 하지 않는 private한 상태 속성을 가지지 않음**
 
-- 5️⃣ plugin
+- 5️⃣ plugin  
   - 애플리케이션의 상태 관리에 필요한 추가 기능을 제공하거나 확장하는 도구나 모듈
   - 애플리케이션의 상태 관리를 더욱 간편하고 유연하게 만들어주며 패키지 매니저로 설치 이후 별도 설정을 통해 추가 됨 
 
