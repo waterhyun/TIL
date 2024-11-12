@@ -1,3 +1,18 @@
+- [State Management](#state-management)
+- [State management library (Pinia)](#state-management-library-pinia)
+  - [Pinia](#pinia)
+  - [Pinia 구조](#pinia-구조)
+  - [Pinia 구성 요소 활용](#pinia-구성-요소-활용)
+- [Pinia 실습](#pinia-실습)
+  - [Read Todo](#read-todo)
+  - [Create Todo](#create-todo)
+  - [Delete Todo](#delete-todo)
+  - [Update Todo](#update-todo)
+  - [Counting Todo](#counting-todo)
+  - [Local Storage](#local-storage)
+- [참고](#참고)
+  - [Pinia 활용 시점](#pinia-활용-시점)
+
 # State Management
 - 상태 관리 state management
   - vue 컴포넌트는 이미 반응형 상태를 관리하고 있음
@@ -155,12 +170,12 @@
 
 ## Read Todo
 - Todo 조회
-  - store에 임시 tools 목록 state를 정의
+  - store에 임시 tools 목록 state를 정의  
     <img src ='images\pinia18.png' width=500 style='margin:8px'>   
   - store의 todos state를 참조
-  - 하위 컴포넌트인 TodoListItem을 반복하면서 개별 todo를 props로 전달
+  - 하위 컴포넌트인 TodoListItem을 반복하면서 개별 todo를 props로 전달  
     <img src ='images\pinia19.png' width=700 style='margin:8px'>   
-  - props 정의 후 데이터 출력 확인
+  - props 정의 후 데이터 출력 확인  
     <img src ='images\pinia20.png' width=700 style='margin:8px'>   
 
 ## Create Todo
