@@ -121,6 +121,11 @@
 
   - 각 컴포넌트 깊이에 관계 없이 store 인스턴스로 state에 접근하여 직접 읽고 쓸 수 있음
   - 만약 store에 state를 정의하지 않았다면 컴포넌트에서 새로 추가할 수 없음
+    1. 중앙 저장소에서 가져오기
+       - `import {} from`
+    2. 중앙 저장소를 활용해 인스턴스 생성
+    3. 중앙 저장소에 상태를 참조
+    - [주의] 각 컴포넌트에서는 중앙 저장소에 새로운 상태를 생성할 수 없다. (store.ssafy = 'ssafy')
 
 - Getters  
   <img src ='images\pinia08.png' width=750 style='margin:8px'>   
@@ -187,7 +192,12 @@
   - submit 이벤트가 발생 했을 때 사용자 입력 텍스트를 인자로 전달하여 store에 정의한 addTodo 액션 메서드를 호출  
     <img src ='images\pinia23.png' width=700 style='margin:8px'>   
   - form 요소를 선택하여 todo 입력 후 input 데이터를 초기화할 수 있도록 처리  
-    <img src ='images\pinia24.png' width=700 style='margin:8px'>   
+    <img src ='images\pinia24.png' width=700 style='margin:8px'>  
+    
+    - 중앙저장소의 addTodo 액션을 직접 호출해도 되지만
+      - store.addTodo(todoText)
+    - 굳이 createTodo를 만들어서 호출하는 이유는
+    - addTodo 호출 전후로 추가 로직을 작성할 수 있기 때문이다.
   - 결과 확인  
     <img src ='images\pinia25.png' width=700 style='margin:8px'>   
 
