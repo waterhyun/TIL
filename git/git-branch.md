@@ -300,7 +300,9 @@ Git branch
   
   7. hotfix 생성 `git branch hotfix`  
      <img src="images/merge02.png" width=300 margin='8px'>   
+  
   8. article.txt 생성 `$ touch article.txt`
+  
   9. 각각 master-3, master-4 이라는 내용을 순서대로 입력하여 commit 2개 작성  
       ```bash
       # article.txt에 master-3 작성
@@ -314,18 +316,19 @@ Git branch
       <img src="images/merge03.png" width=400 margin='8px'>  
 
   10. hotfix 브랜치로 이동 `git switch hotfix`
-  11. article.txt 3번째 라인에 hotfix-1 작성
+  11. article.txt 3번째 라인에 hotfix-1 작성  
       ```bash
       $ git add .
       $ git commit -m "c5"
       ``` 
       <img src="images/merge04.png" width=400 margin='8px'>  
 
-  12. master 브랜치로 이동하고 hotfix 브랜치 병합 진행, 충돌 확인
+  12. master 브랜치로 이동하고 hotfix 브랜치 병합 진행, 충돌 확인  
      <img src="images/merge05.png" width=400 margin='8px'>
 
   13. 충돌 후 VSCode 화면 확인. 충돌 영역을 원하는 내용으로 변경해야 함    
      <img src="images/merge06.png" width=500 margin='8px'>  
+
   14. git status를 사용해 확인. 충돌이 일어난 article.txt 파일의 both modified 상태 확인  
      <img src="images/merge07.png" width=500 margin='8px'>  
 
@@ -337,12 +340,16 @@ Git branch
 
   17. git commit 진행 후 vim 에디터 실행 확인  
      <img src="images/merge10.png" width=500 margin='8px'>  
+  
   18. merge commit에 대한 commit 메시지를 작성하기 위한 vim 에디터가 실행되는 것
       1.  기본적으로 git이 지정한 commit 메세지가 작성되어 있음
       2.  필요에 따라 commit 메시지를 수정 가능
       3.  수정 없이 진행하려면 :wq를 입력 후 enter를 클릭해 저장 및 종료
+  
   19. 충돌 해결 후 commit 목록 확인  
      <img src="images/merge11.png" width=500 margin='8px'>
+  
   20. 병합 완료된 브랜치 삭제 `$ git branch -d hotfix`
+
 - 병합 결과  
    <img src="images/merge12.png" width=500 margin='8px'>
