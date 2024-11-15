@@ -92,7 +92,8 @@
    - rest_framework.authtoken 주석 해제   
       <img src ='images\vue-with-drf02-07.png' width=550 style='margin:8px'>   
 3. Migrate 진행  
-  <img src ='images\vue-with-drf02-08.png' width=550 style='margin:8px'>   
+   <img src ='images\vue-with-drf02-08.png' width=550 style='margin:8px'>   
+
 4. 토큰 생성 코드 작성
   - accounts/signals.py 주석 해제
   - 인증된 사용자에게 자동으로 토큰을 생성해주는 역할  
