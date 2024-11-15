@@ -123,12 +123,12 @@
      $ pip install 'dj-rest-auth[with-social]'
      ```  
   2. 추가 App 등록      
-    <img src ='images\vue-with-drf02-14.png' width=550 style='margin:8px'>   
-    <img src ='images\vue-with-drf02-15.png' width=550 style='margin:8px'>   
+     <img src ='images\vue-with-drf02-14.png' width=550 style='margin:8px'>   
+     <img src ='images\vue-with-drf02-15.png' width=550 style='margin:8px'>   
   3. 추가 URL 등록  
-    <img src ='images\vue-with-drf02-16.png' width=550 style='margin:8px'>   
+     <img src ='images\vue-with-drf02-16.png' width=550 style='margin:8px'>   
   4. Migrate  
-    <img src ='images\vue-with-drf02-17.png' width=550 style='margin:8px'>   
+     <img src ='images\vue-with-drf02-17.png' width=550 style='margin:8px'>   
   
   - https://dj-rest-auth.readthedocs.io/en/latest/installation.html#registraion-optional  
 
