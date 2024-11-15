@@ -47,6 +47,56 @@
 
 - [Numpy](https://github.com/waterhyun/TIL/blob/master/python/numpy.md)
 
+
+### 📁 Web
+- [HTML&CSS](https://github.com/waterhyun/TIL/blob/master/web/html-css.md)
+- [CSS Layout](https://github.com/waterhyun/TIL/blob/master/web/css-layout.md)
+- [Bootstrap](https://github.com/waterhyun/TIL/blob/master/web/bootstrap.md)
+- [Responsive Web](https://github.com/waterhyun/TIL/blob/master/web/responsive-web.md)
+
+
+### 📁 Django
+- [Intro & Degisn Pattern](https://github.com/waterhyun/TIL/blob/master/django/01-design-pattern.md)
+- [Template & URLs](https://github.com/waterhyun/TIL/blob/master/django/02-template.md)
+- [Models](https://github.com/waterhyun/TIL/blob/master/django/03-model.md)
+- [orm](https://github.com/waterhyun/TIL/blob/master/django/06-form.md)
+- [orm with view](https://github.com/waterhyun/TIL/blob/master/django/05-orm-with-view.md)
+- [form](https://github.com/waterhyun/TIL/blob/master/django/06-form.md)
+- [static](https://github.com/waterhyun/TIL/blob/master/django/07-static.md)
+- [authentication system 1](https://github.com/waterhyun/TIL/blob/master/django/08-01-authentication-system.md)
+- [authentication system 2](https://github.com/waterhyun/TIL/blob/master/django/08-02-authentication-system.md)
+- [django rest framework 1](https://github.com/waterhyun/TIL/blob/master/django/09-01-django-rest-framework.md)
+- [django rest framework 2](https://github.com/waterhyun/TIL/blob/master/django/09-02-django-rest-framework.md)
+
+### 📁 Database
+- sqlite
+  - [sql](https://github.com/waterhyun/TIL/blob/master/database/01-sql.md)
+  - [many to one relationships](https://github.com/waterhyun/TIL/blob/master/database/02-many-to-one-relationships.md)
+  - [many to many relationships 1](https://github.com/waterhyun/TIL/blob/master/database/03-many-to-many-relationships.md)
+  - [many to many relationships 2](https://github.com/waterhyun/TIL/blob/master/database/04-many-to-many-relationships.md)
+
+### 📁 JavaScript
+- [DOM](https://github.com/waterhyun/TIL/blob/master/javascript/01-dom.md)
+- [Basic Syntax](https://github.com/waterhyun/TIL/blob/master/javascript/02-basic-syntax.md)
+- [function](https://github.com/waterhyun/TIL/blob/master/javascript/03-function.md)
+- [object](https://github.com/waterhyun/TIL/blob/master/javascript/04-object.md)
+- [array](https://github.com/waterhyun/TIL/blob/master/javascript/05-array.md)
+- [controlling event](https://github.com/waterhyun/TIL/blob/master/javascript/06-controlling-event.md)
+- [asynchronous javascript](https://github.com/waterhyun/TIL/blob/master/javascript/07-asynchronous-javascript.md)
+- [ajax with django](https://github.com/waterhyun/TIL/blob/master/javascript/08-ajax-with-django.md)
+
+### 📁 Vue
+- [Introduction of Vue](https://github.com/waterhyun/TIL/blob/master/vue/01-introduction-of-vue.md)
+- [Basic Syntax 01](https://github.com/waterhyun/TIL/blob/master/vue/02-01-basic-syntax.md)
+- [Basic Syntax 02](https://github.com/waterhyun/TIL/blob/master/vue/02-02-basic-syntax.md)
+- [Single File Component](https://github.com/waterhyun/TIL/blob/master/vue/03-single-file-component.md)
+- [Component State Flow](https://github.com/waterhyun/TIL/blob/master/vue/04-component-state-flow.md)
+- [Router](https://github.com/waterhyun/TIL/blob/master/vue/05-vue-router.md)
+- [State management](https://github.com/waterhyun/TIL/blob/master/vue/06-state-management.md)
+- [Vue with DRF 01](https://github.com/waterhyun/TIL/blob/master/vue/07-01-vue-with-drf.md)
+- [Vue with DRF 02](https://github.com/waterhyun/TIL/blob/master/vue/07-02-vue-wth-drf.md)
+
+
 ### 📁 Algorithm
 - [복잡도](https://github.com/waterhyun/TIL/blob/master/algorithm/complexity.md)
 - List
@@ -89,37 +139,6 @@
   - [이진 탐색 트리](https://github.com/waterhyun/TIL/blob/master/algorithm/tree/binary-search-tree.md)
   - [Heap](https://github.com/waterhyun/TIL/blob/master/algorithm/tree/heap.md)
 
-
-### 📁 Web
-- [HTML&CSS](https://github.com/waterhyun/TIL/blob/master/web/html-css.md)
-- [CSS Layout](https://github.com/waterhyun/TIL/blob/master/web/css-layout.md)
-- [Bootstrap](https://github.com/waterhyun/TIL/blob/master/web/bootstrap.md)
-- [Responsive Web](https://github.com/waterhyun/TIL/blob/master/web/responsive-web.md)
-
-
-### 📁 Django
-- [Intro & Degisn Pattern](https://github.com/waterhyun/TIL/blob/master/django/01-design-pattern.md)
-- [Template & URLs](https://github.com/waterhyun/TIL/blob/master/django/02-template.md)
-- [Models](https://github.com/waterhyun/TIL/blob/master/django/03-model.md)
-- [orm](https://github.com/waterhyun/TIL/blob/master/django/06-form.md)
-- [orm with view](https://github.com/waterhyun/TIL/blob/master/django/05-orm-with-view.md)
-- [form](https://github.com/waterhyun/TIL/blob/master/django/06-form.md)
-- [static](https://github.com/waterhyun/TIL/blob/master/django/07-static.md)
-- [authentication system 1](https://github.com/waterhyun/TIL/blob/master/django/08-01-authentication-system.md)
-- [authentication system 2](https://github.com/waterhyun/TIL/blob/master/django/08-02-authentication-system.md)
-- [django rest framework 1](https://github.com/waterhyun/TIL/blob/master/django/09-01-django-rest-framework.md)
-- [django rest framework 2](https://github.com/waterhyun/TIL/blob/master/django/09-02-django-rest-framework.md)
-
-### 📁 Database
-- sqlite
-  - [sql](https://github.com/waterhyun/TIL/blob/master/database/01-sql.md)
-  - [many to one relationships](https://github.com/waterhyun/TIL/blob/master/database/02-many-to-one-relationships.md)
-  - [many to many relationships 1](https://github.com/waterhyun/TIL/blob/master/database/03-many-to-many-relationships.md)
-  - [many to many relationships 2](https://github.com/waterhyun/TIL/blob/master/database/04-many-to-many-relationships.md)
-
-### 📁 JavaScript
-- [DOM](https://github.com/waterhyun/TIL/blob/master/javascript/01-dom.md)
-- [Basic Syntax](https://github.com/waterhyun/TIL/blob/master/javascript/02-basic-syntax.md)
 
 ### 📁 기타
 - [정규표현식 regexp](https://github.com/waterhyun/TIL/blob/master/regexp.md)
