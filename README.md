@@ -1,13 +1,37 @@
-# TIL
-✏️ Today I Learned  
+# TIL - Today I Learned  
 새롭게 배운 내용들과 궁금했던 점을 기록하고 공유합니다.
 
-## TIL(Today I Learned) 목차
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
 
-### 📁 Markdown
-- [Markdown 기초](https://github.com/waterhyun/TIL/blob/master/markdown.md)
+- [TIL - Today I Learned](#til---today-i-learned)
+  - [⚙️ DevOps](#️-devops)
+    - [📁 Git](#-git)
+    - [📁 API](#-api)
+  - [🔧 Backend](#-backend)
+    - [📁 Python](#-python)
+    - [📁 Django](#-django)
+  - [💻 Frontend](#-frontend)
+    - [📁 Web](#-web)
+    - [📁 JavaScript](#-javascript)
+    - [📁 Vue](#-vue)
+  - [🗃️ Database](#️-database)
+    - [📁 sqlite](#-sqlite)
+  - [🧮 Algorithm \& Data Structure](#-algorithm--data-structure)
+    - [Fundamentals](#fundamentals)
+    - [Data Structures \& Algorithms](#data-structures--algorithms)
+  - [📚 CS Fundamentals](#-cs-fundamentals)
+    - [Documentation](#documentation)
+    - [Regular Expressions](#regular-expressions)
 
-
+## ⚙️ DevOps
 ### 📁 Git
 - [Git](https://github.com/waterhyun/TIL/blob/master/git/git.md)
 - [Git Branch](https://github.com/waterhyun/TIL/blob/master/git/git-branch.md)
@@ -18,7 +42,7 @@
 ### 📁 API
 - [API 사용법](https://github.com/waterhyun/TIL/blob/master/api/api.md)
 
-
+## 🔧 Backend
 ### 📁 Python 
 - [Python이란](https://github.com/waterhyun/TIL/blob/master/python/python_basic.md)
 - [Python 기초 문법 1](https://github.com/waterhyun/TIL/blob/master/python/python_basic_syntax.md)
@@ -28,7 +52,7 @@
   - 변수
   - Data Types
   - [Copy](https://github.com/waterhyun/TIL/blob/master/python/copy_method.md)
-  - 아스키코드
+  - 아스키코드 
 - [Python 기초 문법 2](https://github.com/waterhyun/TIL/blob/master/python/python_basic_syntax2.md)
   - Data Types
   - Collection
@@ -47,14 +71,6 @@
 
 - [Numpy](https://github.com/waterhyun/TIL/blob/master/python/numpy.md)
 
-
-### 📁 Web
-- [HTML&CSS](https://github.com/waterhyun/TIL/blob/master/web/html-css.md)
-- [CSS Layout](https://github.com/waterhyun/TIL/blob/master/web/css-layout.md)
-- [Bootstrap](https://github.com/waterhyun/TIL/blob/master/web/bootstrap.md)
-- [Responsive Web](https://github.com/waterhyun/TIL/blob/master/web/responsive-web.md)
-
-
 ### 📁 Django
 - [Intro & Degisn Pattern](https://github.com/waterhyun/TIL/blob/master/django/01-design-pattern.md)
 - [Template & URLs](https://github.com/waterhyun/TIL/blob/master/django/02-template.md)
@@ -68,12 +84,13 @@
 - [django rest framework 1](https://github.com/waterhyun/TIL/blob/master/django/09-01-django-rest-framework.md)
 - [django rest framework 2](https://github.com/waterhyun/TIL/blob/master/django/09-02-django-rest-framework.md)
 
-### 📁 Database
-- sqlite
-  - [sql](https://github.com/waterhyun/TIL/blob/master/database/01-sql.md)
-  - [many to one relationships](https://github.com/waterhyun/TIL/blob/master/database/02-many-to-one-relationships.md)
-  - [many to many relationships 1](https://github.com/waterhyun/TIL/blob/master/database/03-many-to-many-relationships.md)
-  - [many to many relationships 2](https://github.com/waterhyun/TIL/blob/master/database/04-many-to-many-relationships.md)
+
+## 💻 Frontend
+### 📁 Web
+- [HTML&CSS](https://github.com/waterhyun/TIL/blob/master/web/html-css.md)
+- [CSS Layout](https://github.com/waterhyun/TIL/blob/master/web/css-layout.md)
+- [Bootstrap](https://github.com/waterhyun/TIL/blob/master/web/bootstrap.md)
+- [Responsive Web](https://github.com/waterhyun/TIL/blob/master/web/responsive-web.md)
 
 ### 📁 JavaScript
 - [DOM](https://github.com/waterhyun/TIL/blob/master/javascript/01-dom.md)
@@ -97,8 +114,18 @@
 - [Vue with DRF 02](https://github.com/waterhyun/TIL/blob/master/vue/07-02-vue-wth-drf.md)
 
 
-### 📁 Algorithm
+## 🗃️ Database
+### 📁 sqlite
+  - [sql](https://github.com/waterhyun/TIL/blob/master/database/01-sql.md)
+  - [many to one relationships](https://github.com/waterhyun/TIL/blob/master/database/02-many-to-one-relationships.md)
+  - [many to many relationships 1](https://github.com/waterhyun/TIL/blob/master/database/03-many-to-many-relationships.md)
+  - [many to many relationships 2](https://github.com/waterhyun/TIL/blob/master/database/04-many-to-many-relationships.md)
+
+## 🧮 Algorithm & Data Structure
+### Fundamentals
 - [복잡도](https://github.com/waterhyun/TIL/blob/master/algorithm/complexity.md)
+
+### Data Structures & Algorithms
 - List
   - [List1](https://github.com/waterhyun/TIL/blob/master/algorithm/list/1-dimensional-array.md)
     - 1차원 배열
@@ -140,6 +167,9 @@
   - [Heap](https://github.com/waterhyun/TIL/blob/master/algorithm/tree/heap.md)
 
 
-### 📁 기타
-- [정규표현식 regexp](https://github.com/waterhyun/TIL/blob/master/regexp.md)
+## 📚 CS Fundamentals
+### Documentation
+- [Markdown 기초](https://github.com/waterhyun/TIL/blob/master/markdown.md)
 - [명명 규칙 Naming Rules](https://github.com/waterhyun/TIL/blob/master/naming-rule.md)
+### Regular Expressions
+- [정규표현식 regexp](https://github.com/waterhyun/TIL/blob/master/regexp.md)
